@@ -1,46 +1,21 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+Nos últimos anos, o cenário do mercado de trabalho tem passado por uma notável transformação impulsionada pela crescente digitalização. Os métodos tradicionais de busca por empregos e recrutamento, como anúncios em jornais e agências físicas, têm cedido espaço a uma abordagem mais dinâmica e eficiente. A convergência das tecnologias de informação com a globalização tem levado candidatos e empresas a explorar novas possibilidades em plataformas online. Diante desse panorama, surge a demanda por uma solução que transcende a simples elaboração de currículos, permitindo aos indivíduos candidatar-se diretamente a vagas de emprego. Simultaneamente, as empresas almejam uma maneira mais ágil de promover suas oportunidades e aprimorar o processo de recrutamento e seleção. É nesse contexto que emerge a necessidade imperativa de um website inovador, capaz de unir essas demandas e revolucionar a interação entre talentos em busca de oportunidades e organizações em busca de talentos.  
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
+Conforme exposto, o problema que se busca resolver com este projeto é a limitação que as empresas têm ao buscar por novos colaboradores e também as pessoas ao buscar novas oportunidades de emprego, principalmente sendo algo mais rápido e intuitivo .
 
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
-
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+O objetivo do projeto seria resolver a lacuna entre a demanda por talentos e a busca por empregos, otimizando o processo para todas as partes envolvidas. 
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+A criação desse aplicativo resultaria em economia de tempo, recursos e energia, ao mesmo tempo em que aumentaria as chances de encontrar as combinações perfeitas entre candidatos e vagas. Em um mundo cada vez mais digital e globalizado, essa solução seria um passo ousado em direção a um mercado de trabalho mais eficiente, justo e satisfatório para todos. 
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
-
+ 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
-
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+O aplicativo tem como público-alvo indivíduos em busca de emprego, desde recém-formados até profissionais experientes, incluindo aqueles interessados em trabalho freelance ou remoto. Também atende a empresas de todos os tamanhos, desde startups até multinacionais, oferecendo ferramentas para promover vagas e automatizar a triagem de candidatos. Além disso, instituições de ensino, agências de recrutamento e freelancers podem se beneficiar da plataforma. Em essência, o aplicativo visa unir de maneira eficiente todos os participantes do processo de recrutamento e seleção, transformando a forma como as oportunidades profissionais são encontradas e preenchidas. 
