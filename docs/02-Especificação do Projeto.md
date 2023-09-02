@@ -24,17 +24,14 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
-
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
+|Vinicius Oliveira  | Visualizar vagas de emprego da minha área            | Candidatar para uma vaga                 |
+|Vinicius Oliveira  | Cadastrar Currículos            | Para receber propostas de emprego                 |
+|Cristiane Souza       | Poder realizar uma pesquisa sobre vagas de Analista de sistemas                 | Manter atualizada sobre o mercado |
+|Cristiane Souza       | Encontrar uma empresa grande com o foco em C#                 | Achar uma vaga melhor em sua especialização |
+|Débora Peixoto       | Publicar vagas de emprego                 | Para receber currículos |
+|Débora Peixoto       | Filtrar possíveis candidatos                 | Analisar o melhor perfil |
+|Wagner Silva       | Achar um bom profissional                 | Analisar o melhor perfil |
+|Wagner Silva       | Um site intuitivo para publicar suas vagas                 | Tem dificuldade em divulgar suas ofertas de trabalho |
 
 ## Requisitos
 
@@ -42,48 +39,42 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|ID    | Descrição do Requisito                                               | Prioridade |
+|------|-----------------------------------------------------------------------|------------|
+|RF-01 | O site deve conter um sistema de cadastro e login do usuário          | ALTA       |
+|RF-02 | O usuário deve conseguir personalizar seu perfil                      | MÉDIA      |
+|RF-03 | O usuário deve conseguir aplicar seu currículo em vagas disponíveis   | ALTA       |
+|RF-04 | O site deve apresentar uma lista de vagas na página principal         | ALTA       |
+|RF-05 | O usuário deve ter opções de filtro para a pesquisa de vagas         | ALTA       |
+|RF-06 | O usuário deve conseguir divulgar seu currículo                       | ALTA       |
+|RF-07 | O usuário deve conseguir compartilhar a vaga                          | BAIXA      |
+|RF-08 | O usuário empregador deve poder criar vagas                           | ALTA       |
+|RF-09 | O usuário empregador poderá filtrar currículos cadastrados a sua vaga | ALTA       |
+|RF-10 | O site deve conter um sistema de cadastro e login do usuário empregador| ALTA       |
+|RF-11 | O usuário empregador deve conseguir personalizar o perfil da empresa  | MÉDIA      |
 
 ### Requisitos não Funcionais
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+|ID     | Descrição do Requisito                                             | Prioridade |
+|-------|--------------------------------------------------------------------|------------|
+|RNF-01 | O site deverá ser responsivo permitindo a visualização em um celular de forma adequada | Alta    |
+|RNF-02 | O site deve ter bom nível de contraste entre os elementos da tela em conformidade | Média |
+|RNF-03 | O site deve ser compatível com os principais navegadores do mercado (Google Chrome, Firefox, Microsoft Edge) | Alta |
+|RNF-04 | O site deve estar em pleno funcionamento 24 horas por dia, 7 dias por semana, garantindo acesso ininterrupto aos usuários e proporcionando informações atualizadas e confiáveis a qualquer momento. | Alta |
+|RNF-05 | O site deve ser publicado em um ambiente acessível publicamente na Internet (Repl.it, Github Pages, Heroku); | Alta |
+|RNF-06 | O sistema deve seguir práticas de UI e UX                          | Alta       |
+|RNF-07 | O sistema deve ser de fácil manutenção                              | Alta       |
 
 ## Restrições
 
-O projeto está restrito pelos itens apresentados na tabela a seguir.
-
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
-
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
+|ID | Restrição                                                                                         |
+|-- |----------------------------------------------------------------------------------------------------|
+|01 | O projeto deverá ser entregue no final do semestre letivo, não podendo extrapolar a data de 06/12/2023.|
+|02 | A equipe não pode subcontratar o desenvolvimento do trabalho.                                      |
+|03 | O aplicativo deve se restringir às tecnologias básicas e atualizadas                               |
+|04 | É necessário realizar o envio constante de atualizações acerca do projeto para o professor orientador.|
+|05 | O projeto deve comportar sua aplicação no Windows ou Linux.                                        |
+|06 | É necessário que o projeto possua todos os requisitos de aplicação antes alinhados com o professor orientador.|
 
 ## Diagrama de Casos de Uso
 
