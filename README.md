@@ -1,23 +1,25 @@
-# TÍTULO DO PROJETO
+# JobHub
 
-`CURSO`
+`Tecnólogo em Análise e Desenvolvimento de Sistemas`
 
-`DISCIPLINA`
+`Projeto: Desenvolvimento de uma Aplicação Interativa`
 
-`SEMESTRE`
+`2° Semestre de 2023`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O projeto é uma plataforma online destinada a facilitar o processo de recrutamento e seleção de pessoal. De um lado, candidatos podem preencher seus currículos e aplicar para vagas de emprego que se alinham com suas habilidades e experiências. De outro lado, as empresas têm a oportunidade de promover suas vagas, identificar candidatos potenciais e gerenciar todo o processo de seleção em um só lugar. Assim, a aplicação web busca agilizar e tornar mais eficiente a conexão entre empresas e profissionais, otimizando o tempo e os recursos de ambos.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Matheus Gonçalves de Oliveira Machado
+* Thiago Pontes Gazzinelli
+* Andréia Borges da Silva de Moura Fé
+* Bianca Cristina Sousa Santana
+* Carlos Henrique Santos da Silva
+* Vinicius Henrique Alves Mariano
 
 ## Orientador
 
-* Nome completo do professor 1
+* Daniela Carvalho Monteiro Ferreira
 
 ## Instruções de utilização
 
