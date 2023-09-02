@@ -78,4 +78,4 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ## Diagrama de Casos de Uso
 
-img/casodeuso.png
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t9-jobhub/blob/main/docs/img/casodeuso.png
