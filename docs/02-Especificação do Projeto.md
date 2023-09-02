@@ -12,8 +12,8 @@ As personas levantadas durante o processo de entendimento do problema são apres
 | Idade      | 24                                | 30                                  |
 | Ocupação   | Recém-formado em Engenharia Civil | Desenvolvedora C# |
 | Aplicativos | ● Instagram <br> ● Facebook <br> ● Whatsapp | ● TikTok <br> ● Youtube |
-| Motivações | Inicialização no mercado de trabalho / Ascensão de carreira | Desenvolvimento profissional / Realização de metas pessoais |
-| Frustrações | Competição acentuada / Expectativas Irrealistas | Dificuldade de encontrar empregos relevantes / Pressão social |
+| Motivações | Inicialização no mercado de trabalho <br> ● Ascensão de carreira | Desenvolvimento profissional <br> ● Realização de metas pessoais |
+| Frustrações | Competição acentuada <br> ● Expectativas Irrealistas | Dificuldade de encontrar empregos relevantes <br> ● Pressão social |
 | Hobbies | ● Jogar videogame <br> ● Passear com a família | ● Tecnologia <br> ● Viagens |
 
 ## Histórias de Usuários
