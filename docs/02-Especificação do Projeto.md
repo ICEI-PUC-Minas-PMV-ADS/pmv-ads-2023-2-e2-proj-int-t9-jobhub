@@ -1,26 +1,20 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
-
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
+A especificação precisa do desafio e dos aspectos mais significativos a serem abordados neste projeto foi solidificada por meio da colaboração dos usuários, através de um processo imersivo conduzido pela equipe. Esse processo envolveu a observação dos usuários em seus ambientes cotidianos e a realização de entrevistas. Os insights e informações obtidos durante essa etapa foram organizados na forma de personas e histórias de usuários, proporcionando uma compreensão mais profunda das necessidades e expectativas do público-alvo. Essa abordagem centrada no usuário servirá como base para o desenvolvimento da solução, assegurando que os principais requisitos sejam abordados de maneira eficaz e alinhada às demandas reais dos usuários. 
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+As personas levantadas durante o processo de entendimento do problema são apresentadas nas figuras que se seguem.
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
-
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+|            | Vinicius Oliveira                       | Cristiane Souza                        |
+|------------|-----------------------------------|-------------------------------------|
+|            | <div align="center"><img src="https://github.com/matheudev/futscore/blob/main/docs/img/persona%201.png" width="300" title="Henrique Silva"></div> | <div align="center"><img src="https://github.com/matheudev/futscore/blob/main/docs/img/persona%202.png" width="300" title="Júlia Pereira"></div> |
+| Idade      | 24                                | 30                                  |
+| Ocupação   | Recém-formado em Engenharia Civil | Desenvolvedora C# |
+| Aplicativos | ● Instagram <br> ● Facebook <br> ● Whatsapp | ● TikTok <br> ● Youtube |
+| Motivações | Inicialização no mercado de trabalho / Ascensão de carreira | Desenvolvimento profissional / Realização de metas pessoais |
+| Frustrações | Competição acentuada / Expectativas Irrealistas | Dificuldade de encontrar empregos relevantes / Pressão social |
+| Hobbies | ● Jogar videogame <br> ● Passear com a família | ● Tecnologia <br> ● Viagens |
 
 ## Histórias de Usuários
 
