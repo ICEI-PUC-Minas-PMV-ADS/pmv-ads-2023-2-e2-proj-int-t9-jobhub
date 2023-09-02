@@ -6,15 +6,15 @@ A especificação precisa do desafio e dos aspectos mais significativos a serem 
 
 As personas levantadas durante o processo de entendimento do problema são apresentadas nas figuras que se seguem.
 
-|            | Vinicius Oliveira                       | Cristiane Souza                        | Wagner Silva                        |
-|------------|------------------------------------------|----------------------------------------|-------------------------------------|
-|            | ![Henrique Silva](https://github.com/matheudev/futscore/blob/main/docs/img/persona%201.png) | ![Júlia Pereira](https://github.com/matheudev/futscore/blob/main/docs/img/persona%202.png) | ![Júlia Pereira](https://github.com/matheudev/futscore/blob/main/docs/img/persona%202.png) |
-| Idade      | 24                                       | 30                                    | 40                                  |
-| Ocupação   | Recém-formado em Engenharia Civil        | Desenvolvedora C#                     | Dono de Restaurante                 |
-| Aplicativos| Instagram, Facebook, Whatsapp            | TikTok, Youtube                       | Ifood, Instagram                    |
-| Motivações | Inicialização no mercado de trabalho, Ascensão de carreira | Desenvolvimento profissional, Realização de metas pessoais | Ampliar seu restaurante, Ter um fluxo de atendimento melhor |
-| Frustrações| Competição acentuada, Expectativas Irrealistas | Dificuldade de encontrar empregos relevantes, Pressão social | Não achar mão de obra qualificada |
-| Hobbies    | Jogar videogame, Passear com a família   | Tecnologia, Viagens                   | Cozinhar, Corridas                  |
+|            | Vinicius Oliveira                       | Cristiane Souza                        | Débora Peixoto                       | Wagner Silva                        |
+|------------|------------------------------------------|----------------------------------------|---------------------------------------|-------------------------------------|
+|            | ![Henrique Silva](https://github.com/matheudev/futscore/blob/main/docs/img/persona%201.png) | ![Júlia Pereira](https://github.com/matheudev/futscore/blob/main/docs/img/persona%202.png) | | ![Júlia Pereira](https://github.com/matheudev/futscore/blob/main/docs/img/persona%202.png) |
+| Idade      | 24                                       | 30                                    | 25                                   | 40                                  |
+| Ocupação   | Recém-formado em Engenharia Civil        | Desenvolvedora C#                     | Recrutadora de RH                    | Dono de Restaurante                 |
+| Aplicativos| Instagram, Facebook, Whatsapp            | TikTok, Youtube                       | Whatsapp, Threads                    | Ifood, Instagram                    |
+| Motivações | Inicialização no mercado de trabalho, Ascensão de carreira | Desenvolvimento profissional, Realização de metas pessoais | Em busca de pessoas competentes, Se destacar como recrutadora | Ampliar seu restaurante, Ter um fluxo de atendimento melhor |
+| Frustrações| Competição acentuada, Expectativas Irrealistas | Dificuldade de encontrar empregos relevantes, Pressão social | Dificuldade de achar perfis que a empresa procura, Dificuldade em compilar perfis | Não achar mão de obra qualificada |
+| Hobbies    | Jogar videogame, Passear com a família   | Tecnologia, Viagens                   | Culinária, Assistir Séries e Filmes   | Cozinhar, Corridas                  |
 
 
 ## Histórias de Usuários
