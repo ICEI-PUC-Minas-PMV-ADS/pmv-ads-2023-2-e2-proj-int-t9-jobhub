@@ -6,15 +6,15 @@ A especificação precisa do desafio e dos aspectos mais significativos a serem 
 
 As personas levantadas durante o processo de entendimento do problema são apresentadas nas figuras que se seguem.
 
-|            | Vinicius Oliveira                       | Cristiane Souza                        |
+|            | Vinicius Oliveira                       | Cristiane Souza                        | Wagner Silva                        |
 |------------|-----------------------------------|-------------------------------------|
-|            | <div align="center"><img src="https://github.com/matheudev/futscore/blob/main/docs/img/persona%201.png" width="300" title="Henrique Silva"></div> | <div align="center"><img src="https://github.com/matheudev/futscore/blob/main/docs/img/persona%202.png" width="300" title="Júlia Pereira"></div> |
-| Idade      | 24                                | 30                                  |
-| Ocupação   | Recém-formado em Engenharia Civil | Desenvolvedora C# |
-| Aplicativos | ● Instagram <br> ● Facebook <br> ● Whatsapp | ● TikTok <br> ● Youtube |
-| Motivações | ● Inicialização no mercado de trabalho <br> ● Ascensão de carreira | ● Desenvolvimento profissional <br> ● Realização de metas pessoais |
-| Frustrações | ● Competição acentuada <br> ● Expectativas Irrealistas | ● Dificuldade de encontrar empregos relevantes <br> ● Pressão social |
-| Hobbies | ● Jogar videogame <br> ● Passear com a família | ● Tecnologia <br> ● Viagens |
+|            | <div align="center"><img src="https://github.com/matheudev/futscore/blob/main/docs/img/persona%201.png" width="300" title="Henrique Silva"></div> | <div align="center"><img src="https://github.com/matheudev/futscore/blob/main/docs/img/persona%202.png" width="300" title="Júlia Pereira"></div> | <div align="center"><img src="https://github.com/matheudev/futscore/blob/main/docs/img/persona%202.png" width="300" title="Júlia Pereira"></div> |
+| Idade      | 24                                | 30                                  | 40                                  |
+| Ocupação   | Recém-formado em Engenharia Civil | Desenvolvedora C# | Dono de Restaurante |
+| Aplicativos | ● Instagram <br> ● Facebook <br> ● Whatsapp | ● TikTok <br> ● Youtube | ● Ifood <br> ● Instagram |
+| Motivações | ● Inicialização no mercado de trabalho <br> ● Ascensão de carreira | ● Desenvolvimento profissional <br> ● Realização de metas pessoais | ● Ampliar seu restaurante <br> ● Ter um fluxo de atendimento melhor |
+| Frustrações | ● Competição acentuada <br> ● Expectativas Irrealistas | ● Dificuldade de encontrar empregos relevantes <br> ● Pressão social | ● Não achar mão de obra qualificada |
+| Hobbies | ● Jogar videogame <br> ● Passear com a família | ● Tecnologia <br> ● Viagens | ● Cozinhar <br> ● Corridas |
 
 ## Histórias de Usuários
 
