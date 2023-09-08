@@ -37,13 +37,19 @@ A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para def
 
 ### Processo
 
-Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
- 
-> **Links Úteis**:
-> - [Project management, made simple](https://github.com/features/project-management/)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/github/managing-your-work-on-github/about-project-boards)
-> - [Como criar Backlogs no Github](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
+Para organização e distribuição das tarefas do projeto, a equipe está utilizando o Trello estruturado com as seguintes listas:
+
+**Recursos**: Lista que contém todos os recursos que serão utilizados no projeto, como bibliotecas, ferramentas, serviços, entre outros. Essa lista é importante para que todos os membros da equipe tenham conhecimento dos recursos disponíveis e possam utilizá-los de maneira eficiente no projeto.
+
+**Backlog**: Lista que contém todas as funcionalidades que serão desenvolvidas no projeto. O Product Owner é responsável por definir as funcionalidades que serão implementadas e priorizá-las de acordo com a necessidade do cliente e do negócio.
+
+**To Do**: Lista que contém as tarefas que ainda não foram iniciadas e que precisam ser desenvolvidas. Essa lista é atualizada diariamente pelo Scrum Master, que deve garantir que as tarefas estejam claras e que a equipe tenha conhecimento das prioridades.
+
+**In Progress**: Lista que contém as tarefas que estão em andamento. É importante que a equipe atualize o status das tarefas para que o Scrum Master possa acompanhar o andamento do projeto e garantir que tudo esteja caminhando conforme o planejado.
+
+**Done**: Lista que contém as tarefas que foram concluídas. É importante que a equipe atualize essa lista diariamente para que o Scrum Master possa acompanhar o progresso do projeto e garantir que as tarefas estejam sendo concluídas dentro do prazo estabelecido.
+
+O uso dessas listas permite que a equipe tenha uma visão clara do que precisa ser feito, do que já foi concluído e do que está em andamento, facilitando a colaboração e o trabalho em equipe. Além disso, o Trello também permite a atribuição de responsabilidades e prazos para cada tarefa, garantindo que o projeto esteja caminhando dentro do prazo estabelecido.
 
 ### Ferramentas
 
