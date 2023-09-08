@@ -47,6 +47,8 @@ Para organização e distribuição das tarefas do projeto, a equipe está utili
 
 **In Progress**: Lista que contém as tarefas que estão em andamento. É importante que a equipe atualize o status das tarefas para que o Scrum Master possa acompanhar o andamento do projeto e garantir que tudo esteja caminhando conforme o planejado.
 
+**Testing**: Esta lista engloba as tarefas que estão em fase de testes. Os testadores devem verificar as funcionalidades implementadas, garantindo que estão funcionando corretamente e identificando possíveis erros para correção antes de serem movidas para a coluna "Done". Atualizações regulares nesta coluna ajudam a equipe a manter um acompanhamento preciso do progresso do projeto.
+
 **Done**: Lista que contém as tarefas que foram concluídas. É importante que a equipe atualize essa lista diariamente para que o Scrum Master possa acompanhar o progresso do projeto e garantir que as tarefas estejam sendo concluídas dentro do prazo estabelecido.
 
 O uso dessas listas permite que a equipe tenha uma visão clara do que precisa ser feito, do que já foi concluído e do que está em andamento, facilitando a colaboração e o trabalho em equipe. Além disso, o Trello também permite a atribuição de responsabilidades e prazos para cada tarefa, garantindo que o projeto esteja caminhando dentro do prazo estabelecido.
@@ -55,18 +57,23 @@ O uso dessas listas permite que a equipe tenha uma visão clara do que precisa s
 
 As ferramentas empregadas no projeto são:
 
-- Editor de código.
-- Ferramentas de comunicação
-- Ferramentas de desenho de tela (_wireframing_)
+| Ambiente | Plataforma | Link de Acesso |
+| --- | --- | --- |
+| Editor de Código | Visual Studio Code | https://code.visualstudio.com/ |
+| Ferramenta de comunicação | Discord | https://discord.com/ |
+| Gerenciamento do Projeto | Trello | [Trello](https://trello.com/b/lEOrYQO2/jobhub) |
+| Projeto de Interface e Wireframes | Figma | Figma Link|
+| Controle de Versão | Git | https://git-scm.com/ |
+| Repositório | GitHub | [FutScore](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t9-jobhub) |
 
-O editor de código foi escolhido porque ele possui uma integração com o
-sistema de versão. As ferramentas de comunicação utilizadas possuem
-integração semelhante e por isso foram selecionadas. Por fim, para criar
-diagramas utilizamos essa ferramenta por melhor captar as
-necessidades da nossa solução.
+O editor de código foi escolhido porque ele possui uma integração com o sistema de versão. 
 
-Liste quais ferramentas foram empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível.
- 
-> **Possíveis Ferramentas que auxiliarão no gerenciamento**: 
-> - [Slack](https://slack.com/)
-> - [Github](https://github.com/)
+As ferramentas de comunicação utilizada é completa e de fácil acesso e por isso foi selecionada. 
+
+O Trello foi utilizado para gerenciamento do projeto por ser uma ferramenta intuitiva, flexível, colaborativa, com recursos para gerenciamento de tarefas e acessível.
+
+Para criação dos wireframes, utilizamos essa ferramenta porque ela é completa e pode ser usada de forma gratuita, podendo ter edição simultânea de telas por diferentes membros do grupo.
+
+A ferramente para o controle de versão utilizada é mais completa e de fácil utilização.
+
+O repositório utilizado foi definido pela faculdade.
