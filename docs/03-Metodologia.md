@@ -32,8 +32,8 @@ A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para def
 
 - Scrum Master: Matheus Gonçalves de Oliveira Machado;
 - Product Owner: Carlos Henrique Santos da Silva;
-- Equipe de Desenvolvimento: Thiago Pontes Gazzinelli, Vinicius Henrique Alves Mariano;
-- Equipe de Design: Daphine Custodia de Almeida;
+- Equipe de Desenvolvimento: Thiago Pontes Gazzinelli, Vinicius Henrique Alves Mariano, Andréia Borges da Silva de Moura Fé;
+- Equipe de Design: Bianca Cristina Sousa Santana;
 
 ### Processo
 
