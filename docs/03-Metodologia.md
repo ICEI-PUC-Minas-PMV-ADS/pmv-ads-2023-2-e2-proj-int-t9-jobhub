@@ -64,7 +64,7 @@ As ferramentas empregadas no projeto são:
 | Gerenciamento do Projeto | Trello | [Trello](https://trello.com/b/lEOrYQO2/jobhub) |
 | Projeto de Interface e Wireframes | Figma | Figma Link|
 | Controle de Versão | Git | https://git-scm.com/ |
-| Repositório | GitHub | [FutScore](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t9-jobhub) |
+| Repositório | GitHub | [JobHub](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t9-jobhub) |
 
 O editor de código foi escolhido porque ele possui uma integração com o sistema de versão. 
 
