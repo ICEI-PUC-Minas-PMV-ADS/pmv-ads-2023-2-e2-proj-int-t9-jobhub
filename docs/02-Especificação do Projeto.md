@@ -3,6 +3,7 @@
 A especificação precisa do desafio e dos aspectos mais significativos a serem abordados neste projeto foi solidificada por meio da colaboração dos usuários, através de um processo imersivo conduzido pela equipe. Esse processo envolveu a observação dos usuários em seus ambientes cotidianos e a realização de entrevistas. Os insights e informações obtidos durante essa etapa foram organizados na forma de personas e histórias de usuários, proporcionando uma compreensão mais profunda das necessidades e expectativas do público-alvo. Essa abordagem centrada no usuário servirá como base para o desenvolvimento da solução, assegurando que os principais requisitos sejam abordados de maneira eficaz e alinhada às demandas reais dos usuários. 
 
 ## Personas
+A ideia de criar uma plataforma que satisfaça o maior número de usuários distintos entre si é, ao primeiro ver, a forma mais lógica de se alcançar uma plataforma bem-sucedida. Entretanto, para COOPER e al. (2014) essa lógica está fadada ao fracasso, uma vez que tentar criar algo que agrade a todos têm como resultado algo que não agrada ninguém. E para evitar isso, criamos as chamadas “personas”, que são representações de usuários fictícios, mas que agrupam as motivações, comportamentos (COOPER e al., 2014) e necessidades reais do nosso público-alvo.
 
 As personas levantadas durante o processo de entendimento do problema são apresentadas nas figuras que se seguem.
 
