@@ -7,15 +7,15 @@ A ideia de criar uma plataforma que satisfaça o maior número de usuários dist
 
 As personas levantadas durante o processo de entendimento do problema são apresentadas nas figuras que se seguem.
 
-|            | Vinicius Oliveira                       | Cristiane Souza                        | Débora Peixoto                       | Wagner Silva                        |
-|------------|------------------------------------------|----------------------------------------|---------------------------------------|-------------------------------------|
-|            | ![Vinicius Oliveira](img/vinicius.jpg) | ![Cristiane Souza](img/cristiane.jpg) | ![Débora Peixoto](img/debora.jpg) | ![Wagner Silva](img/wagner.jpg) |
-| Idade      | 24                                       | 30                                    | 25                                   | 40                                  |
-| Ocupação   | Recém-formado em Engenharia Civil        | Desenvolvedora C#                     | Recrutadora de RH                    | Dono de Restaurante                 |
-| Aplicativos| Instagram, Facebook, Whatsapp            | TikTok, Youtube                       | Whatsapp, Threads                    | Ifood, Instagram                    |
-| Motivações | Inicialização no mercado de trabalho, Ascensão de carreira | Desenvolvimento profissional, Realização de metas pessoais | Em busca de pessoas competentes, Se destacar como recrutadora | Ampliar seu restaurante, Ter um fluxo de atendimento melhor |
-| Frustrações| Competição acentuada, Expectativas Irrealistas | Dificuldade de encontrar empregos relevantes, Pressão social | Dificuldade de achar perfis que a empresa procura, Dificuldade em compilar perfis | Não achar mão de obra qualificada |
-| Hobbies    | Jogar videogame, Passear com a família   | Tecnologia, Viagens                   | Culinária, Assistir Séries e Filmes   | Cozinhar, Corridas                  |
+|            | Vinicius Oliveira                       | Cristiane Souza                        | Débora Peixoto                       | Wagner Silva                        | Thiago Melo                       | 
+|------------|------------------------------------------|----------------------------------------|---------------------------------------|-------------------------------------|-------------------------------------|
+|            | ![Vinicius Oliveira](img/vinicius.jpg) | ![Cristiane Souza](img/cristiane.jpg) | ![Débora Peixoto](img/debora.jpg) | ![Wagner Silva](img/wagner.jpg) | ![Thiago Melo](img/thiago.jpg) |
+| Idade      | 24                                       | 30                                    | 25                                   | 40                                  | 45                                  |
+| Ocupação   | Recém-formado em Engenharia Civil        | Desenvolvedora C#                     | Recrutadora de RH                    | Dono de Restaurante                 | Dono de uma Concessionária                 |
+| Aplicativos| Instagram, Facebook, Whatsapp            | TikTok, Youtube                       | Whatsapp, Threads                    | Ifood, Instagram                    | Whatsapp, Instagram                    |
+| Motivações | Inicialização no mercado de trabalho, Ascensão de carreira | Desenvolvimento profissional, Realização de metas pessoais | Em busca de pessoas competentes, Se destacar como recrutadora | Ampliar seu restaurante, Ter um fluxo de atendimento melhor | Ser lider de mercado, Atendimento diferenciado e eficaz |
+| Frustrações| Competição acentuada, Expectativas Irrealistas | Dificuldade de encontrar empregos relevantes, Pressão social | Dificuldade de achar perfis que a empresa procura, Dificuldade em compilar perfis | Não achar mão de obra qualificada | Fidelização de clientes |
+| Hobbies    | Jogar videogame, Passear com a família   | Tecnologia, Viagens                   | Culinária, Assistir Séries e Filmes   | Cozinhar, Corridas                  | Viagem, Leitura                 |
 
 
 
