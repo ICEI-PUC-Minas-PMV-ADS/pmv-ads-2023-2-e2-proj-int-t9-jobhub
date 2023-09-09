@@ -33,7 +33,8 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |Débora Peixoto       | Filtrar possíveis candidatos                 | Analisar o melhor perfil |
 |Wagner Silva       | Achar um bom profissional                 | Analisar o melhor perfil |
 |Wagner Silva       | Um site intuitivo para publicar suas vagas                 | Tem dificuldade em divulgar suas ofertas de trabalho |
-
+|Thiago Melo       | Achar vendedores qualificados                 | Para Melhorar o Atendimento |
+|Thiago Melo       | Um site intuitivo para publicar suas vagas                 | Analisar o melhor perfil |
 ## Requisitos
 
 As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
