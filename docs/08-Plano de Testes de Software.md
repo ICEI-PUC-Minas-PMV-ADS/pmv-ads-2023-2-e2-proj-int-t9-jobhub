@@ -15,8 +15,6 @@ Por exemplo:
 | Passos 	| - Acessar o navegador <br> - Acessar a pagina Home - Clicar em "Cadastro" <br> - Preencher os campos obrigatórios (e-mail, nome, sobrenome, senha, confirmação de senha) <br> - Clicar em "Cadastre" |
 |Critério de Êxito | - O cadastro foi realizado com sucesso. |
 
-|  	|  	|
-
 | Caso de Teste 	| CT-02 – Efetuar login	|
 |Requisito Associado | RF-01	- O site deve conter um sistema de cadastro e login do usuário. |
 | Objetivo do Teste 	| Verificar se o usuário consegue realizar login. |
