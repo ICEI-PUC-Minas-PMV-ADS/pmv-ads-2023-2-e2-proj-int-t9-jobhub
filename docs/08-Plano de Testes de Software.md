@@ -20,6 +20,12 @@ Por exemplo:
 | Objetivo do Teste 	| Verificar se o usuário consegue realizar login. |
 | Passos 	| - Acessar o navegador <br> - Acessar a pagina Home <br> - Clicar no botão "Login" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" |
 |Critério de Êxito | - O login foi realizado com sucesso. |
+|  	|  	|
+| **Caso de Teste** 	| **CT-03 – Personalizar Perfil**	|
+|Requisito Associado | RF-02	O usuário deve conseguir personalizar seu perfil. |
+| Objetivo do Teste 	| Verificar se o usuário consegue alterar todos os campos do Perfil. |
+| Passos 	| - Acessar o navegador <br> - Acessar a pagina Home <br> - Clicar no botão "Perfil" <br> - Preencher os campos ( Localidade, numero de telefone, email, Habilidades, Trabalho de interesse) <br> |
+|Critério de Êxito | - A alteração de todos os campos foi concluida com sucesso. |
 
 
  
