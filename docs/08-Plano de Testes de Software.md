@@ -16,8 +16,6 @@ Por exemplo:
 |Critério de Êxito | - O cadastro foi realizado com sucesso. |
 
 |  	|  	|
-|  	|  	|
-|  	|  	|
 
 | Caso de Teste 	| CT-02 – Efetuar login	|
 |Requisito Associado | RF-01	- O site deve conter um sistema de cadastro e login do usuário. |
