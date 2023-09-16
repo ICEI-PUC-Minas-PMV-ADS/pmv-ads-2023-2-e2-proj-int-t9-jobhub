@@ -27,11 +27,17 @@ Por exemplo:
 | Passos 	| - Acessar o navegador <br> - Acessar a pagina Home <br> - Clicar no botão "Perfil" <br> - Preencher os campos ( Localidade, numero de telefone, email, Habilidades, Trabalho de interesse) <br> |
 |Critério de Êxito | - A alteração de todos os campos foi concluida com sucesso. |
 |  	|  	|
-| **Caso de Teste** 	| **CT-04 – Aplicação do currículo em vagas de emprego**	|
-|Requisito Associado | RF-03 O usuário deve conseguir aplicar seu currículo em vagas disponíveis. <br> - RF-04 O site deve apresentar uma lista de vagas na página principal <br> RF-05 O usuário deve ter opções de filtro para a pesquisa de vagas. |
-| Objetivo do Teste 	| Verificar se o usuário consegue alterar todos os campos do Perfil. |
-| Passos 	| - Acessar o navegador <br> - Acessar a pagina Home <br> - Clicar no botão "Perfil" <br> - Preencher os campos ( Localidade, numero de telefone, email, Habilidades, Trabalho de interesse) <br> |
-|Critério de Êxito | - A alteração de todos os campos foi concluida com sucesso. |
+| **Caso de Teste** 	| **CT-04 – Pesquisa de vaga**	|
+|Requisito Associado | RF-04 O site deve apresentar uma lista de vagas na página principal <br> RF-05 O usuário deve ter opções de filtro para a pesquisa de vagas. |
+| Objetivo do Teste 	| Verificar se o usuário consegue visualizar as vaga disponíveis. |
+| Passos 	| - Acessar o navegador <br> - Acessar a pagina Home <br> - Clicar no campo "Pesquisar cargo, competência ou empresa" <br> - Ou filtrar sua pesquisa clicando nos campos a esquerda (Presencial/remoto, local, categoria, nivel de experiência, data do anúncio)  <br> |
+|Critério de Êxito | - A pesquisa foi realizada com sucesso. |
+|  	|  	|
+| **Caso de Teste** 	| **CT-05 – Aplicando vaga**	|
+|Requisito Associado | RF-03 O usuário deve conseguir aplicar seu currículo em vagas disponíveis <br> RF-04 O site deve apresentar uma lista de vagas na página principal <br> RF-05 O usuário deve ter opções de filtro para a pesquisa de vagas. |
+| Objetivo do Teste 	| Verificar se o usuário consegue visualizar as vaga disponíveis. |
+| Passos 	| - Acessar o navegador <br> - Acessar a pagina Home <br> - Clicar no campo "Pesquisar cargo, competência ou empresa" <br> - Ou filtrar sua pesquisa clicando nos campos a esquerda (Presencial/remoto, local, categoria, nivel de experiência, data do anúncio)  <br> Clicar na vaga desejada <br> Visualizar a pagina da vaga <br> Clicar no botão "Aplicar" |
+|Critério de Êxito | - A pesquisa foi realizada com sucesso. |
 
 
 
