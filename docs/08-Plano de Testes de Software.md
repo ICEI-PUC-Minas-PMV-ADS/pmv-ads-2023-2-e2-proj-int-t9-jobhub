@@ -14,7 +14,6 @@ Por exemplo:
 | Objetivo do Teste 	| Verificar se o usuário consegue se cadastrar na aplicação. |
 | Passos 	| - Acessar o navegador <br> - Acessar a pagina Home - Clicar em "Cadastro" <br> - Preencher os campos obrigatórios (e-mail, nome, sobrenome, senha, confirmação de senha) <br> - Clicar em "Cadastre" |
 |Critério de Êxito | - O cadastro foi realizado com sucesso. |
-
 |  	|  	|
 | Caso de Teste 	| CT-02 – Efetuar login	|
 |:---:	|:---:	|
