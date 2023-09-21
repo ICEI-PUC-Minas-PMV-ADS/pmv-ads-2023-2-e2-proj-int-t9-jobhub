@@ -1,7 +1,7 @@
 
 # Projeto de Interface
 
-O projeto de interface do Futscore visa proporcionar uma experiência de usuário intuitiva e agradável. Para isso, foram elaborados wireframes para cada página do site, seguindo as especificações funcionais e não funcionais definidas na documentação de especificação.
+O projeto de interface do JobHub visa proporcionar uma experiência de usuário intuitiva e agradável tanto para empresa quanto ao candidato. Para isso, foram elaborados wireframes para cada página do site, seguindo as especificações funcionais e não funcionais definidas na documentação de especificação.
 
 ## Diagrama de Fluxo
 
