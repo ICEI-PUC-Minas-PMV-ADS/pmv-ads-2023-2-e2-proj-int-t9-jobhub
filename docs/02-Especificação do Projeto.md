@@ -48,12 +48,10 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-03 | O usuário deve conseguir aplicar seu currículo em vagas disponíveis   | ALTA       |
 |RF-04 | O site deve apresentar uma lista de vagas na página principal         | ALTA       |
 |RF-05 | O usuário deve ter opções de filtro para a pesquisa de vagas         | ALTA       |
-|RF-06 | O usuário deve conseguir divulgar seu currículo                       | ALTA       |
-|RF-07 | O usuário deve conseguir compartilhar a vaga                          | BAIXA      |
-|RF-08 | O usuário empregador deve poder criar vagas                           | ALTA       |
-|RF-09 | O usuário empregador poderá visualizar currículos cadastrados a sua vaga | ALTA       |
-|RF-10 | O site deve conter um sistema de cadastro e login do usuário empregador| ALTA       |
-|RF-11 | O usuário empregador deve conseguir personalizar o perfil da empresa  | MÉDIA      |
+|RF-06 | O usuário empregador deve poder criar vagas                           | ALTA       |
+|RF-07 | O usuário empregador poderá visualizar currículos cadastrados a sua vaga | ALTA       |
+|RF-08 | O site deve conter um sistema de cadastro e login do usuário empregador| ALTA       |
+|RF-09 | O usuário empregador deve conseguir personalizar o perfil da empresa  | MÉDIA      |
 
 ### Requisitos não Funcionais
 
