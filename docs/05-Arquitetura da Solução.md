@@ -6,7 +6,7 @@ Definição de como o software é estruturado em termos dos componentes que faze
 
 ## Diagrama de Classes
 
-img/Blank_diagram_1.png
+![Diagrama de CLasse](img/Blank_diagram_1.png)
 
 ## Modelo ER (Projeto Conceitual)
 
