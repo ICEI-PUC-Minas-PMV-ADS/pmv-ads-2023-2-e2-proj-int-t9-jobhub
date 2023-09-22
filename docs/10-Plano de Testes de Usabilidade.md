@@ -24,18 +24,23 @@ Os participantes reais interagem com o aplicativo enquanto um moderador observa 
 # Casos de teste
 
 
-| **Caso de Teste** 	| **CT-01 – Fazer Cadastro  ** 	|
+| **Caso de Teste** 	| **CT-01 – Fazer Cadastro** 	|
 |:---:	|:---:	|
 |	Objetivo do Teste 	| Verificar se o  usuário Candidato consegue se cadastrar de maneira satisfatória . |
 | Passos 	| - Acessar o site <br> - Preencher os dados necessários para o cadastro  -<br>  |
 |Critério de Êxito | - O usuário devera considerar o sistema intuitivo e de fácil utilização. |
 |  	|  	|
 | **Caso de Teste** 	| **CT-02 – Efetuar login**	|
-|Requisito Associado | RF-01	- O site deve conter um sistema de cadastro e login do usuário. |
 | Objetivo do Teste 	| Verificar se o usuário consegue realizar login. |
 | Passos 	| - Acessar o site <br> - Preencher os dados necessários e efetuar o Login |
 |Critério de Êxito | - Obter êxito em logar na aplicação e ser direcionado para a pagina inicial. |
 |  	|  	|
+| **Caso de Teste** 	| **CT-03 – Personalizar Perfil**	|
+| Objetivo do Teste 	| Verificar se o usuário consegue personalizar o perfil e adicionar seu currículo |
+| Passos 	| - Acessar o site <br> - Personalizar  |
+|Critério de Êxito | - Obter êxito em logar na aplicação e ser direcionado para a pagina inicial. |
+|  	|  	|
+
 
 
 
