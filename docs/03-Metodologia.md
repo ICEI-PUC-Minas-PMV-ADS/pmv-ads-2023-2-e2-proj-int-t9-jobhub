@@ -39,8 +39,6 @@ A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para def
 
 Para organização e distribuição das tarefas do projeto, a equipe está utilizando o Trello estruturado com as seguintes listas:
 
-**Recursos**: Lista que contém todos os recursos que serão utilizados no projeto, como bibliotecas, ferramentas, serviços, entre outros. Essa lista é importante para que todos os membros da equipe tenham conhecimento dos recursos disponíveis e possam utilizá-los de maneira eficiente no projeto.
-
 **Backlog**: Lista que contém todas as funcionalidades que serão desenvolvidas no projeto. O Product Owner é responsável por definir as funcionalidades que serão implementadas e priorizá-las de acordo com a necessidade do cliente e do negócio.
 
 **To Do**: Lista que contém as tarefas que ainda não foram iniciadas e que precisam ser desenvolvidas. Essa lista é atualizada diariamente pelo Scrum Master, que deve garantir que as tarefas estejam claras e que a equipe tenha conhecimento das prioridades.
