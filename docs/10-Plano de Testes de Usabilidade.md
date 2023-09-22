@@ -24,14 +24,21 @@ Os participantes reais interagem com o aplicativo enquanto um moderador observa 
 # Casos de teste
 
 
+| **Caso de Teste** 	| **CT-01 – Fazer Cadastro  ** 	|
+|:---:	|:---:	|
+|	Objetivo do Teste 	| Verificar se o  usuário Candidato consegue se cadastrar de maneira satisfatória . |
+| Passos 	| - Acessar o site <br> - Preencher os dados necessários para o cadastro  -<br>  |
+|Critério de Êxito | - O usuário devera considerar o sistema intuitivo e de fácil utilização. |
+|  	|  	|
+| **Caso de Teste** 	| **CT-02 – Efetuar login**	|
+|Requisito Associado | RF-01	- O site deve conter um sistema de cadastro e login do usuário. |
+| Objetivo do Teste 	| Verificar se o usuário consegue realizar login. |
+| Passos 	| - Acessar o site <br> - Preencher os dados necessários e efetuar o Login |
+|Critério de Êxito | - Obter êxito em logar na aplicação e ser direcionado para a pagina inicial. |
+|  	|  	|
 
 
 
-
-
-Um plano de teste de usabilidade deverá conter: o detalhamento dos objetivos (em função dos requisitos levantados/implementados), dos critérios que serão utilizados para a seleção dos participantes, dos procedimentos a serem adotados pelos condutores de teste (por exemplo: os testes serão presenciais ou remotos? o método será observação direta, medição ou avaliação?), das tarefas a serem executadas, dos dados a serem coletados (quantidade de cliques, número de erros, tempo etc.), a ordem de execução das tarefas e das etapas da sessão de teste, recursos demandados, métricas coletadas etc.
-
-Para cada voluntário do teste, é fundamental coletar e apresentar todos os dados/métricas previamente definidos, mas não se esqueça: atendendo à LGPD (Lei Geral de Proteção de Dados), nenhum dado sensível, que permita identificar o voluntário, deverá ser apresentado).
 
 
 
