@@ -7,12 +7,16 @@ Os testes de usabilidade avaliam como os usuários interagem com um sistema, con
 Esses testes têm como objetivo identificar problemas de usabilidade e melhorar a experiência do usuário. Aqui estão os objetivos :
 
 .Verificar se o sistema é intuitivo
+
 .Verificar se o sistema é responsivo
+
 .Verificar se o Usúario alcançou seu objetivo em poucos cliques
+
 
 # Requisito 
 
 Os requisitos para realização dos testes são o usuário ter conectividade com internet por dados móveis ou por banda larga; Navegador da internet - Chrome, Firefox, Safari ou Edge; 
+
 Disponibilidade do usuário em acessar ferramentas de videoconferência com compartilhamento de tela - Zoom, Google Meet, Teams, Webcam.
 
 # Método 
