@@ -24,4 +24,4 @@ Apresente também uma figura explicando como as tecnologias estão relacionadas 
 
 ## Hospedagem
 
-O site utiliza a ferramenta GitHub Pages pelo domínio github.io como ambiente de hospedagem do site do projeto, disponibilizado gratuitamente pelo próprio github. E Microsoft Azure - Microsoft SQL Server para a hospedagem do banco de dados, utilizando o credito que PUC Minas disponibilizou para estudos.
+O site utiliza a ferramenta Vercel pelo domínio vercel.app como ambiente de hospedagem do site do projeto, disponibilizado gratuitamente pelo próprio github. E Railway - PostgreSQL para a hospedagem do banco de dados.
