@@ -61,8 +61,8 @@ As ferramentas empregadas no projeto são:
 | --- | --- | --- |
 | Editor de Código | Visual Studio Code | https://code.visualstudio.com/ |
 | Ferramenta de comunicação | Discord | https://discord.com/ |
-| Gerenciamento do Projeto | Trello | [Trello](https://trello.com/b/lEOrYQO2/jobhub) |
-| Projeto de Interface e Wireframes | Figma | Figma Link|
+| Gerenciamento do Projeto | Github | https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/614 |
+| Projeto de Interface e Wireframes | Marvel |(https://marvelapp.com/project/6831630)|
 | Controle de Versão | Git | https://git-scm.com/ |
 | Repositório | GitHub | [JobHub](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t9-jobhub) |
 
