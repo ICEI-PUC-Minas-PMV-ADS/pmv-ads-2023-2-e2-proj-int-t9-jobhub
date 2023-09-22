@@ -43,12 +43,12 @@ Os participantes reais interagem com o aplicativo enquanto um moderador observa 
 | Objetivo do Teste 	| Verificar se o usuário consegue personalizar o perfil e adicionar seu currículo |
 | Passos 	| - Acessar o site <br> - Personalizar seu Perfil <br> Adicionar Currículo  |
 |Critério de Êxito | - Obter êxito em personalizar o perfil e adicionar seu currículo de fomar rapida e intuitiva. |
-|  	|  	|| **Caso de Teste** 	| **CT-04 – Aplicanndo para Vaga**	|
+| **Caso de Teste** 	| **CT-04 – Aplicanndo para Vaga**	|
 | Objetivo do Teste 	| Verificar se o usuário consegue pesquisar a vaga desejada e aplicar para ela de maneira satisfatória |
 | Passos 	| - Acessar o site <br> - Pesquisar vaga <br> Abrir a pagina da vaga para mais informações sobre ela <br> Aplicar para vaga desejada |
 |Critério de Êxito | - Obter êxito em pesquisar vaga de emprego desejada e aplicar seu currículo de fomar rapida e intuitiva. |
 |  	|  	|
-|  	|  	|| **Caso de Teste** 	| **CT-05 – Criação de Vaga**	|
+| **Caso de Teste** 	| **CT-05 – Criação de Vaga**	|
 | Objetivo do Teste 	| Verificar se o usuário Empresa consegue adcionar a vaga de emprego de maneira satisfatória |
 | Passos 	| - Acessar o site <br> - Entrar no Perfil da Empresa <br> Criar vaga de emprego <br> |
 |Critério de Êxito | - Obter êxito em criar vaga de emprego desejada de fomar rapida e intuitiva. |
