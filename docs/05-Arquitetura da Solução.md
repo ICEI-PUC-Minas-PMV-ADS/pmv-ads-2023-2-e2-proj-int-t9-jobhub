@@ -18,7 +18,7 @@
 
 ## Tecnologias Utilizadas
 
-![Tecnologia](img/Diagrama de componentes1.png)
+![Tecnologia](img/Tecnologiaa.png)
 
 ### 1. Linguagens de Programação e Desenvolvimento Web
 
