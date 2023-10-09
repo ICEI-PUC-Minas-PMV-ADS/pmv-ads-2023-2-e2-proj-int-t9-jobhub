@@ -1,7 +1,7 @@
-﻿using JobHub2.Models;
+﻿using JobHub.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace JobHub2.Context
+namespace JobHub.Context
 {
     public class AppDbContext : DbContext
     {
@@ -10,5 +10,6 @@ namespace JobHub2.Context
         }
 
         public DbSet<Categoria> Categorias { get; set; } 
+        public DbSet<Vaga> Vagas { get; set; }
     }
 }

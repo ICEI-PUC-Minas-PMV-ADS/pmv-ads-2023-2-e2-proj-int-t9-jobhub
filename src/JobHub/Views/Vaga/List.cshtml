@@ -1,0 +1,18 @@
+﻿@model VagaListViewModel
+
+<div>
+    <h2>@ViewData["Title"]</h2>
+</div>
+
+<hr />
+<h3>Total de Vagas: @ViewBag.TotalVagas</h3>
+<hr />
+
+@foreach(var vaga in Model.Vagas)
+{
+    <div>
+        <h4>@vaga.Titulo</h4>
+        <p>@vaga.Descricao</p>
+        <p>@vaga.Categoria.Nome</p>
+    </div>
+}

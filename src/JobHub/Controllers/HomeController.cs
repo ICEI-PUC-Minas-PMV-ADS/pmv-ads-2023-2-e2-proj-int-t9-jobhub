@@ -1,8 +1,8 @@
-﻿using JobHub2.Models;
+﻿using JobHub.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace JobHub2.Controllers
+namespace JobHub.Controllers
 {
     public class HomeController : Controller
     {

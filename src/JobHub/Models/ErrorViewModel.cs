@@ -1,8 +1,8 @@
-namespace JobHub2.Models
+namespace JobHub.Models
 {
     public class ErrorViewModel
     {
-        public string? RequestId { get; set; }
+        public string RequestId { get; set; }
 
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
     }

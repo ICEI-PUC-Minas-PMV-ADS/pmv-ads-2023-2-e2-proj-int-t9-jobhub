@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace JobHub2.Models
+namespace JobHub.Models
 {
     [Table("Vagas")]
     public class Vaga
