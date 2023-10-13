@@ -2,12 +2,12 @@
 using JobHub.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace JobHub2.Migrations
+namespace JobHub.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     partial class AppDbContextModelSnapshot : ModelSnapshot
@@ -16,54 +16,72 @@ namespace JobHub2.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.10")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128);
+                .HasAnnotation("ProductVersion", "7.0.11")
+                .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+            NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("JobHub2.Models.Categoria", b =>
+            modelBuilder.Entity("JobHub.Models.Categoria", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Descricao")
                         .IsRequired()
                         .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasColumnType("character varying(500)");
 
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("character varying(100)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Categorias");
                 });
 
-            modelBuilder.Entity("JobHub2.Models.Vaga", b =>
+            modelBuilder.Entity("JobHub.Models.Vaga", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<int>("CategoriaId")
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
 
                     b.Property<string>("Descricao")
                         .IsRequired()
                         .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasColumnType("character varying(500)");
+
+                    b.Property<string>("Empresa")
+                        .HasColumnType("text");
+
+                    b.Property<string>("FormaDeTrabalho")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Local")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Nivel")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Salario")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Skills")
+                        .HasColumnType("text");
 
                     b.Property<string>("Titulo")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("character varying(100)");
 
                     b.HasKey("Id");
 
@@ -72,9 +90,9 @@ namespace JobHub2.Migrations
                     b.ToTable("Vagas");
                 });
 
-            modelBuilder.Entity("JobHub2.Models.Vaga", b =>
+            modelBuilder.Entity("JobHub.Models.Vaga", b =>
                 {
-                    b.HasOne("JobHub2.Models.Categoria", "Categoria")
+                    b.HasOne("JobHub.Models.Categoria", "Categoria")
                         .WithMany("Vagas")
                         .HasForeignKey("CategoriaId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -83,7 +101,7 @@ namespace JobHub2.Migrations
                     b.Navigation("Categoria");
                 });
 
-            modelBuilder.Entity("JobHub2.Models.Categoria", b =>
+            modelBuilder.Entity("JobHub.Models.Categoria", b =>
                 {
                     b.Navigation("Vagas");
                 });
