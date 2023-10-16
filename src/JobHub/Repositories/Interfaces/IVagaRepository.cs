@@ -6,8 +6,9 @@ namespace JobHub.Repositories.Interfaces
     {
         IEnumerable<Vaga> Vagas { get; }
         Vaga GetVagaById(int vagaId);
-        void CreateVaga(Vaga vaga);
+        void AddVaga(Vaga vaga);
         void UpdateVaga(Vaga vaga);
         void DeleteVaga(Vaga vaga);
+        void AddVaga(object vagaListViewModel);
     }
 }

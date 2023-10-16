@@ -13,6 +13,8 @@ namespace JobHub.Repositories
             _context = contexto;
         }
 
+        
+
         public IEnumerable<Categoria> Categorias => _context.Categorias;
     }
 }

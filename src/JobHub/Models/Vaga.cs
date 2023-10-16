@@ -16,13 +16,25 @@ namespace JobHub.Models
         [StringLength(500, ErrorMessage ="O tamanho máximo é 500 caracteres")]
         [Display(Name ="Descrição")]
         public string Descricao { get; set; }
-        public string Empresa { get; set; }
-        public string Skills { get; set; }
-        public string Local { get; set; }
-        public string FormaDeTrabalho { get; set; }
-        public string Nivel { get; set; }
-        public string Salario { get; set; }
 
+        
+        public string Empresa { get; set; }
+
+        
+        public string Skills { get; set; }
+
+        
+        public string Local { get; set; }
+
+       
+        public string FormaDeTrabalho { get; set; }
+
+        
+        public string Nivel { get; set; }
+
+        
+        public string Salario { get; set; }
+        
         public int CategoriaId { get; set; }
         [ForeignKey("CategoriaId")]
         virtual public Categoria Categoria { get; set; }

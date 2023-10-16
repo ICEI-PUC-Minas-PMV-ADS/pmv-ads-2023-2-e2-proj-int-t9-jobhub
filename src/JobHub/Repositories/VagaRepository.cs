@@ -14,9 +14,14 @@ namespace JobHub.Repositories
         }
         public IEnumerable<Vaga> Vagas => _context.Vagas.Include(c => c.Categoria);
 
-        public void CreateVaga(Vaga vaga)
+        public void AddVaga(Vaga vaga)
         {
-            
+            _context.Vagas.Add(vaga);
+        }
+
+        public void AddVaga(object vagaListViewModel)
+        {
+            _context.Vagas.Add((Vaga)vagaListViewModel);
         }
 
         public void DeleteVaga(Vaga vaga)
