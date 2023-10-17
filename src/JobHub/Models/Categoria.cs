@@ -12,11 +12,6 @@ namespace JobHub.Models
         [StringLength(100, ErrorMessage ="O tamanho máximo é 100 caracteres")]
         [Display(Name ="Nome")]
         public string Nome { get; set; }
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> fe9023544c9f8d1030d133478b63aa31666340c1
         public List<Vaga> Vagas { get; set; }
     }
 }
