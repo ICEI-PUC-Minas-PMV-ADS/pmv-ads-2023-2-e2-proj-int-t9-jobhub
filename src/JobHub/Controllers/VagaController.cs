@@ -3,6 +3,7 @@ using JobHub.Repositories;
 using JobHub.Repositories.Interfaces;
 using JobHub.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace JobHub.Controllers
 {
@@ -33,6 +34,13 @@ namespace JobHub.Controllers
 
         public IActionResult CreateVaga()
         {
+            ViewBag.Categorias = _categoriaRepository.Categorias
+                .Select(c => new SelectListItem
+                {
+                    Value = c.Id.ToString(),
+                    Text = c.Nome  // Assuming the property for category name is "Nome"
+                }).ToList();
+
             return View();
         }
 
@@ -47,6 +55,17 @@ namespace JobHub.Controllers
                 return RedirectToAction("List");
                     
             }
+
+            var categories = _categoriaRepository.Categorias.ToList();
+            Console.WriteLine(categories.Count);
+
+            ViewBag.Categorias = _categoriaRepository.Categorias
+                .Select(c => new SelectListItem
+                {
+                    Value = c.Id.ToString(),
+                    Text = c.Nome  // Assuming the property for category name is "Name"
+                }).ToList();
+
 
 
             return View(Vaga); 
