@@ -38,7 +38,7 @@ namespace JobHub.Controllers
                 .Select(c => new SelectListItem
                 {
                     Value = c.Id.ToString(),
-                    Text = c.Nome  // Assuming the property for category name is "Nome"
+                    Text = c.Nome
                 }).ToList();
 
             return View();
@@ -63,7 +63,7 @@ namespace JobHub.Controllers
                 .Select(c => new SelectListItem
                 {
                     Value = c.Id.ToString(),
-                    Text = c.Nome  // Assuming the property for category name is "Name"
+                    Text = c.Nome
                 }).ToList();
 
 

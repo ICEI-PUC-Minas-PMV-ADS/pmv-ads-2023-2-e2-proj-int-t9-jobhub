@@ -15,4 +15,11 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color: #0f1135;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
+
+.btn-primary {
+  margin-top: 10px;
 }
