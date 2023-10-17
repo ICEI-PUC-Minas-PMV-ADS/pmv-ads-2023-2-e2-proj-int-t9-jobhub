@@ -38,7 +38,7 @@ namespace JobHub.Controllers
                 .Select(c => new SelectListItem
                 {
                     Value = c.Id.ToString(),
-                    Text = c.Nome  
+                    Text = c.Nome
                 }).ToList();
 
             return View();

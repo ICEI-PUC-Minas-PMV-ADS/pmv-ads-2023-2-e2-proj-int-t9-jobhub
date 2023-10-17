@@ -12,6 +12,7 @@ namespace JobHub.Models
         [StringLength(100, ErrorMessage ="O tamanho máximo é 100 caracteres")]
         [Display(Name ="Nome")]
         public string Nome { get; set; }
+
         public List<Vaga> Vagas { get; set; }
     }
 }
