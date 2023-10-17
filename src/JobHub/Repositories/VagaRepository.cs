@@ -17,6 +17,7 @@ namespace JobHub.Repositories
         public void AddVaga(Vaga vaga)
         {
             _context.Vagas.Add(vaga);
+            _context.SaveChanges();
         }
 
         public void AddVaga(object vagaListViewModel)

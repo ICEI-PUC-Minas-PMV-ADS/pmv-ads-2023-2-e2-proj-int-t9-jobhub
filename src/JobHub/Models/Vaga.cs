@@ -36,7 +36,6 @@ namespace JobHub.Models
         public string Salario { get; set; }
         
         public int CategoriaId { get; set; }
-        [ForeignKey("CategoriaId")]
         virtual public Categoria Categoria { get; set; }
     }
 }
