@@ -48,13 +48,13 @@ namespace JobHub.Controllers
         [HttpPost]
 
         public IActionResult CreateVaga(Vaga Vaga)
-        {  
-            if(ModelState.IsValid)
+        {
+            if (ModelState.IsValid)
             {
                 _vagaRepository.AddVaga(Vaga);
-                
+
                 return RedirectToAction("List");
-                    
+
             }
 
             var categories = _categoriaRepository.Categorias.ToList();
@@ -69,7 +69,7 @@ namespace JobHub.Controllers
 
 
 
-            return View(Vaga); 
+            return View(Vaga);
         }
 
         public IActionResult Edit(int id)
@@ -109,10 +109,15 @@ namespace JobHub.Controllers
             };
             return View("EditCategory", viewModel);
         }
+
+
+
+
+
         public IActionResult Delete(int id)
         {
 
-            var vaga = _vagaRepository.GetVagaById(id);
+            var vaga = _vagaRepository.Vagas.FirstOrDefault(t => t.Id == id);
             if (vaga == null)
             {
                 return NotFound();
@@ -123,5 +128,19 @@ namespace JobHub.Controllers
             return RedirectToAction("List");
         }
 
+        [HttpPost, ActionName("Delete")]
+
+        public IActionResult DeleteConfirmed(Vaga vaga)
+        {
+
+            if (ModelState.IsValid)
+            {
+                _vagaRepository.DeleteVaga(vaga);
+                return RedirectToAction("List");
+            }
+
+
+            return RedirectToAction("List");
+        }
     }
 }

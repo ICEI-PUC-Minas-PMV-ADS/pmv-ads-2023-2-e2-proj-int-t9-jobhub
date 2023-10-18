@@ -27,7 +27,8 @@ namespace JobHub.Repositories
 
         public void DeleteVaga(Vaga vaga)
         {
-            throw new NotImplementedException();
+            _context.Remove(vaga).State = EntityState.Modified;
+            _context.SaveChanges() ;
         }
 
         public Vaga GetVagaById(int vagaId)
