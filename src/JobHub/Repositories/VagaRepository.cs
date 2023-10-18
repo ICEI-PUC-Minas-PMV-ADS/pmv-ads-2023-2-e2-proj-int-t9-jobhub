@@ -37,7 +37,8 @@ namespace JobHub.Repositories
 
         public void UpdateVaga(Vaga vaga)
         {
-            throw new NotImplementedException();
+            _context.Entry(vaga).State = EntityState.Modified;
+            _context.SaveChanges();
         }
     }
 }
