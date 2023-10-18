@@ -109,7 +109,19 @@ namespace JobHub.Controllers
             };
             return View("EditCategory", viewModel);
         }
+        public IActionResult Delete(int id)
+        {
 
+            var vaga = _vagaRepository.GetVagaById(id);
+            if (vaga == null)
+            {
+                return NotFound();
+            }
+
+            _vagaRepository.DeleteVaga(vaga);
+
+            return RedirectToAction("List");
+        }
 
     }
 }
