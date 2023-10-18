@@ -11,8 +11,14 @@
 @foreach(var vaga in Model.Vagas)
 {
     <div>
-        <h4>@vaga.Titulo</h4>
-        <p>@vaga.Descricao</p>
-        <p>@vaga.Categoria.Nome</p>
+        <h4>@vaga.Id - @vaga.Titulo</h4> 
+        <p><strong>Descrição da vaga:</strong> @vaga.Descricao</p>
+        <p><strong>Categoria:</strong> @vaga.Categoria.Nome</p>
+        <div class="row">
+            <div class="mb-2">
+                <a href="Edit/@vaga.Id" class="btn btn-warning btn-sm">Editar</a> | <a class="btn btn-danger btn-sm">Excluir</a>
+            </div>
+        </div>
     </div>
+    <hr />
 }
