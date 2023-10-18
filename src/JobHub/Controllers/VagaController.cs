@@ -140,7 +140,7 @@ namespace JobHub.Controllers
             }
 
 
-            return RedirectToAction("List");
+            return View(vaga);
         }
     }
 }
