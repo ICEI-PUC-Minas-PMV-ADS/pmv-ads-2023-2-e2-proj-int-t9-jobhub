@@ -27,7 +27,7 @@ namespace JobHub.Repositories
 
         public void DeleteVaga(Vaga vaga)
         {
-            _context.Remove(vaga).State = EntityState.Modified;
+            _context.Vagas.Remove(vaga);
             _context.SaveChanges() ;
         }
 
