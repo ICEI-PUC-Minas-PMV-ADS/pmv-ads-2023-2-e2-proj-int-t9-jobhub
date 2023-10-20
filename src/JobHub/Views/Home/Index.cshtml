@@ -1,4 +1,6 @@
-﻿@{
+﻿@model HomeIndexViewModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -6,7 +8,6 @@
     <h1 class="display-4">JobHub</h1>
     <p>O projeto é uma plataforma online destinada a facilitar o processo de recrutamento e seleção de pessoal. De um lado, candidatos podem preencher seus currículos e aplicar para vagas de emprego que se alinham com suas habilidades e experiências. De outro lado, as empresas têm a oportunidade de promover suas vagas, identificar candidatos potenciais e gerenciar todo o processo de seleção em um só lugar. Assim, a aplicação web busca agilizar e tornar mais eficiente a conexão entre empresas e profissionais, otimizando o tempo e os recursos de ambos.</p>
 </div>
-@model List<Vaga>
 
 <h1>Lista de Vagas</h1>
 
@@ -17,13 +18,23 @@
             <th>Salário</th>
             <th>Presencial/Remoto</th>
             <th>Nível de Senioridade</th>
-            <th>Horário de Trabalho</th>
+            <th>Local de Trabalho</th>
             <th>Skills</th>
             <th>Descrição da Vaga</th>
-            <th>Requisitos</th>
         </tr>
     </thead>
     <tbody>
-   
+        @foreach (var vaga in Model.Vagas)
+        {
+            <tr>
+                <td>@vaga.Titulo</td>
+                <td>@vaga.Salario</td>
+                <td>@vaga.FormaDeTrabalho</td>
+                <td>@vaga.Nivel</td>
+                <td>@vaga.Local</td>
+                <td>@vaga.Skills</td>
+                <td>@vaga.Descricao</td>
+            </tr>
+        }
     </tbody>
 </table>
