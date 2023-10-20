@@ -46,3 +46,8 @@ footer .text-center a {
     text-align: center;
     
 }
+
+.btn-custom-azulescuro1 {
+    background-color: #07082B;
+    color: white;
+}
