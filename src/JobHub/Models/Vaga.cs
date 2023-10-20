@@ -37,5 +37,6 @@ namespace JobHub.Models
         
         public int CategoriaId { get; set; }
         virtual public Categoria Categoria { get; set; }
+
     }
 }
