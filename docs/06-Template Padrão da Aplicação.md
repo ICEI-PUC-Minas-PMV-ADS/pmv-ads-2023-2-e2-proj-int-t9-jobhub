@@ -19,7 +19,7 @@ O cabeçalho do site apresenta o logotipo e os botões de navegação para as di
 
 ## Conteúdo
 
-Essa seção será dedicada ao conteúdo de cada página. Por exemplo, na página Home, será exibida uma lista com varias vagas. Cada página terá um conteúdo específico relacionado ao seu propósito, como criação de vaga, perfil, entre outros.
+Essa seção será dedicada ao conteúdo de cada página. Por exemplo, na página Home, será exibida uma lista com as vagas disponíveis. Cada página terá um conteúdo específico relacionado ao seu propósito, como criação de vaga, perfil, entre outros.
 
 ## Rodapé
 
