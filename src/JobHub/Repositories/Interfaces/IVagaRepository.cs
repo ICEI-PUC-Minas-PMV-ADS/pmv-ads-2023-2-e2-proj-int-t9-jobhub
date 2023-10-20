@@ -10,5 +10,6 @@ namespace JobHub.Repositories.Interfaces
         void UpdateVaga(Vaga vaga);
         void DeleteVaga(Vaga vaga);
         void AddVaga(object vagaListViewModel);
-    }
+
+            }
 }

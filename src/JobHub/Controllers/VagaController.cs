@@ -142,17 +142,20 @@ namespace JobHub.Controllers
 
             return View(vaga);
         }
-        public async Task<IActionResult> PaginaVaga(int? id)
+        public IActionResult PaginaVaga(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
-            var vaga = await _context.Vagas.FindAsync(id);
+
+            var vaga = _vagaRepository.GetVagaById(id.Value); 
+
             if (vaga == null)
             {
                 return NotFound();
             }
+
             ViewBag.Vaga = vaga;
             return View(vaga);
         }

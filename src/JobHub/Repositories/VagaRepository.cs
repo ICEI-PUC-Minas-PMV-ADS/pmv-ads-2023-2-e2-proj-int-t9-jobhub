@@ -33,7 +33,7 @@ namespace JobHub.Repositories
 
         public Vaga GetVagaById(int vagaId)
         {
-            throw new NotImplementedException();
+            return _context.Vagas.Find(vagaId);
         }
 
         public void UpdateVaga(Vaga vaga)
