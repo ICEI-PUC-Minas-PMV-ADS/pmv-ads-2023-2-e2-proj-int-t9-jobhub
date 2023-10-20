@@ -1,25 +1,42 @@
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
-  background-color: #0f1135;
-  font-family: 'Roboto', sans-serif;
-  color: #fff;
+    background-color: #0f1135;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .btn-primary {
   margin-top: 10px;
+}
+
+.bg-white {
+    background-color: #0B2D71 !important;
+    border: none !important;
+}
+
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-brand {
+    color: #fff !important;
+}
+
+.bg-light {
+    margin-top: auto; 
+    background-color: #0B2D71 !important;
+}
+
+footer .text-center a {
+    color: #fff !important;
 }

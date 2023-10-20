@@ -52,27 +52,39 @@
             </div>
             </div>
             <div class="col-md-4">
-            <div class="form-group">
-                <label asp-for="FormaDeTrabalho" class="control-label"></label>
-                <input asp-for="FormaDeTrabalho" class="form-control" />
-                <span asp-validation-for="FormaDeTrabalho" class="text-danger"></span>
+                <div class="form-group">
+                    <label asp-for="FormaDeTrabalho" class="control-label">Presencial/Remoto</label>
+                    <select asp-for="FormaDeTrabalho" class="form-control">
+                        <option selected disabled>Selecione uma opção</option>
+                        <option value="Presencial">Presencial</option>
+                        <option value="Hibrido">Híbrido</option>
+                        <option value="Remoto">Remoto</option>
+                    </select>
+                    <span asp-validation-for="FormaDeTrabalho" class="text-danger"></span>
+                </div>
             </div>
-            </div>
             <div class="form-group">
-                <label asp-for="Nivel" class="control-label"></label>
-                <input asp-for="Nivel" class="form-control" />
+                <label asp-for="Nivel" class="control-label">Senioridade</label>
+                <select asp-for="Nivel" class="form-control">
+                    <option selected disabled>Selecione um nível</option>
+                    <option value="Estágio">Estágio</option>
+                    <option value="Junior">Junior</option>
+                    <option value="Pleno">Pleno</option>
+                    <option value="Senior">Senior</option>
+                </select>
                 <span asp-validation-for="Nivel" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Descricao" class="control-label"></label>
-                <input asp-for="Descricao" class="form-control" />
-                <span asp-validation-for="Descricao" class="text-danger"></span>
-               
+                <label asp-for="CategoriaId" class="control-label">Especialidade</label>
+                <select asp-for="CategoriaId" asp-items="ViewBag.Categorias" class="form-control">
+                    <option selected disabled>Selecione uma especialidade</option>
+                </select>
+                <span asp-validation-for="CategoriaId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CategoriaId" class="control-label"></label>
-                <select asp-for="CategoriaId" asp-items="ViewBag.Categorias" class="form-control"></select>
-                <span asp-validation-for="CategoriaId" class="text-danger"></span>
+                <label asp-for="Descricao" class="control-label"></label>
+                <textarea asp-for="Descricao" class="form-control" rows="5"></textarea>
+                <span asp-validation-for="Descricao" class="text-danger"></span>
             </div>
             <div class="form-group">
              
