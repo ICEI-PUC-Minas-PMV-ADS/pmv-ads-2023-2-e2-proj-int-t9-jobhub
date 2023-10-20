@@ -2,13 +2,26 @@
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="4-Metodologia.md"> Metodologia</a>
 
-Layout padrão da aplicação que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
+Layout padrão do site (HTML e CSS) que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
 
 ![Template Padrão](img/templatepadrao.png)
 
-> **Links Úteis**:
->
-> - [CSS Website Layout (W3Schools)](https://www.w3schools.com/css/css_website_layout.asp)
-> - [Website Page Layouts](http://www.cellbiol.com/bioinformatics_web_development/chapter-3-your-first-web-page-learning-html-and-css/website-page-layouts/)
-> - [Perfect Liquid Layout](https://matthewjamestaylor.com/perfect-liquid-layouts)
-> - [How and Why Icons Improve Your Web Design](https://usabilla.com/blog/how-and-why-icons-improve-you-web-design/)
+O template criado está disponível [aqui](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t10-futscore/blob/main/src/Layout.html) e é composto pelos seguintes
+layouts:
+- Cabeçalho
+- Conteúdo de cada página
+- Rodapé
+
+Todas as paginas do site são responsivas.
+
+## Cabeçalho
+
+O cabeçalho do site apresenta o logotipo e os botões de navegação para as diferentes páginas do site.
+
+## Conteúdo
+
+Essa seção será dedicada ao conteúdo de cada página. Por exemplo, na página Home, será exibida uma lista com varias vagas. Cada página terá um conteúdo específico relacionado ao seu propósito, como criação de vaga, perfil, entre outros.
+
+## Rodapé
+
+No rodapé do site, uma seção de direitos autorais (copyright).
