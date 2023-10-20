@@ -53,7 +53,7 @@ footer .text-center a {
 }
 
 table {
-    color: #fff;
+    color: #fff !important;
     text-align: center;
 }
 
