@@ -16,6 +16,7 @@
         <p><strong>Categoria:</strong> @vaga.Categoria.Nome</p>
         <div class="row">
             <div class="mb-2">
+                <a asp-action="PaginaVaga" class="btn btn-info" asp-route-id="@vaga.Id">Detalhes da Vaga</a>
                 <a href="Edit/@vaga.Id" class="btn btn-warning btn-sm">Editar</a> | <a href="Delete/@vaga.Id" class="btn btn-danger btn-sm">Excluir</a>
             </div>
         </div>
