@@ -142,5 +142,7 @@ namespace JobHub.Controllers
 
             return View(vaga);
         }
+
+
     }
 }
