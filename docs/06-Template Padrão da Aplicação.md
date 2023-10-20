@@ -5,8 +5,7 @@ Layout padrão do site (HTML e CSS) que será utilizado em todas as páginas com
 
 ![Template Padrão](img/templatepadrao.png)
 
-O template criado está disponível [aqui](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t10-futscore/blob/main/src/Layout.html) e é composto pelos seguintes
-layouts:
+O template criado é composto pelos seguintes layouts:
 - Cabeçalho
 - Conteúdo de cada página
 - Rodapé
