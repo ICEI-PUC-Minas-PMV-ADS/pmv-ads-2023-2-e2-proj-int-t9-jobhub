@@ -65,3 +65,7 @@ td, th {
     border: 1px solid #fff;
 
 }
+
+input.btn.btn-primary {
+    margin-bottom: 5px;
+}

@@ -58,14 +58,14 @@
                 @Html.DropDownListFor(model => model.Vaga.CategoriaId, new SelectList(Model.Categorias, "Id", "Nome"), "Selecione uma Categoria", new { @class = "form-control" })
             </div>
             <div class="form-group">
-                <input type="submit" value="Editar" class="btn btn-primary" />
+                <input type="submit" value="Salvar" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" asp-controller="Home">Back to List</a>
 </div>
 
 @section Scripts {

@@ -53,7 +53,7 @@ namespace JobHub.Controllers
             {
                 _vagaRepository.AddVaga(Vaga);
 
-                return RedirectToAction("List");
+                return RedirectToAction("Index", "Home");
 
             }
 
@@ -99,7 +99,7 @@ namespace JobHub.Controllers
             if (ModelState.IsValid)
             {
                 _vagaRepository.UpdateVaga(vaga);
-                return RedirectToAction("List");
+                return RedirectToAction("Index", "Home");
             }
 
             var viewModel = new VagaEditViewModel
@@ -125,7 +125,7 @@ namespace JobHub.Controllers
 
             _vagaRepository.DeleteVaga(vaga);
 
-            return RedirectToAction("List");
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpPost, ActionName("Delete")]
@@ -136,7 +136,7 @@ namespace JobHub.Controllers
             if (ModelState.IsValid)
             {
                 _vagaRepository.DeleteVaga(vaga);
-                return RedirectToAction("List");
+                return RedirectToAction("Index", "Home");
             }
 
 
