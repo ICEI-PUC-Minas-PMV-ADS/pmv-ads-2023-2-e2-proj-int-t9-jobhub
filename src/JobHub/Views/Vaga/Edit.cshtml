@@ -8,61 +8,86 @@
 
 <h4>Vaga</h4>
 <hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
+
+<form asp-action="Edit">
             <input asp-for="Vaga.Id" type="hidden" />
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<div class="row">
+    <div class="col-md-4">
+
             <div class="form-group">
                 <label asp-for="Vaga.Titulo" class="control-label"></label>
                 <input asp-for="Vaga.Titulo" class="form-control" />
                 <span asp-validation-for="Vaga.Titulo" class="text-danger"></span>
+
             </div>
-            <div class="form-group">
-                <label asp-for="Vaga.Descricao" class="control-label"></label>
-                <input asp-for="Vaga.Descricao" class="form-control" />
-                <span asp-validation-for="Vaga.Descricao" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Vaga.Empresa" class="control-label"></label>
-                <input asp-for="Vaga.Empresa" class="form-control" />
-                <span asp-validation-for="Vaga.Empresa" class="text-danger"></span>
-            </div>
+            <div class="col-md-4">
             <div class="form-group">
                 <label asp-for="Vaga.Skills" class="control-label"></label>
                 <input asp-for="Vaga.Skills" class="form-control" />
                 <span asp-validation-for="Vaga.Skills" class="text-danger"></span>
+
             </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="Vaga.Empresa" class="control-label"></label>
+                <input asp-for="Vaga.Empresa" class="form-control" />
+                <span asp-validation-for="Vaga.Empresa" class="text-danger"></span>
+
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="Vaga.Salario" class="control-label"></label>
+                <input asp-for="Vaga.Salario" class="form-control" />
+                <span asp-validation-for="Vaga.Salario" class="text-danger"></span>
+
+            </div>
+            </div>
+            <div class="col-md-4">
             <div class="form-group">
                 <label asp-for="Vaga.Local" class="control-label"></label>
                 <input asp-for="Vaga.Local" class="form-control" />
                 <span asp-validation-for="Vaga.Local" class="text-danger"></span>
             </div>
+            </div>
+            <div class="col-md-4">
             <div class="form-group">
                 <label asp-for="Vaga.FormaDeTrabalho" class="control-label"></label>
                 <input asp-for="Vaga.FormaDeTrabalho" class="form-control" />
                 <span asp-validation-for="Vaga.FormaDeTrabalho" class="text-danger"></span>
+
+            </div>
             </div>
             <div class="form-group">
-                <label asp-for="Vaga.Nivel" class="control-label"></label>
-                <input asp-for="Vaga.Nivel" class="form-control" />
+                <label asp-for="Vaga.Nivel" class="control-label">Senioridade</label>
+                <select asp-for="Vaga.Nivel" class="form-control">
+            <option selected disabled>Selecione um nível</option>
+            <option value="Estágio">Estágio</option>
+            <option value="Junior">Junior</option>
+            <option value="Pleno">Pleno</option>
+            <option value="Senior">Senior</option>
+             </select>
+
                 <span asp-validation-for="Vaga.Nivel" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Vaga.Salario" class="control-label"></label>
-                <input asp-for="Vaga.Salario" class="form-control" />
-                <span asp-validation-for="Vaga.Salario" class="text-danger"></span>
-            </div>
+
             <div class="form-group">
                 @Html.LabelFor(model => model.Vaga.CategoriaId)
                 @Html.DropDownListFor(model => model.Vaga.CategoriaId, new SelectList(Model.Categorias, "Id", "Nome"), "Selecione uma Categoria", new { @class = "form-control" })
             </div>
             <div class="form-group">
+                <label asp-for="Vaga.Descricao" class="control-label"></label>
+                <textarea asp-for="Vaga.Descricao" class="form-control" rows="5"></textarea>
+                <span asp-validation-for="Vaga.Descricao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Editar" class="btn btn-primary" />
             </div>
         </form>
-    </div>
-</div>
+
 
 <div>
     <a asp-action="Index">Back to List</a>
