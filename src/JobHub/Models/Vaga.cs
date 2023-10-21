@@ -26,13 +26,13 @@ namespace JobHub.Models
         
         public string Local { get; set; }
 
-       
+        [Display(Name = "Local de Trabalho")]
         public string FormaDeTrabalho { get; set; }
 
-        
+        [Display(Name = "Nível")]
         public string Nivel { get; set; }
 
-        
+        [Display(Name = "Salário")]
         public string Salario { get; set; }
         
         public int CategoriaId { get; set; }
