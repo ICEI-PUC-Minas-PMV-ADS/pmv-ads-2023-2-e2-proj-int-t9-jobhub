@@ -79,18 +79,22 @@
                 @Html.DropDownListFor(model => model.Vaga.CategoriaId, new SelectList(Model.Categorias, "Id", "Nome"), "Selecione uma Categoria", new { @class = "form-control" })
             </div>
             <div class="form-group">
+<<<<<<< HEAD
                 <label asp-for="Vaga.Descricao" class="control-label"></label>
                 <textarea asp-for="Vaga.Descricao" class="form-control" rows="5"></textarea>
                 <span asp-validation-for="Vaga.Descricao" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Editar" class="btn btn-primary" />
+=======
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+>>>>>>> a4d18d73af493371abadd7d3ea0ad0908e181380
             </div>
         </form>
 
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" asp-controller="Home">Back to List</a>
 </div>
 
 @section Scripts {

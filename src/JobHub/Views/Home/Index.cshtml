@@ -21,6 +21,9 @@
             <th>Local de Trabalho</th>
             <th>Skills</th>
             <th>Descrição da Vaga</th>
+            <th>Editar</th>
+            <th>Excluir</th>
+
         </tr>
     </thead>
     <tbody>
@@ -34,6 +37,8 @@
                 <td>@vaga.Local</td>
                 <td>@vaga.Skills</td>
                 <td>@vaga.Descricao</td>
+                <td><a asp-action="Edit" asp-controller="Vaga"  asp-route-id="@vaga.Id"><i class="fa-solid fa-pen"></i></a></td>
+                <td><a asp-action="Delete" asp-controller="Vaga" asp-route-id="@vaga.Id"><i class="fa-solid fa-trash"></i></a></td>
             </tr>
         }
     </tbody>
