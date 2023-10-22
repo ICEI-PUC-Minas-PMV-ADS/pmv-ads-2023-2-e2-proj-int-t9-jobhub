@@ -5,7 +5,7 @@ do sistema. O respectivo endereço (URL) e outras orientações de acesso são s
 apresentadas na sequência.
 
 ## 1. HOMEPAGE (RF-04)
-![Homepage](img/homepage2.png)
+![Homepage](img/Homepage2.png)
 Nesta sesssão, o usuario, assim que abrir verá a lista de vagas disponiveis no momento.
 
 |ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
