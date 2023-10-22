@@ -8,6 +8,18 @@ apresentadas na sequência.
 ![Homepage](img/Homepage2.png)
 Nesta sesssão, o usuario, assim que abrir verá a lista de vagas disponiveis no momento.
 
+## 2. CRIAR VAGA (RF-06)
+![Homepage](img/Criarvaga2.png)
+Nesta sessão, a empresa poderá criar a vaga.
+
+## 3. EXCLUIR VAGA (RF-07)
+![Homepage](img/Listadevagas2.png)
+Nesta sessão, a empresa verá as vagas criadas e poderá excluí-las.
+
+## 4. EDITAR VAGA (RF-08)
+![Homepage](img/Editarvaga.png)
+Nesta sessão, a empresa poderá editar a vaga já criada.
+
 |ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
 |------|-----------------------------------------|----|
 |RF-001| Permitir que o usuário cadastre tarefas | tarefas.shtml / tarefas.cs / controllertarefas.cs | 
