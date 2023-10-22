@@ -7,18 +7,34 @@ apresentadas na sequência.
 ## 1. HOMEPAGE (RF-04)
 ![Homepage](img/Homepage2.png)
 Nesta sesssão, o usuario, assim que abrir verá a lista de vagas disponiveis no momento.
+|ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
+|------|-----------------------------------------|----|
+|RF-001| O site deve conter um sistema de cadastro e login do usuário | tarefas.shtml / tarefas.cs / controllertarefas.cs | 
+|RF-002| O usuário deve conseguir personalizar seu perfil    | relatorio.shtml |
 
 ## 2. CRIAR VAGA (RF-06)
 ![Homepage](img/Criarvaga2.png)
 Nesta sessão, a empresa poderá criar a vaga.
+|ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
+|------|-----------------------------------------|----|
+|RF-001| O site deve conter um sistema de cadastro e login do usuário | tarefas.shtml / tarefas.cs / controllertarefas.cs | 
+|RF-002| O usuário deve conseguir personalizar seu perfil    | relatorio.shtml |
 
 ## 3. EXCLUIR VAGA (RF-07)
 ![Homepage](img/Listadevagas2.png)
 Nesta sessão, a empresa verá as vagas criadas e poderá excluí-las.
+|ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
+|------|-----------------------------------------|----|
+|RF-001| O site deve conter um sistema de cadastro e login do usuário | tarefas.shtml / tarefas.cs / controllertarefas.cs | 
+|RF-002| O usuário deve conseguir personalizar seu perfil    | relatorio.shtml |
 
 ## 4. EDITAR VAGA (RF-08)
 ![Homepage](img/Editarvaga.png)
 Nesta sessão, a empresa poderá editar a vaga já criada.
+|ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
+|------|-----------------------------------------|----|
+|RF-001| O site deve conter um sistema de cadastro e login do usuário | tarefas.shtml / tarefas.cs / controllertarefas.cs | 
+|RF-002| O usuário deve conseguir personalizar seu perfil    | relatorio.shtml |
 
 |ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
 |------|-----------------------------------------|----|
