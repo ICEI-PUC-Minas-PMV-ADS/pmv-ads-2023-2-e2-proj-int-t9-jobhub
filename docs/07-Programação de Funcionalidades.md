@@ -9,7 +9,7 @@ apresentadas na sequência.
 Nesta sesssão, o usuario, assim que abrir verá a lista de vagas disponiveis no momento.
 |ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
 |------|-----------------------------------------|----|
-|RF-001| O site deve conter um sistema de cadastro e login do usuário | tarefas.shtml / tarefas.cs / controllertarefas.cs | 
+|RF-004| O site deve conter um sistema de cadastro e login do usuário | tarefas.shtml / tarefas.cs / controllertarefas.cs | 
 |RF-002| O usuário deve conseguir personalizar seu perfil    | relatorio.shtml |
 
 ## 2. CRIAR VAGA (RF-06)
