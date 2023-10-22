@@ -46,7 +46,19 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 |Critério de Êxito | - A alteração de todos os campos foi concluida com sucesso. |
 |  	|  	|
 | **Caso de Teste** 	| **CT-07 – Criação da Vaga**	|
-|Requisito Associado | RF-08 - O usuário empregador deve poder criar vagas. |
+|Requisito Associado | RF-06 - O usuário empregador deve poder criar vagas. |
 | Objetivo do Teste 	| Verificar se o Empregrador consegue criar a vaga de emprego. |
 | Passos 	| - Acessar o navegador <br> - Acessar a pagina Home <br> - Clicar no botão "Perfil" <br> - Clicar em "Criar Vaga" <br> Preencher os campos ( Título da vaga, Presencial/Remoto, Horário de trabalho, salário, nível de senioridade, skills, descrição da vaga, requisitos) <br> Clicar no botão "Criar vaga" |
 |Critério de Êxito | - A vaga foi criada com sucesso. |
+|  	|  	|
+| **Caso de Teste** 	| **CT-08 – Editar a Vaga**	|
+|Requisito Associado | RF-08 - O usuário empregador deve poder editar vagas. |
+| Objetivo do Teste 	| Verificar se o Empregrador consegue editar a vaga de emprego. |
+| Passos 	| - Acessar o navegador <br> - Acessar a pagina Home <br> - Clicar no botão "Perfil" <br> - Clicar no botão "Editar" da vaga desejada |
+|Critério de Êxito | - A vaga foi editada com sucesso. |
+|  	|  	|
+| **Caso de Teste** 	| **CT-09 – Deletar a Vaga**	|
+|Requisito Associado | RF-07 - O usuário empregador deve poder deletar a vagas. |
+| Objetivo do Teste 	| Verificar se o Empregrador consegue deletar a vaga de emprego. |
+| Passos 	| - Acessar o navegador <br> - Acessar a pagina Home <br> - Clicar no botão "Perfil" <br> - Clicar em "Delete" da vaga desejada |
+|Critério de Êxito | - A vaga foi deletada com sucesso. |
