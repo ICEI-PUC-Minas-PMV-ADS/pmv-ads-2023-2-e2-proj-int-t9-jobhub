@@ -9,7 +9,7 @@ apresentadas na sequência.
 Nesta sesssão, o usuario, assim que abrir verá a lista de vagas disponiveis no momento.
 |ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
 |------|-----------------------------------------|----|
-|RF-004| O site deve apresentar uma lista de vagas na página principal |  | 
+|RF-004| O site deve apresentar uma lista de vagas na página principal | HomeController.cs / Index.cs.html / Vaga.cs | 
 
 
 ## 2. CRIAR VAGA (RF-06)
@@ -17,21 +17,21 @@ Nesta sesssão, o usuario, assim que abrir verá a lista de vagas disponiveis no
 Nesta sessão, a empresa poderá criar a vaga.
 |ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
 |------|-----------------------------------------|----|
-|RF-006| O usuário empregador deve poder criar vagas|  | 
+|RF-006| O usuário empregador deve poder criar vagas| VagaController.cs / Vaga.cs / Categoria.cs / CreateVaga.cshtml | 
 
 ## 3. EXCLUIR VAGA (RF-07)
 ![Homepage](img/Listadevagas2.png)
 Nesta sessão, a empresa verá as vagas criadas e poderá excluí-las.
 |ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
 |------|-----------------------------------------|----|
-|RF-007| O usuário empregador deve poder excluir vagas |  | 
+|RF-007| O usuário empregador deve poder excluir vagas | VagaController.cs / VagaRepository.cs / CategoriaRepository.cs / List.cshtml | 
 
 ## 4. EDITAR VAGA (RF-08)
 ![Homepage](img/Editarvaga.png)
 Nesta sessão, a empresa poderá editar a vaga já criada.
 |ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
 |------|-----------------------------------------|----|
-|RF-008| O usuário empregador deve poder editar vagas |  | 
+|RF-008| O usuário empregador deve poder editar vagas | VagaController.cs / VagaRepository.cs / CategoriaRepository.cs / Edit.cshtml | 
 
 
 ## Requisitos em Desenvolvimento
