@@ -11,5 +11,9 @@ namespace JobHub.Context
 
         public DbSet<Categoria> Categorias { get; set; } 
         public DbSet<Vaga> Vagas { get; set; }
+
+        public  DbSet<Usuario> Usuarios { get; set; }
+
+        public DbSet<UsuarioEmpresa> UsuariosEmpresa { get; set; }
     }
 }
