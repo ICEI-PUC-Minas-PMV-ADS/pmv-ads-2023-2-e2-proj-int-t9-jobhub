@@ -38,5 +38,10 @@ namespace JobHub.Models
         public int CategoriaId { get; set; }
         virtual public Categoria Categoria { get; set; }
 
+        public ICollection<VagaCandidato> CandidatosAplicados { get; set; }
+
+        public int EmpresaId { get; set; }
+        virtual public Empresa EmpresaVaga { get; set; }
+
     }
 }

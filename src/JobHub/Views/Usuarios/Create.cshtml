@@ -1,0 +1,98 @@
+﻿@model JobHub.ViewModels.RegisterViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Usuario</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Perfil" class="control-label"></label>
+                @foreach (var perfil in Html.GetEnumSelectList<JobHub.Models.Perfil>())
+                {
+                    <div>
+                        <input type="radio" asp-for="Perfil" value="@perfil.Value" />
+                        <label>@perfil.Text</label>
+                    </div>
+                }
+                <span asp-validation-for="Perfil" class="text-danger"></span>
+            </div>
+            <div id="candidatoForm" style="display: none;">
+                <div class="form-group">
+                    <label asp-for="Candidato.Nome" class="control-label"></label>
+                    <input asp-for="Candidato.Nome" class="form-control" />
+                    <span asp-validation-for="Candidato.Nome" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Senha" class="control-label"></label>
+                    <input asp-for="Senha" class="form-control" />
+                    <span asp-validation-for="Senha" class="text-danger"></span>
+                </div>
+            </div>
+            <div id="empresaForm" style="display: none;">
+                <div class="form-group">
+                    <label asp-for="Empresa.NomeDaEmpresa" class="control-label">Nome da Empresa</label>
+                    <input asp-for="Empresa.NomeDaEmpresa" class="form-control" />
+                    <span asp-validation-for="Empresa.NomeDaEmpresa" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Empresa.Cnpj" class="control-label">CNPJ</label>
+                    <input asp-for="Empresa.Cnpj" class="form-control" />
+                    <span asp-validation-for="Empresa.Cnpj" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Senha" class="control-label"></label>
+                    <input asp-for="Senha" class="form-control" />
+                    <span asp-validation-for="Senha" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var perfilRadios = document.querySelectorAll("input[name='Perfil']");
+
+            perfilRadios.forEach(function (radio) {
+                radio.addEventListener('change', function () {
+                    var selectedPerfil = this.value;
+                    document.getElementById("candidatoForm").style.display = selectedPerfil === "0" ? "block" : "none";
+                    document.getElementById("empresaForm").style.display = selectedPerfil === "1" ? "block" : "none";
+                    console.log(selectedPerfil);
+                });
+            });
+
+            var checkedRadio = document.querySelector("input[name='Perfil']:checked");
+            if (checkedRadio) {
+                checkedRadio.dispatchEvent(new Event('change'));
+            }
+        });
+    </script>
+}
