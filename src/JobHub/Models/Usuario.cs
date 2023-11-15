@@ -51,7 +51,7 @@ namespace JobHub.Models
     {
         [Required(ErrorMessage = "Obrigatório Informar o nome da empresa!")]
         public string NomeDaEmpresa { get; set; }
-        public int Cnpj { get; set; }
+        public string Cnpj { get; set; }
         public string SobreEmpresa { get; set; }
         public string Endereco { get; set; }
         public int Telefone { get; set; }

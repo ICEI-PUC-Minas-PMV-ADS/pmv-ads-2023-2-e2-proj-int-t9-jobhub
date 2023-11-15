@@ -116,7 +116,7 @@ namespace JobHub.Controllers
         public IActionResult Create()
         {
             var model = new RegisterViewModel();
-            return View();
+            return View(model);
         }
 
         // POST: Usuarios/Create
@@ -125,16 +125,37 @@ namespace JobHub.Controllers
         [AllowAnonymous]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,Email,Senha")] Usuario usuario)
+        public async Task<IActionResult> Create(RegisterViewModel model)
         {
             if (ModelState.IsValid)
             {
-                usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
-                _context.Add(usuario);
+                if (model.Perfil == Perfil.Candidato)
+                {
+                    var candidato = new Candidato
+                    {
+                        Nome = model.Candidato.Nome,
+                        Email = model.Email,
+                        Senha = BCrypt.Net.BCrypt.HashPassword(model.Senha),
+                        Perfil = model.Perfil
+                    };
+                    _context.Add(candidato);
+                }
+                else
+                {
+                    var empresa = new Empresa
+                    {
+                        NomeDaEmpresa = model.Empresa.NomeDaEmpresa,
+                        Cnpj = model.Empresa.Cnpj,
+                        Email = model.Email,
+                        Senha = BCrypt.Net.BCrypt.HashPassword(model.Senha),
+                        Perfil = model.Perfil
+                    };
+                    _context.Add(empresa);
+                }
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(usuario);
+            return View(model);
         }
 
         // GET: Usuarios/Edit/5

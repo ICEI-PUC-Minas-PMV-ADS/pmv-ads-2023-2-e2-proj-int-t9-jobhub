@@ -2,9 +2,11 @@
 using JobHub.Repositories;
 using JobHub.Repositories.Interfaces;
 using JobHub.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace JobHub.Controllers
 {
@@ -46,11 +48,13 @@ namespace JobHub.Controllers
         }
 
         [HttpPost]
-
+        [Authorize(Roles = "Empresa")]
         public IActionResult CreateVaga(Vaga Vaga)
         {
             if (ModelState.IsValid)
             {
+                Vaga.EmpresaId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+
                 _vagaRepository.AddVaga(Vaga);
 
                 return RedirectToAction("Index", "Home");
