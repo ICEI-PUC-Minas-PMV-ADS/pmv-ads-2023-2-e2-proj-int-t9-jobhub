@@ -34,13 +34,13 @@
                                 <a type="button" class="btn btn-custom-azulescuro1 mx-2" asp-area="" asp-controller="Vaga" asp-action="CreateVaga">Criar Vaga</a>
                             </li>
                             <li class="nav-item">
-                                Olá, @User.Identity.Name <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Logout">Sair</a>
+                                Olá, @User.Identity.Name <a type="button" class="btn btn-custom-azulescuro1 mx-2" asp-area="" asp-controller="Usuarios" asp-action="Logout">Sair</a>
                             </li>
                         }
                         else
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Login">Login</a>
+                                <a type="button" class="btn btn-custom-azulescuro1 mx-2" asp-area="" asp-controller="Usuarios" asp-action="Login">Login</a>
                             </li>
                         }
                     </ul>
