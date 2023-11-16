@@ -69,3 +69,151 @@ td, th {
 input.btn.btn-primary {
     margin-bottom: 5px;
 }
+
+.filter {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    box-shadow: 5px 5px 5px 5px rgba(61, 36, 36, 0.2);
+    border-radius: 10px;
+    position: absolute;
+    top: 18vh;
+    left: 14vw;
+    background-color: white;
+    z-index: 3;
+    height: 80px;
+    width: 72%;
+}
+
+.main_body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.item {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2.5vw 2.5vw;
+    margin: 20px 0;
+    background-color: white;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px rgba(61, 36, 36, 0.2);
+}
+
+.skills, .info {
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+}
+
+.skills {
+    margin-left: 2vw;
+    font-size: 13px;
+    align-items: center;
+    text-align: right;
+    width: 45%;
+    justify-content: flex-end;
+}
+
+.info {
+    flex-direction: column;
+    font-size: 15px;
+    margin-right: 2vw;
+    width: 35%;
+}
+
+.skill_item {
+    padding: 10px;
+    margin: 0 7px;
+    background-color: hsl(180, 31%, 95%);
+    border-radius: 10%;
+    color: hsl(180, 7%, 30%);
+    font-weight: bolder;
+}
+
+.info1, .info2, .info3 {
+    padding: 1px;
+    margin: 4px 0;
+    color: hsl(180, 29%, 50%);
+}
+
+#id1, #id2 {
+    font-size: 9px;
+    color: azure;
+    padding: 7px;
+    border-radius: 10px;
+    margin: 0 5px;
+    font-weight: 900;
+}
+
+#id1 {
+    background-color: hsl(180, 8%, 52%);
+}
+
+#id2 {
+    background-color: black;
+}
+
+.info1 > span {
+    padding: 2px;
+    margin: 0 2px;
+    font-weight: bold;
+}
+
+.info2 {
+    font-weight: 900;
+    /* margin-left: 13px; */
+    color: black;
+    font-weight: bold;
+}
+
+.info3 {
+    font-weight: bold;
+}
+
+.logoPA {
+    margin: 0 20px;
+}
+
+/* Responsive Design */
+body {
+    font-family: Arial;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+    form.example button:hover {
+        background: #0b7dda;
+    }
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;

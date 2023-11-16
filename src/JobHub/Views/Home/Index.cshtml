@@ -1,45 +1,58 @@
-﻿@model HomeIndexViewModel
+﻿<!DOCTYPE html>
+<html lang="en">
+@model HomeIndexViewModel
 
 @{
     ViewData["Title"] = "Home Page";
 }
+<head>
+    <title>Jobhub</title>
 
-<div class="text-center">
-    <h1 class="display-4">JobHub</h1>
-    <p>O projeto é uma plataforma online destinada a facilitar o processo de recrutamento e seleção de pessoal. De um lado, candidatos podem preencher seus currículos e aplicar para vagas de emprego que se alinham com suas habilidades e experiências. De outro lado, as empresas têm a oportunidade de promover suas vagas, identificar candidatos potenciais e gerenciar todo o processo de seleção em um só lugar. Assim, a aplicação web busca agilizar e tornar mais eficiente a conexão entre empresas e profissionais, otimizando o tempo e os recursos de ambos.</p>
-</div>
+    <script defer src="script.js"></script>
+</head>
+<body>
 
-<h1>Lista de Vagas</h1>
+    <h1>Jobhub</h1>
+    <p>
+        O projeto é uma plataforma online destinada a facilitar o processo de recrutamento e seleção de pessoal. De um lado, candidatos podem preencher seus currículos e aplicar para vagas de emprego que se alinham com suas habilidades e experiências. De outro lado, as empresas têm a oportunidade de promover suas vagas, identificar candidatos potenciais e gerenciar todo o processo de seleção em um só lugar. Assim, a aplicação web busca agilizar e tornar mais eficiente a conexão entre empresas e profissionais, otimizando o tempo e os recursos de ambos.
+    </p>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Título da Vaga</th>
-            <th>Salário</th>
-            <th>Presencial/Remoto</th>
-            <th>Nível de Senioridade</th>
-            <th>Local de Trabalho</th>
-            <th>Skills</th>
-            <th>Descrição da Vaga</th>
-            <th>Editar</th>
-            <th>Excluir</th>
+    <h2>Search Button</h2>
+    <form class="example" action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
 
-        </tr>
-    </thead>
-    <tbody>
+    <div class="main_body">
         @foreach (var vaga in Model.Vagas)
         {
-            <tr>
-                <td>@vaga.Titulo</td>
-                <td>@vaga.Salario</td>
-                <td>@vaga.FormaDeTrabalho</td>
-                <td>@vaga.Nivel</td>
-                <td>@vaga.Local</td>
-                <td>@vaga.Skills</td>
-                <td>@vaga.Descricao</td>
-                <td><a asp-action="Edit" asp-controller="Vaga"  asp-route-id="@vaga.Id"><i class="fa-solid fa-pen"></i></a></td>
-                <td><a asp-action="Delete" asp-controller="Vaga" asp-route-id="@vaga.Id"><i class="fa-solid fa-trash"></i></a></td>
-            </tr>
+            <div class="item">
+                <div style="margin: 0 20px;">
+                    <img src="vaga.ImagemUrl" alt="Company Logo">
+                </div>
+                <div class="info">
+                    <div class="info2">
+                        <span>@vaga.Titulo</span>
+                        <span id="id1">NEW!</span>
+                        <span id="id2">FEATURED</span>
+                    </div>
+                    <div class='info2'>
+                        <span>@vaga.Salario</span>
+                        <span>-</span>
+                        <span>@vaga.Nivel</span>
+                        <span>-</span>
+
+                    
+                    </div>
+                    <div class="info2">
+                        <span> @vaga.FormaDeTrabalho</span>
+                        <span> @vaga.Nivel </span>
+                        <span> @vaga.Local</span>
+                    </div>
+                </div>
+                    
+            </div>
         }
-    </tbody>
-</table>
+    </div>
+</body>
+</html>
