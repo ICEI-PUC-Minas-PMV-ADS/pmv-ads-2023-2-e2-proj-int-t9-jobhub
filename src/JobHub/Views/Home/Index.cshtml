@@ -26,38 +26,30 @@
     <div class="main_body">
         @foreach (var vaga in Model.Vagas)
         {
-            <div class="item">
-                <div style="margin: 0 20px;">
-                    <img src="vaga.ImagemUrl" alt="Company Logo">
-                </div>
-                <div class="info">
-                    <div class="info2">
-                        <span>@vaga.Titulo</span>
-                        <span id="id1">NEW!</span>
-                        <span id="id2">FEATURED</span>
-                    </div>
-                    <div class='info2'>
-                        <span>@vaga.Salario</span>
-                        <span>-</span>
-                        <span>@vaga.Nivel</span>
-                        <span>-</span>
-
-                    
-                    </div>
-                    <div class="info2">
-                        <span> @vaga.FormaDeTrabalho</span>
-                        <span> @vaga.Nivel </span>
-                        <span> @vaga.Local</span>
-                       
-                    </div>
-                    <div class="mb-2">
-                        <a asp-action="PaginaVaga" asp-controller="Vaga" class="btn btn-info" asp-route-id="@vaga.Id">Detalhes da Vaga</a>
-                        
+            <a href="@Url.Action("PaginaVaga", "Vaga", new { id = vaga.Id })" style="text-decoration: none; color: inherit;">
+                <div class="item">
+                    <div class="info">
+                        <div class="info2">
+                            <span>@vaga.Titulo</span>
+                            <span id="id1">NEW!</span>
+                            <span id="id2">FEATURED</span>
+                        </div>
+                        <div class='info2'>
+                            <span>@vaga.Salario</span>
+                            <span>-</span>
+                            <span>@vaga.Nivel</span>
+                            <span>-</span>
+                        </div>
+                        <div class="info2">
+                            <span>@vaga.FormaDeTrabalho</span>
+                            <span>@vaga.Nivel</span>
+                            <span>@vaga.Local</span>
+                        </div>
                     </div>
                 </div>
-                    
-            </div>
+            </a>
         }
     </div>
+
 </body>
 </html>
