@@ -2,6 +2,8 @@
 
 @{
     ViewData["Title"] = "PaginaVaga";
+    var userId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+    var empresaIdAsString = Model.EmpresaId.ToString();
 }
 
 <h1>@Html.DisplayFor(model => model.Titulo)</h1>
@@ -51,6 +53,15 @@
 
     </div>
 </div>
+
+@if (empresaIdAsString == userId)
+{
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
+        <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Deletar</a>
+    </div>
+}
+
 <div>
     <a asp-action="Index" class="btn btn-success">Voltar</a>
 </div>
