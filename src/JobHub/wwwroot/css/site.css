@@ -90,7 +90,7 @@ input.btn.btn-primary {
     justify-content: center;
     flex-direction: row;
     align-items: center;
-    padding-top: 40px;
+    padding-top: 50px;
 }
 
 .item {
@@ -98,8 +98,8 @@ input.btn.btn-primary {
     flex-wrap: wrap;
     padding: 2.5vw 2.5vw;
     margin: 20px 0;
-    background-color: white;
-    width: 80%;
+    background-color: #12091F;
+    width: 120%;
     border-radius: 10px;
     box-shadow: 5px 5px 5px 5px rgba(61, 36, 36, 0.2);
 }
@@ -123,26 +123,27 @@ input.btn.btn-primary {
     flex-direction: column;
     font-size: 15px;
     margin-right: 2vw;
-    width: 35%;
+    width: 60%;
+    color: white;
 }
 
-.skill_item {
-    padding: 10px;
-    margin: 0 7px;
-    background-color: hsl(180, 31%, 95%);
-    border-radius: 10%;
-    color: hsl(180, 7%, 30%);
-    font-weight: bolder;
+.Descricao {
+    flex-direction: column;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    margin-right: 2vw;
+    width: 20%;
+    color: aliceblue
 }
 
 .info1, .info2, .info3 {
-    padding: 1px;
-    margin: 4px 0;
-    color: hsl(180, 29%, 50%);
+    padding: 2px;
+    margin: 5px 0;
+    color: white;
 }
 
 #id1, #id2 {
-    font-size: 9px;
+    font-size: 7px;
     color: azure;
     padding: 7px;
     border-radius: 10px;
@@ -158,21 +159,16 @@ input.btn.btn-primary {
     background-color: black;
 }
 
-.info1 > span {
-    padding: 2px;
-    margin: 0 2px;
-    font-weight: bold;
-}
-
 .info2 {
     font-weight: 900;
     /* margin-left: 13px; */
-    color: black;
-    font-weight: bold;
+    color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
 .info3 {
-    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: white
 }
 
 .logoPA {
@@ -197,24 +193,11 @@ form.example input[type=text] {
     background: #f1f1f1;
 }
 
-form.example button {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background: #2196F3;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none;
-    cursor: pointer;
+form.example button:hover {
+    background: #0b7dda;
 }
-
-    form.example button:hover {
-        background: #0b7dda;
-    }
 
 form.example::after {
     content: "";
     clear: both;
-    display: table;
-}
+    display: table; 

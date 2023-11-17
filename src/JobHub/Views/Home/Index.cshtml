@@ -14,10 +14,10 @@
 
     <h1>Jobhub</h1>
     <p>
-        O projeto é uma plataforma online destinada a facilitar o processo de recrutamento e seleção de pessoal. De um lado, candidatos podem preencher seus currículos e aplicar para vagas de emprego que se alinham com suas habilidades e experiências. De outro lado, as empresas têm a oportunidade de promover suas vagas, identificar candidatos potenciais e gerenciar todo o processo de seleção em um só lugar. Assim, a aplicação web busca agilizar e tornar mais eficiente a conexão entre empresas e profissionais, otimizando o tempo e os recursos de ambos.
+        Encontre seu emprego dos sonhos
     </p>
 
-    <h2>Search Button</h2>
+    <h2>Pesquisar</h2>
     <form class="example" action="/action_page.php">
         <input type="text" placeholder="Search.." name="search">
         <button type="submit"><i class="fa fa-search"></i></button>
@@ -27,26 +27,40 @@
         @foreach (var vaga in Model.Vagas)
         {
             <a href="@Url.Action("PaginaVaga", "Vaga", new { id = vaga.Id })" style="text-decoration: none; color: inherit;">
-                <div class="item">
-                    <div class="info">
-                        <div class="info2">
-                            <span>@vaga.Titulo</span>
-                            <span id="id1">NEW!</span>
-                            <span id="id2">FEATURED</span>
+                 <div class="item">
+                <div style="margin: 0 5px;">
+                    <img src="imgempresas.jpg" alt="imgempresas">
+                </div>
+                <div class="info">
+                    <div class="info2">
+                        <span>@vaga.Titulo</span>
+                        <span id="id1">NEW!</span>
+                        <span id="id2">FEATURED</span>
+                    </div>
+                    <div class='info2'>
+                        <span>@vaga.Salario</span>
+                        <span>-</span>
+                        <span>@vaga.FormaDeTrabalho</span>
+                        <span>-</span> 
+                    </div>
+                    <div class="info2">
+                        <span>@vaga.Empresa</span>
+                        <span> - </span>
+                        <span>@vaga.Local</span>
                         </div>
-                        <div class='info2'>
-                            <span>@vaga.Salario</span>
-                            <span>-</span>
-                            <span>@vaga.Nivel</span>
-                            <span>-</span>
-                        </div>
-                        <div class="info2">
-                            <span>@vaga.FormaDeTrabalho</span>
-                            <span>@vaga.Nivel</span>
-                            <span>@vaga.Local</span>
-                        </div>
+                    <div class="info2">
+                        <span> @vaga.Categoria</span>
+                        <span> - </span>
+                        <span> @vaga.Nivel </span>
+                        <span> - </span>
+                        <span> @vaga.Titulo</span>
                     </div>
                 </div>
+                <div class="info2">
+                    <span> @vaga.Descricao</span>
+                </div>
+                    
+            </div>
             </a>
         }
     </div>
