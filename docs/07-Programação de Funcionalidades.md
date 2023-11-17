@@ -58,7 +58,6 @@ Ao clicar na frase, o usuário empregador poderá realizar seu cadastro ao preen
 |RF-003| O usuário deve conseguir aplicar seu currículo em vagas disponíveis | Em desenvolvimento | 
 |RF-005| O usuário deve ter opções de filtro para a pesquisa de vagas | Em desenvolvimento| 
 |RF-009| O usuário empregador poderá visualizar currículos cadastrados a sua vaga | Em desenvolvimento | 
-|RF-010| O site deve conter um sistema de cadastro e login do usuário empregador   | Em desenvolvimento |
 |RF-011| O usuário empregador deve conseguir personalizar o perfil da empresa | Em desenvolvimento | 
 
 
