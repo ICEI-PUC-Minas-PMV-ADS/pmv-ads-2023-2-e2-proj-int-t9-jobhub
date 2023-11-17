@@ -17,12 +17,20 @@ namespace JobHub.Controllers
             _categoriaRepository = categoriaRepository;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string nome)
         {
             ViewData["Title"] = "Home Page";
 
             var homeIndexViewModel = new HomeIndexViewModel();
-            homeIndexViewModel.Vagas = _vagaRepository.Vagas.OrderByDescending(v => v.Id).ToList();
+            if (nome == null)
+            {
+                homeIndexViewModel.Vagas = _vagaRepository.Vagas.OrderByDescending(v => v.Id).ToList();
+            } 
+            else
+            {
+                homeIndexViewModel.Vagas = _vagaRepository.BuscarPorNome(nome);
+            }
+            
             homeIndexViewModel.Categorias = _categoriaRepository.Categorias;
 
             return View(homeIndexViewModel);

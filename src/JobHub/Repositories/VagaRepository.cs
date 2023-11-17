@@ -41,5 +41,13 @@ namespace JobHub.Repositories
             _context.Entry(vaga).State = EntityState.Modified;
             _context.SaveChanges();
         }
+
+        public IEnumerable<Vaga> BuscarPorNome(string nome)
+        {
+            IEnumerable<Vaga> vagas = _context.Vagas.Where(
+                v => v.Titulo.ToUpper().Contains(nome.ToUpper())
+            ).ToList();
+            return vagas;
+        }
     }
 }
