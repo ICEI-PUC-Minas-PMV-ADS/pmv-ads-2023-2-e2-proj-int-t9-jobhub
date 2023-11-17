@@ -42,6 +42,15 @@ Ao clicar na frase, o usuário candidato poderá realizar seu cadastro ao preenc
 |------|-----------------------------------------|----|
 |RF-001| O site deve conter um sistema de cadastro e login do usuário | UsuariosController.cs / Usuario.cs / Login.cshtml / Create.cshtml | 
 
+## 6. CADASTRO E LOGIN DO USUÁRIO EMPREGADOR (RF-10)
+![Homepage](img/LoginFuncionalidade.png)
+Nesta sessão, o usuário empregador poderá realizar seu login ao preencher os requisitos. Caso não tenha uma conta cadastrada, basta clicar na frase "Não tem uma conta? Cadastre-se".
+![Homepage](img/CadastroFuncionalidadeE.png)
+Ao clicar na frase, o usuário empregador poderá realizar seu cadastro ao preencher os requisitos solicitados. 
+|ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
+|------|-----------------------------------------|----|
+|RF-010| O site deve conter um sistema de cadastro e login do usuário empregador | UsuariosController.cs / Usuario.cs / Login.cshtml / Create.cshtml | 
+
 ## Requisitos em Desenvolvimento
 |ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
 |------|-----------------------------------------|----|
