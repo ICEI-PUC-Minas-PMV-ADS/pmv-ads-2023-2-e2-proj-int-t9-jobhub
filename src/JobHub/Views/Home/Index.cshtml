@@ -18,9 +18,29 @@
     </p>
 
     <h2>Pesquisar</h2>
+
     <form class="example" action="/action_page.php">
         <input type="text" placeholder="Search.." name="search">
         <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+    <form name="form1" id="form1" action="/action_page.php">
+        Presencial/Remoto: <select name="subject" id="subject">
+            <option value="" selected="selected">Select subject</option>
+        </select>
+        <br><br>
+        Local: <select name="topic" id="topic">
+            <option value="" selected="selected">Please select subject first</option>
+        </select>
+        <br><br>
+        Categoria: <select name="chapter" id="chapter">
+            <option value="" selected="selected">Please select topic first</option>
+        </select>
+        <br><br>
+        Habilidades: <select name="chapter" id="chapter">
+            <option value="" selected="selected">Please select topic first</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
     </form>
 
     <div class="main_body">
@@ -49,14 +69,14 @@
                         <span>@vaga.Local</span>
                         </div>
                     <div class="info2">
-                        <span> @vaga.Categoria</span>
+                        <span> @vaga.CategoriaId</span>
                         <span> - </span>
                         <span> @vaga.Nivel </span>
                         <span> - </span>
                         <span> @vaga.Titulo</span>
                     </div>
                 </div>
-                <div class="info2">
+                <div class="">
                     <span> @vaga.Descricao</span>
                 </div>
                     
