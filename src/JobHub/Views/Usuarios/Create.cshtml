@@ -1,94 +1,214 @@
 ﻿@model JobHub.ViewModels.RegisterViewModel
 
 @{
-    ViewData["Title"] = "Create";
+    Layout = null;
 }
 
-<h1>Cadastro</h1>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+@{
+    ViewData["Title"] = "Login";
+}
 
-            <div class="form-group">
-                <label asp-for="Perfil" class="control-label"></label>
-                @foreach (var perfil in Html.GetEnumSelectList<JobHub.Models.Perfil>())
-                {
-                    <div>
-                        <input type="radio" asp-for="Perfil" value="@perfil.Value" />
-                        <label>@perfil.Text</label>
-                    </div>
-                }
+<div class="page">
+    <div class ="formLogin">
+        <h1>Cadastro</h1>
+        <p style="margin: 0; margin-top: 5px">Escolha o seu tipo de conta e digite os seus dados nos campos abaixo.</p>
+        <div>
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <span asp-validation-for="Perfil" class="text-danger"></span>
-            </div>
+                <div class="perfilChoose">
+                    @foreach (var perfil in Html.GetEnumSelectList<JobHub.Models.Perfil>())
+                    {
+                        <div class="perfilOption">
+                            <input type="radio" asp-for="Perfil" value="@perfil.Value" />
+                            <label>@perfil.Text</label>
+                        </div>
+                    }
+                </div>
 
 
-            <div id="commonFields" style="display: none;">
-                <div class="form-group">
-                    <label id="nameLabel" class="control-label"></label>
-                    <input id="nameInput" class="form-control" />
-                    <span id="nameValidation" class="text-danger"></span>
+                <div id="commonFields" style="display: none;">
+                    <div>
+                        <label id="nameLabel" class="control-label"></label>
+                        <input id="nameInput" class="form-control" />
+                        <span id="nameValidation" class="text-danger"></span>
+                    </div>
+                    <div id="empresaForm" style="display: none;">
+                        <label asp-for="Empresa.Cnpj" class="control-label">CNPJ</label>
+                        <input asp-for="Empresa.Cnpj" class="form-control" />
+                        <span asp-validation-for="Empresa.Cnpj" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="Senha" class="control-label"></label>
+                        <input asp-for="Senha" class="form-control" />
+                        <span asp-validation-for="Senha" class="text-danger"></span>
+                    </div>
                 </div>
-                <div class="form-group" id="empresaForm" style="display: none;">
-                    <label asp-for="Empresa.Cnpj" class="control-label">CNPJ</label>
-                    <input asp-for="Empresa.Cnpj" class="form-control" />
-                    <span asp-validation-for="Empresa.Cnpj" class="text-danger"></span>
+                <div>
+                    <input type="submit" value="Cadastrar" class="btn btn-primary" style="margin: 5px 0 !important;" />
                 </div>
-                <div class="form-group">
-                    <label asp-for="Email" class="control-label"></label>
-                    <input asp-for="Email" class="form-control" />
-                    <span asp-validation-for="Email" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Senha" class="control-label"></label>
-                    <input asp-for="Senha" class="form-control" />
-                    <span asp-validation-for="Senha" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+                <a asp-action="Create" style="margin: 0px; margin-top: 10px;">Já tem uma conta? Faça o login</a>
+            </form>
+        </div>
     </div>
 </div>
 
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+<style>
+    body {
+        background-color: #0f1135;
+        font-family: 'Roboto', sans-serif;
     }
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var perfilRadios = document.querySelectorAll("input[name='Perfil']");
-            var commonFields = document.getElementById("commonFields");
-            var empresaForm = document.getElementById("empresaForm");
-            var nameLabel = document.getElementById("nameLabel");
-            var nameInput = document.getElementById("nameInput");
-            var nameValidation = document.getElementById("nameValidation");
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #023047
+    }
 
-            perfilRadios.forEach(function (radio) {
-                radio.addEventListener('change', function () {
-                    var selectedPerfil = this.value;
-                    commonFields.style.display = "block";
-                    if (selectedPerfil === "0") { // Candidato
-                        empresaForm.style.display = "none";
-                        nameLabel.innerHTML = "Nome";
-                        nameInput.name = "Candidato.Nome";
-                        nameValidation.setAttribute('data-valmsg-for', 'Candidato.Nome');
-                    } else { // Empresa
-                        empresaForm.style.display = "block";
-                        nameLabel.innerHTML = "Nome da Empresa";
-                        nameInput.name = "Empresa.NomeDaEmpresa";
-                        nameValidation.setAttribute('data-valmsg-for', 'Empresa.NomeDaEmpresa');
-                    }
-                });
+    .perfilChoose {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        margin: 10px 0;
+    }
+
+    .perfilOption {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .formLogin {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        border-radius: 7px;
+        padding: 40px;
+        box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+        gap: 5px
+    }
+
+    .areaLogin img {
+        width: 420px;
+    }
+
+    .formLogin h1 {
+        padding: 0;
+        margin: 0;
+        font-weight: 500;
+        font-size: 2.3em;
+    }
+
+    .formLogin p {
+        display: inline-block;
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 25px;
+    }
+
+    .formLogin input {
+        padding: 15px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border-radius: 4px;
+        width: 100%;
+        transition: all linear 160ms;
+        outline: none;
+    }
+
+
+        .formLogin input:focus {
+            border: 1px solid #0f1135;
+        }
+
+    .formLogin label {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .formLogin a {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 13px;
+        color: #555;
+        transition: all linear 160ms;
+    }
+
+        .formLogin a:hover {
+            color: #0f1135;
+        }
+
+    .btn {
+        background-color: #0f1135;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        border: none !important;
+        transition: all linear 160ms;
+        cursor: pointer;
+        margin: 0 !important;
+    }
+
+        .btn:hover {
+            transform: scale(1.05);
+            background-color: #0f1135;
+        }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var perfilRadios = document.querySelectorAll("input[name='Perfil']");
+        var commonFields = document.getElementById("commonFields");
+        var empresaForm = document.getElementById("empresaForm");
+        var nameLabel = document.getElementById("nameLabel");
+        var nameInput = document.getElementById("nameInput");
+        var nameValidation = document.getElementById("nameValidation");
+        console.log("Teste");
+
+        perfilRadios.forEach(function (radio) {
+            radio.addEventListener('change', function () {
+                var selectedPerfil = this.value;
+                commonFields.style.display = "block";
+                if (selectedPerfil === "0") { // Candidato
+                    console.log("Candidato")
+                    empresaForm.style.display = "none";
+                    nameLabel.innerHTML = "Nome";
+                    nameInput.name = "Candidato.Nome";
+                    nameValidation.setAttribute('data-valmsg-for', 'Candidato.Nome');
+                } else { // Empresa
+                    console.log("Empresa")
+                    empresaForm.style.display = "block";
+                    nameLabel.innerHTML = "Nome da Empresa";
+                    nameInput.name = "Empresa.NomeDaEmpresa";
+                    nameValidation.setAttribute('data-valmsg-for', 'Empresa.NomeDaEmpresa');
+                }
             });
-
-            var checkedRadio = document.querySelector("input[name='Perfil']:checked");
-            if (checkedRadio) {
-                checkedRadio.dispatchEvent(new Event('change'));
-            }
         });
-    </script>
-}
+
+        var checkedRadio = document.querySelector("input[name='Perfil']:checked");
+        if (checkedRadio) {
+            checkedRadio.dispatchEvent(new Event('change'));
+        }
+    });
+</script>
+
