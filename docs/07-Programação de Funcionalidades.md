@@ -35,7 +35,9 @@ Nesta sessão, a empresa poderá editar a vaga já criada.
 
 ## 5. CADASTRO E LOGIN DO USUÁRIO (RF-01)
 ![Homepage](img/LoginFuncionalidade.png)
-Nesta sessão, o usuário poderá realizar seu login ao preencher os requisitos.
+Nesta sessão, o usuário candidato poderá realizar seu login ao preencher os requisitos. Caso não tenha uma conta cadastrada, basta clicar na frase "Não tem uma conta? Cadastre-se".
+![Homepage](img/CadastroFuncionalidadeC.png)
+Nesta sessão, o usuário candidato poderá realizar seu cadastro ao preencher os requisitos. 
 |ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
 |------|-----------------------------------------|----|
 |RF-001| O site deve conter um sistema de cadastro e login do usuário | UsuariosController.cs / Usuario.cs / Login.cshtml / Create.cshtml | 
