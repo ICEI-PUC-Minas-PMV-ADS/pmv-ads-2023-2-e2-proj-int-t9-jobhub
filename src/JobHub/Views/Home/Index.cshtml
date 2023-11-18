@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 @model HomeIndexViewModel
 
 @{
@@ -11,43 +12,50 @@
     <script defer src="script.js"></script>
 </head>
 <body>
+   
+    <p><font size="7" face="Mountain" color="blue">&emsp; &emsp; &ensp;&emsp; &emsp; &ensp;Encontre o emprego dos sonhos</font></p>
 
-    <h1>Jobhub</h1>
-    <p>
-        Encontre seu emprego dos sonhos
-    </p>
-
-    <h2>Pesquisar</h2>
+    <h2> <font size="3">Pesquisar</font></h2>
+    
     <form class="example" action="" method="GET">
-        <input type="text" placeholder="Search.." name="nome">
+        <input type="text" placeholder="Pesquisar cargo, compeência ou empresa" name="nome">
         <button type="submit"><i class="fa fa-search"></i></button>
     </form>
-    <form name="form1" id="form1" action="/action_page.php">
-        Presencial/Remoto: <select name="subject" id="subject">
-            <option selected disabled>Selecione uma opção</option>
-            <option value="Presencial">Presencial</option>
-            <option value="Hibrido">Híbrido</option>
-            <option value="Remoto">Remoto</option>/option>
-        </select>
-        <br><br>
-        Senioridade: <select name="local" id="topic">
-            <option selected disabled>Selecione um nível</option>
-            <option value="Estágio">Estágio</option>
-            <option value="Junior">Junior</option>
-            <option value="Pleno">Pleno</option>
-            <option value="Senior">Senior</option>
-            <</select>
-        <br><br>
-        Especialidade: <select name="chapter" id="chapter">
-            <option value="" selected disabled>Selecionne uma opção</option>
-        </select>
-        <br><br>
-        Habilidades: <select name="chapter" id="chapter">
-            <option value="" selected="selected">Please select topic first</option>
-        </select>
-        <br><br>
-        <input type="submit" value="Submit">
-    </form>
+
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+        Modo de trabalho
+    </button>
+    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+        <li><a class="dropdown-item" href="#">Presencial</a></li>
+        <li><a class="dropdown-item" href="#">Híbrido</a></li>
+        <li><a class="dropdown-item" href="#">Remoto</a></li>
+    </ul>
+</div>
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+            Categoria  &emsp; &emsp; &ensp;
+        </button>
+    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+        <li><a class="dropdown-item" href="#">Desenvolvedor Back-End</a></li>
+        <li><a class="dropdown-item" href="#">Desenvolvedor Front-End</a></li>
+        <li><a class="dropdown-item" href="#">Desenvolvedor Full-Stack</a></li>
+        <li><a class="dropdown-item" href="#">Analista de Dados</a></li>
+        <li><a class="dropdown-item" href="#">Cientista de Dados</a></li>
+        <li><a class="dropdown-item" href="#">Desenvolvedor Mobile</a></li>
+    </ul>
+</div><div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+            Senioridade&emsp; &emsp;
+        </button>
+    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+        <li><a class="dropdown-item" href="#">Estágio</a></li>
+        <li><a class="dropdown-item" href="#">Junior</a></li>
+        <li><a class="dropdown-item" href="#">Pleno</a></li>
+        <li><a class="dropdown-item" href="#">Senior</a></li>
+    </ul>
+</div>
+
 
     <div class="main_body">
         @foreach (var vaga in Model.Vagas)
@@ -55,14 +63,15 @@
             <a href="@Url.Action("PaginaVaga", "Vaga", new { id = vaga.Id })" style="text-decoration: none; color: inherit;">
                  <div class="item">
                 <div style="margin: 0 5px;">
-                    <img src="imgempresas.jpg" alt="imgempresas">
+                    <img src="imgempresas.png" alt="imgempresas">
                 </div>
+
                 <div class="info">
                     <div class="info2">
                         <span>@vaga.Titulo</span>
-                        <span id="id1">NEW!</span>
-                        <span id="id2">FEATURED</span>
+
                     </div>
+
                     <div class='info2'>
                         <span>@vaga.Salario</span>
                         <span>-</span>
@@ -82,7 +91,7 @@
                         <span> @vaga.Titulo</span>
                     </div>
                 </div>
-                <div class="">
+                <div class="info2">
                     <span> @vaga.Descricao</span>
                 </div>
                     
@@ -90,6 +99,6 @@
             </a>
         }
     </div>
-
+    
 </body>
 </html>

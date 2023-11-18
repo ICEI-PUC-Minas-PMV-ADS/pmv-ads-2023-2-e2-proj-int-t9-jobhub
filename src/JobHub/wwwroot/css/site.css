@@ -175,10 +175,7 @@ input.btn.btn-primary {
     margin: 0 20px;
 }
 
-/* Responsive Design */
-body {
-    font-family: Arial;
-}
+
 
 * {
     box-sizing: border-box;
@@ -200,4 +197,6 @@ form.example button:hover {
 form.example::after {
     content: "";
     clear: both;
-    display: table; 
+    display: table;
+}
+
