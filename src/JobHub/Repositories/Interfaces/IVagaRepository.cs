@@ -10,7 +10,7 @@ namespace JobHub.Repositories.Interfaces
         void UpdateVaga(Vaga vaga);
         void DeleteVaga(Vaga vaga);
         void AddVaga(object vagaListViewModel);
-        IEnumerable<Vaga> BuscarPorNome(string nome);
+        IEnumerable<Vaga> FiltrarVagas(string nome, string modo_trabalho, string senioridade);
 
     }
 }

@@ -42,10 +42,12 @@ namespace JobHub.Repositories
             _context.SaveChanges();
         }
 
-        public IEnumerable<Vaga> BuscarPorNome(string nome)
+        public IEnumerable<Vaga> FiltrarVagas(string nome, string modo_trabalho, string senioridade)
         {
-            IEnumerable<Vaga> vagas = _context.Vagas.Where(
-                v => v.Titulo.ToUpper().Contains(nome.ToUpper())
+            IEnumerable<Vaga> vagas = _context.Vagas.Where(v => 
+                (string.IsNullOrEmpty(nome) || v.Titulo.ToUpper().Contains(nome.ToUpper())) &&
+                (string.IsNullOrEmpty(modo_trabalho) || v.FormaDeTrabalho.ToUpper().Equals(modo_trabalho.ToUpper())) &&
+                (string.IsNullOrEmpty(senioridade) || v.Nivel.ToUpper().Equals(senioridade.ToUpper()))
             ).ToList();
             return vagas;
         }

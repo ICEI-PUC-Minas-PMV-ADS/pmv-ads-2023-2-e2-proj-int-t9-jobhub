@@ -17,18 +17,18 @@ namespace JobHub.Controllers
             _categoriaRepository = categoriaRepository;
         }
 
-        public IActionResult Index(string nome)
+        public IActionResult Index(string nome, string modo_trabalho, string senioridade)
         {
             ViewData["Title"] = "Home Page";
 
             var homeIndexViewModel = new HomeIndexViewModel();
-            if (nome == null)
+            if (nome == null && modo_trabalho == null && senioridade == null)
             {
                 homeIndexViewModel.Vagas = _vagaRepository.Vagas.OrderByDescending(v => v.Id).ToList();
             } 
             else
             {
-                homeIndexViewModel.Vagas = _vagaRepository.BuscarPorNome(nome);
+                homeIndexViewModel.Vagas = _vagaRepository.FiltrarVagas(nome, modo_trabalho, senioridade);
             }
             
             homeIndexViewModel.Categorias = _categoriaRepository.Categorias;

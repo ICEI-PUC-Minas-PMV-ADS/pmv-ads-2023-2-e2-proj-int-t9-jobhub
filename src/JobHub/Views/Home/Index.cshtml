@@ -19,7 +19,7 @@
        <div class="row mb-5">
             <form action="" method="GET">
                 <div class="input-group">   
-                    <input class="form-control" type="text" placeholder="Pesquisar cargo, compeência ou empresa" name="nome">
+                    <input class="form-control" type="text" placeholder="Pesquisar pela vaga" name="nome">
                     <button type="submit" class="btn btn-warning">Pesquisar</button>
                 </div>
             </form>
@@ -27,23 +27,18 @@
        <div class="row">
            <div class="col-md-4">
                <form action="" method="GET" class="d-flex gap-2 flex-column">
-                   <select name="modo_trabalho" class="form-select">
-                      <option selected>Modo de trabalho</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
+                   <select name="modo_trabalho" id="modo_trabalho" class="form-select">
+                      <option selected value="">Modo de trabalho</option>
+                      <option value="Presencial">Presencial</option>
+                      <option value="Hibrido">Híbrido</option>
+                      <option value="Remoto">Remoto</option>
                    </select>
-                   <select class="form-select">
-                      <option selected>Categoria</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                   </select>
-                   <select class="form-select">
-                      <option selected>Senioridade</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
+                   <select name="senioridade" id="senioridade" class="form-select">
+                        <option selected value="">Senioridade</option>
+                        <option value="Estágio">Estágio</option>
+                        <option value="Junior">Junior</option>
+                        <option value="Pleno">Pleno</option>
+                        <option value="Senior">Senior</option>
                    </select>
                    <button type="submit" class="btn btn-warning">Pesquisar</button>
                </form>
@@ -86,7 +81,23 @@
        </div>
    </div> 
    <script>
-       
-   </script>
+        // Recupera o valor do parâmetro de consulta "selectedValue" da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const modo_trabalho = urlParams.get('modo_trabalho');
+
+        // Se o valor estiver presente, define a opção correspondente como selecionada
+        if (modo_trabalho) {
+            let selectElement = document.getElementById('modo_trabalho');
+            selectElement.value = modo_trabalho;
+        }
+
+        const senioridade = urlParams.get('senioridade');
+
+        // Se o valor estiver presente, define a opção correspondente como selecionada
+        if (senioridade) {
+            let selectElement = document.getElementById('senioridade');
+            selectElement.value = senioridade;
+        }
+    </script>
 </body>
 </html>
