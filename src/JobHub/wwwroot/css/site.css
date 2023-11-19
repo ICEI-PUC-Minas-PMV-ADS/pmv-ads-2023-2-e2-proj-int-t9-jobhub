@@ -94,14 +94,14 @@ input.btn.btn-primary {
 }
 
 .item {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    display: flex;
     padding: 2.5vw 2.5vw;
-    margin: 20px 0;
+    margin: 0 0 20px 0;
     background-color: #12091F;
     width: 60vw;
     border-radius: 10px;
     box-shadow: 5px 5px 5px 5px rgba(61, 36, 36, 0.2);
+    gap: 10px;
 }
 
 .skills, .info {
@@ -123,8 +123,11 @@ input.btn.btn-primary {
     flex-direction: column;
     font-size: 15px;
     margin-right: 2vw;
-    width: 60%;
     color: white;
+}
+
+.img-empresa {
+    max-width: 115px;
 }
 
 .Descricao {
@@ -137,9 +140,9 @@ input.btn.btn-primary {
 }
 
 .info1, .info2, .info3 {
-    padding: 2px;
-    margin: 5px 0;
+    margin-bottom: 4px;
     color: white;
+    font-size: 13px;
 }
 
 #id1, #id2 {
@@ -160,10 +163,15 @@ input.btn.btn-primary {
 }
 
 .info2 {
-    font-weight: 900;
+    font-weight: 300;
     /* margin-left: 13px; */
     color: white;
     font-family: 'Roboto', sans-serif;
+}
+
+.info2 h4 {
+    color: #cad715;
+    font-weight: 900;
 }
 
 .info3 {

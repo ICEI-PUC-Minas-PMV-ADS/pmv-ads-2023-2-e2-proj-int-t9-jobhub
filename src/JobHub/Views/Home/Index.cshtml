@@ -12,93 +12,81 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-   
-    <p><font size="7" face="Mountain" color="blue">&emsp; &emsp; &ensp;&emsp; &emsp; &ensp;Encontre o emprego dos sonhos</font></p>
-
-    <h2> <font size="3">Pesquisar</font></h2>
-    
-    <form class="example" action="" method="GET">
-        <input type="text" placeholder="Pesquisar cargo, compeência ou empresa" name="nome">
-        <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
-
-<div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-        Modo de trabalho
-    </button>
-    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-        <li><a class="dropdown-item" href="#">Presencial</a></li>
-        <li><a class="dropdown-item" href="#">Híbrido</a></li>
-        <li><a class="dropdown-item" href="#">Remoto</a></li>
-    </ul>
-</div>
-<div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-            Categoria  &emsp; &emsp; &ensp;
-        </button>
-    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-        <li><a class="dropdown-item" href="#">Desenvolvedor Back-End</a></li>
-        <li><a class="dropdown-item" href="#">Desenvolvedor Front-End</a></li>
-        <li><a class="dropdown-item" href="#">Desenvolvedor Full-Stack</a></li>
-        <li><a class="dropdown-item" href="#">Analista de Dados</a></li>
-        <li><a class="dropdown-item" href="#">Cientista de Dados</a></li>
-        <li><a class="dropdown-item" href="#">Desenvolvedor Mobile</a></li>
-    </ul>
-</div><div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-            Senioridade&emsp; &emsp;
-        </button>
-    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-        <li><a class="dropdown-item" href="#">Estágio</a></li>
-        <li><a class="dropdown-item" href="#">Junior</a></li>
-        <li><a class="dropdown-item" href="#">Pleno</a></li>
-        <li><a class="dropdown-item" href="#">Senior</a></li>
-    </ul>
-</div>
-
-
-    <div class="main_body">
-        @foreach (var vaga in Model.Vagas)
-        {
-            <a href="@Url.Action("PaginaVaga", "Vaga", new { id = vaga.Id })" style="text-decoration: none; color: inherit;">
-                 <div class="item">
-                <div style="margin: 0 5px;">
-                    <img src="imgempresas.png" alt="imgempresas">
+   <div class="container">
+       <div class="row text-center mb-3">
+           <h1>Encontre o emprego dos sonhos</h1>
+       </div>
+       <div class="row mb-5">
+            <form action="" method="GET">
+                <div class="input-group">   
+                    <input class="form-control" type="text" placeholder="Pesquisar cargo, compeência ou empresa" name="nome">
+                    <button type="submit" class="btn btn-warning">Pesquisar</button>
                 </div>
-
-                <div class="info">
-                    <div class="info2">
-                        <span>@vaga.Titulo</span>
-
-                    </div>
-
-                    <div class='info2'>
-                        <span>@vaga.Salario</span>
-                        <span>-</span>
-                        <span>@vaga.FormaDeTrabalho</span>
-                        <span>-</span> 
-                    </div>
-                    <div class="info2">
-                        <span>@vaga.Empresa</span>
-                        <span> - </span>
-                        <span>@vaga.Local</span>
+            </form>
+       </div>
+       <div class="row">
+           <div class="col-md-4">
+               <form action="" method="GET" class="d-flex gap-2 flex-column">
+                   <select name="modo_trabalho" class="form-select">
+                      <option selected>Modo de trabalho</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                   </select>
+                   <select class="form-select">
+                      <option selected>Categoria</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                   </select>
+                   <select class="form-select">
+                      <option selected>Senioridade</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                   </select>
+                   <button type="submit" class="btn btn-warning">Pesquisar</button>
+               </form>
+           </div>
+           <div class="col-md-8">
+                @foreach (var vaga in Model.Vagas) {
+                    <a href="@Url.Action("PaginaVaga", "Vaga", new { id = vaga.Id })" style="text-decoration: none; color: inherit;">
+                        <div class="item">
+                            <div style="margin: 0 5px;">
+                                <img src="img/Imgempresas.png" class="img-empresa" alt="imgempresas">
+                            </div>
+                                <div class="info d-flex">
+                                    <div class="row">
+                                        <div class="info2">
+                                            <h4>@vaga.Titulo</h4>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class=''>
+                                            <span>R$ @vaga.Salario</span>
+                                            <span>-</span>
+                                            <span>@vaga.FormaDeTrabalho</span>
+                                        </div>
+                                        <div class="">
+                                            <span>@vaga.Empresa</span>
+                                            <span> - </span>
+                                            <span>@vaga.Local</span>
+                                            </div>
+                                        <div class="">
+                                            <span> @vaga.Nivel </span>
+                                            <span> - </span>
+                                            <span> @vaga.Titulo</span>
+                                        </div>
+                                    </div>
+                            </div>
                         </div>
-                    <div class="info2">
-                        <span> @vaga.CategoriaId</span>
-                        <span> - </span>
-                        <span> @vaga.Nivel </span>
-                        <span> - </span>
-                        <span> @vaga.Titulo</span>
-                    </div>
-                </div>
-                <div class="info2">
-                    <span> @vaga.Descricao</span>
-                </div>
-                    
-            </div>
-            </a>
-        }
-    </div>
-    
+                    </a>
+                }
+           </div>
+       </div>
+   </div> 
+   <script>
+       
+   </script>
 </body>
 </html>
