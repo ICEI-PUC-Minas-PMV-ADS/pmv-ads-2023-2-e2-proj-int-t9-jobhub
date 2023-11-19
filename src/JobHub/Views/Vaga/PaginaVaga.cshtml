@@ -12,52 +12,52 @@
     <h4>@Html.DisplayFor(model => model.Nivel)</h4>
     <hr />
     <div class="row">
-
-        <h7>⠀</h7>
-        <h4 class="display-7 ">@Html.DisplayNameFor(model => model.Empresa)</h4>
-        <div class="col-sm-10">
-            @Html.DisplayFor(model => model.Empresa)
+        <div class="vaga1">
+            <div class="vaga2">
+                <span>@Html.DisplayNameFor(model => model.Empresa)</span>
+                <span>-</span>
+                <span>@Html.DisplayFor(model => model.Empresa)</span>
+            </div>
+            <div class="vaga2">
+                <span>@Html.DisplayNameFor(model => model.Local)</span>
+                <span>-</span>
+                <span>@Html.DisplayFor(model => model.Local)</span>
+            </div>
+            <div class="vaga2">
+                <span>@Html.DisplayNameFor(model => model.FormaDeTrabalho)</span>
+                <span>-</span>
+                <span>@Html.DisplayFor(model => model.FormaDeTrabalho)</span>
+            </div>
+            <div class="vaga2">
+                <span>@Html.DisplayNameFor(model => model.Skills)</span>
+                <span>-</span>
+                <span>@Html.DisplayFor(model => model.Skills)</span>
+            </div>
+            <div class="vaga2">
+                <span>@Html.DisplayNameFor(model => model.Descricao)</span>
+                <span>-</span>
+                <span>@Html.DisplayFor(model => model.Descricao)</span>
+            </div>
+            <div class="vaga2">
+                <span>@Html.DisplayNameFor(model => model.Salario)</span>
+                <span>-</span>
+                <span>@Html.DisplayFor(model => model.Salario)</span>
+            </div>
         </div>
-        <h7>⠀</h7>
-
-        <h4 class="display-7 ">@Html.DisplayNameFor(model => model.Local)</h4>
-        <div class="col-sm-10">
-            @Html.DisplayFor(model => model.Local)
+        <div class="vaga1">
+            <div class="vaga2">
+                <span>@Html.DisplayNameFor(model => model.Descricao)</span>
+                <span>:</span>
+                <span>@Html.DisplayFor(model => model.Descricao)</span>
+            </div>
         </div>
-        <h7>⠀</h7>
-
-        <h4 class="display-7 ">@Html.DisplayNameFor(model => model.FormaDeTrabalho)</h4>
-        <div class="col-sm-10">
-            @Html.DisplayFor(model => model.FormaDeTrabalho)
-        </div>
-        <h7>⠀</h7>
-
-        <h4 class="display-7 ">@Html.DisplayNameFor(model => model.Skills)</h4>
-        <div class="col-sm-10">
-            @Html.DisplayFor(model => model.Skills)
-        </div>
-        <h7>⠀</h7>
-
-        <h4 class="display-7 ">@Html.DisplayNameFor(model => model.Descricao)</h4>
-        <div class="col-sm-10">
-            @Html.DisplayFor(model => model.Descricao)
-        </div>
-        <h7>⠀</h7>
-
-        <h4 class="display-7 ">@Html.DisplayNameFor(model => model.Salario)</h4>
-        <div class="col-sm-10">
-            @Html.DisplayFor(model => model.Salario)
-        </div>
-        <h7>⠀</h7>
-
-
     </div>
 </div>
 
-@if (empresaIdAsString == userId)
-{
-    <div>
-        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
-        <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Deletar</a>
-    </div>
-}
+    @if (empresaIdAsString == userId)
+    {
+        <div>
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
+            <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Deletar</a>
+        </div>
+    }
