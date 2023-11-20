@@ -1,8 +1,28 @@
 # Registro de Testes de Usabilidade
 
-Após realizar os testes de usabilidade, obtém-se um relatório a partir das análises realizadas. O Registro de Testes de Usabilidade é um relatório que contém as evidências dos testes e relatos dos usuários participantes, baseado no Plano de Testes de Usabilidade desenvolvido para os casos de uso desta etapa.
-
-As referências abaixo irão auxiliá-lo na geração do artefato “Registro de Testes de Usabilidade”.
-
-> **Links Úteis**:
-> - [Ferramentas de Testes de Usabilidade](https://www.usability.gov/how-to-and-tools/resources/templates.html)
+| **Caso de Teste** 	| **CT-01 – Fazer Cadastro** 	|
+|:---:	|:---:	|
+|	Objetivo do Teste 	| Verificar se o  usuário Candidato consegue se cadastrar de maneira satisfatória . |
+| Referência 	|  |
+| Avalição | - O usuário se cadastrou com sucesso |
+|  	|  	|
+| **Caso de Teste** 	| **CT-02 – Efetuar login**	|
+| Objetivo do Teste 	| Verificar se o usuário consegue realizar login. |
+| Referência 	| ![Homepage](img/loginGIF.gif)   |
+| Avalição | - O usuário fez login com sucesso |
+|  	|  	|
+| **Caso de Teste** 	| **CT-03 – Personalizar Perfil**	|
+| Objetivo do Teste 	| Verificar se o usuário consegue personalizar o perfil e adicionar seu currículo |
+| Referência 	|  |
+| Avalição | - O usuário personalizou o perfil com sucesso |
+|  	|  	|
+| **Caso de Teste** 	| **CT-04 – Aplicando para Vaga**	|
+| Objetivo do Teste 	| Verificar se o usuário consegue pesquisar a vaga desejada e aplicar para ela de maneira satisfatória |
+| Referência 	|  |
+| Avalição | - O usuário aplicou para a vaga com sucesso |
+|  	|  	|
+| **Caso de Teste** 	| **CT-05 – Criação de Vaga**	|
+| Objetivo do Teste 	| Verificar se o usuário Empresa consegue adcionar a vaga de emprego de maneira satisfatória |
+| Referência 	| ![Homepage](img/criarvagaGIF.gif)  |
+| Avalição | - O usuário criou a vaga com sucesso |
+|  	|  	|

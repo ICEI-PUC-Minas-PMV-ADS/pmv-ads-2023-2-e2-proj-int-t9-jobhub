@@ -51,12 +51,18 @@ Ao clicar na frase, o usuário empregador poderá realizar seu cadastro ao preen
 |------|-----------------------------------------|----|
 |RF-010| O site deve conter um sistema de cadastro e login do usuário empregador | UsuariosController.cs / Usuario.cs / Login.cshtml / Create.cshtml | 
 
+## 7. FILTRO DE PESQUISA (RF-05)
+![Homepage](img/FiltroFuncionalidade.png)
+Nesta sessão, a empresa poderá utilizar filtros de pesquisa ao clicar em "Modo de trabalho" e/ou "Senioridade", após isso as opções de filtro aparecerão. Para obter resultado basta clicar no botão "Pesquisar" logo abaixo. 
+|ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
+|------|-----------------------------------------|----|
+|RF-005| O usuário deve ter opções de filtro para a pesquisa de vagas | Categoria.cs / VagaRepository.cs / VagaListViewModel.cs | 
+
 ## Requisitos em Desenvolvimento
 |ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
 |------|-----------------------------------------|----|
 |RF-002| O usuário deve conseguir personalizar seu perfil    | Em desenvolvimento |
 |RF-003| O usuário deve conseguir aplicar seu currículo em vagas disponíveis | Em desenvolvimento | 
-|RF-005| O usuário deve ter opções de filtro para a pesquisa de vagas | Em desenvolvimento| 
 |RF-009| O usuário empregador poderá visualizar currículos cadastrados a sua vaga | Em desenvolvimento | 
 |RF-011| O usuário empregador deve conseguir personalizar o perfil da empresa | Em desenvolvimento | 
 
