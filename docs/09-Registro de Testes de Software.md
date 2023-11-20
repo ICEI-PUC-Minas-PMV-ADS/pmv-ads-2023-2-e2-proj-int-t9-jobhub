@@ -8,6 +8,10 @@ Resultado: Ao clicar na opção "Cadastre-se" a página será direcionada para o
 ![Homepage](img/LoginFuncionalidade.png)
 Resultado: Ao clicar no botão "Login" no cabeçalho, a página será direcionada para a sessão de login. Aparecerão campos de preenchimento necessários para efetuar o Login e após preenchidos clicar no botão "Acessar" para finalizar.
 
+# CT-04 - Pesquisa de vaga
+![Homepage](img/FiltroFuncionalidade.png)
+Resultado: Ao clicar na barra de pesquisa escrito "Pesquisar pela vaga" o usuário poderá pesquisar por uma vaga utilizando palavras chave. Ao clicar nas opções "Modo de Trabalho" e/ou "Senioridade" uma lista para filtros de pesquisa aparecerá de acordo com o tipo de cada opção, e assim que o usuário fizer suas escolhas ele precisará clicar no botão "Pesquisar" logo abaixo para que a pesquisa com filtros seja concluída. 
+
 # CT-06 - Cadastro Empresa
 ![Homepage](img/CadastroFuncionalidadeE.png)
 Resultado: Ao clicar na opção "Cadastre-se" a página será direcionada para o formulário de cadastro. Ao selecionar a opção "Empresa", irão aparecer campos de preenchimento de informações que serão necessários para realizar o cadastro como empregador. Após preenchidos adequadamente, clicar no botão "Cadastrar" para finalizar. 
