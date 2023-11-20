@@ -1,4 +1,15 @@
-﻿@page
-@model JobHub.Views.Usuarios.PerfilEmpresaModel
-@{
+﻿@model JobHub.ViewModels.EmpresaViewModel
+
+<h1>Perfil da Empresa</h1>
+
+<p><strong>Nome da Empresa:</strong> @Model.NomeDaEmpresa</p>
+<p><strong>CNPJ:</strong> @Model.Cnpj</p>
+<p><strong>Sobre a Empresa:</strong> @Model.SobreEmpresa</p>
+<p><strong>Endereço:</strong> @Model.Endereco</p>
+<p><strong>Telefone:</strong> @Model.Telefone</p>
+
+<h2>Vagas Criadas</h2>
+@foreach (var vaga in Model.VagasCriadas)
+{
+    <p>@vaga.Titulo - @vaga.Descricao</p>
 }

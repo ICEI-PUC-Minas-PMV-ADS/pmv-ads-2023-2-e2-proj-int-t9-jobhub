@@ -53,8 +53,11 @@
         </div>
     </div>
 </div>
+<form method="post" action="@Url.Action("Candidatar", "Vaga", new { vagaId = Model.Id })">
+    <button type="submit" class="btn-candidatar">Candidatar-se</button>
+    </form>
 
-    @if (empresaIdAsString == userId)
+@if (empresaIdAsString == userId)
     {
         <div>
             <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>

@@ -225,3 +225,12 @@ form.example::after {
     text-align: left;
     margin-right: 15px;
 }
+.btn-candidatar {
+    background-color: #0b7dda;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
