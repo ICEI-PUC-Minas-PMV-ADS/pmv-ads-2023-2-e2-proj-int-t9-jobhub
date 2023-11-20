@@ -9,7 +9,7 @@
 }
 
 <div class="page">
-    <div class ="formLogin">
+    <div class="formLogin">
         <h1>Cadastro</h1>
         <p style="margin: 0; margin-top: 5px">Escolha o seu tipo de conta e digite os seus dados nos campos abaixo.</p>
         <div>
@@ -26,29 +26,43 @@
                     }
                 </div>
 
-
-                <div id="commonFields" style="display: none;">
+                <div id="candidatoForm" style="display: none;">
                     <div>
-                        <label id="nameLabel" class="control-label"></label>
-                        <input id="nameInput" class="form-control" />
-                        <span id="nameValidation" class="text-danger"></span>
+                        <label asp-for="Candidato.Nome" class="control-label">Nome</label>
+                        <input asp-for="Candidato.Nome" class="form-control" />
+                        <span asp-validation-for="Candidato.Nome" class="text-danger"></span>
                     </div>
-                    <div id="empresaForm" style="display: none;">
+                    <!-- Add other Candidato specific fields here -->
+                </div>
+
+                <div id="empresaForm" style="display: none;">
+                    <div>
+                        <label asp-for="Empresa.NomeDaEmpresa" class="control-label">Nome</label>
+                        <input asp-for="Empresa.NomeDaEmpresa" class="form-control" />
+                        <span asp-validation-for="Empresa.NomeDaEmpresa" class="text-danger"></span>
+                    </div>
+                    <div>
                         <label asp-for="Empresa.Cnpj" class="control-label">CNPJ</label>
                         <input asp-for="Empresa.Cnpj" class="form-control" />
                         <span asp-validation-for="Empresa.Cnpj" class="text-danger"></span>
                     </div>
+                    <!-- Add other Empresa specific fields here -->
+                </div>
+
+                <div id="commonFields" style="display: none;">
+                    <!-- Common fields like email and password -->
                     <div>
-                        <label asp-for="Email" class="control-label"></label>
+                        <label asp-for="Email" class="control-label">Email</label>
                         <input asp-for="Email" class="form-control" />
                         <span asp-validation-for="Email" class="text-danger"></span>
                     </div>
                     <div>
-                        <label asp-for="Senha" class="control-label"></label>
+                        <label asp-for="Senha" class="control-label">Senha</label>
                         <input asp-for="Senha" class="form-control" />
                         <span asp-validation-for="Senha" class="text-danger"></span>
                     </div>
                 </div>
+
                 <div>
                     <input type="submit" value="Cadastrar" class="btn btn-primary" style="margin: 5px 0 !important;" />
                 </div>
@@ -57,6 +71,7 @@
         </div>
     </div>
 </div>
+
 
 <style>
     body {
@@ -178,37 +193,47 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         var perfilRadios = document.querySelectorAll("input[name='Perfil']");
-        var commonFields = document.getElementById("commonFields");
+        var candidatoForm = document.getElementById("candidatoForm");
         var empresaForm = document.getElementById("empresaForm");
-        var nameLabel = document.getElementById("nameLabel");
-        var nameInput = document.getElementById("nameInput");
-        var nameValidation = document.getElementById("nameValidation");
-        console.log("Teste");
+        var commonFields = document.getElementById("commonFields");
 
         perfilRadios.forEach(function (radio) {
             radio.addEventListener('change', function () {
-                var selectedPerfil = this.value;
-                commonFields.style.display = "block";
-                if (selectedPerfil === "0") { // Candidato
-                    console.log("Candidato")
-                    empresaForm.style.display = "none";
-                    nameLabel.innerHTML = "Nome";
-                    nameInput.name = "Candidato.Nome";
-                    nameValidation.setAttribute('data-valmsg-for', 'Candidato.Nome');
-                } else { // Empresa
-                    console.log("Empresa")
-                    empresaForm.style.display = "block";
-                    nameLabel.innerHTML = "Nome da Empresa";
-                    nameInput.name = "Empresa.NomeDaEmpresa";
-                    nameValidation.setAttribute('data-valmsg-for', 'Empresa.NomeDaEmpresa');
-                }
+                updateFormFields(this.value);
             });
         });
 
         var checkedRadio = document.querySelector("input[name='Perfil']:checked");
         if (checkedRadio) {
-            checkedRadio.dispatchEvent(new Event('change'));
+            updateFormFields(checkedRadio.value);
         }
     });
+
+    function updateFormFields(selectedPerfil) {
+        commonFields.style.display = "block";
+        if (selectedPerfil === "0") { // Candidato
+            candidatoForm.style.display = "block";
+            empresaForm.style.display = "none";
+            setValidationEnabled("empresaForm", false);
+            setValidationEnabled("candidatoForm", true);
+        } else { // Empresa
+            empresaForm.style.display = "block";
+            candidatoForm.style.display = "none";
+            setValidationEnabled("candidatoForm", false);
+            setValidationEnabled("empresaForm", true);
+        }
+    }
+
+    function setValidationEnabled(formId, isEnabled) {
+        var inputs = document.querySelectorAll(`#${formId} input`);
+        inputs.forEach(input => {
+            if (isEnabled) {
+                input.removeAttribute('disabled');
+            } else {
+                input.setAttribute('disabled', 'disabled');
+            }
+        });
+    }
 </script>
+
 
