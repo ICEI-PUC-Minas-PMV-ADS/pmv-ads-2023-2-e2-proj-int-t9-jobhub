@@ -1,0 +1,19 @@
+﻿@model JobHub.ViewModels.CandidatoViewModel
+
+<h1>Perfil do Candidato</h1>
+
+<p><strong>Nome:</strong> @Model.Nome</p>
+<p><strong>Idade:</strong> @Model.Idade</p>
+<p><strong>Sobre Mim:</strong> @Model.SobreMim</p>
+<p><strong>Área de Interesse:</strong> @Model.AreaDeInteresse</p>
+<p><strong>Telefone:</strong> @Model.Telefone</p>
+<p><strong>Habilidades:</strong> @Model.Habilidades</p>
+<p><strong>Experiência:</strong> @Model.Experiencia</p>
+<p><strong>Formação:</strong> @Model.Formacao</p>
+<p><strong>Currículo URL:</strong> @Model.CvURL</p>
+
+<h2>Vagas Aplicadas</h2>
+@foreach (var vagaAplicada in Model.VagasAplicadas)
+{
+    <p>@vagaAplicada.Vaga.Titulo - @vagaAplicada.Vaga.Descricao</p>
+}
