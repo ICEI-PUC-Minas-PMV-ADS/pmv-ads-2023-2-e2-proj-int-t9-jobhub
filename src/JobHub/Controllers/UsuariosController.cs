@@ -257,5 +257,17 @@ namespace JobHub.Controllers
         { 
             return View(); 
         }
+
+        [HttpPost]
+        [AllowAnonymous]
+
+        public IActionResult EnviarLinkParaRedefinirSenha() 
+        {
+
+            return View();
+
+        }
+          
+        
     }
 }
