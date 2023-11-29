@@ -262,6 +262,13 @@ namespace JobHub.Controllers
         }
 
         [AllowAnonymous]
+        public IActionResult RedefinicaoDeSenhaEnviada()
+        {
+            return View();
+        }
+
+
+        [AllowAnonymous]
         public IActionResult TrocarSenha(string token)
         {
             if (string.IsNullOrEmpty(token))

@@ -1,23 +1,17 @@
-﻿@model TrocarSenhaViewModel
-
-@{
+﻿@{
     Layout = null;
 }
 
 @{
-    ViewData["Title"] = "Trocar Senha";
+    ViewData["Title"] = "Redefinição de senha enviado com sucesso";
 }
 
 <div class="page">
-    
-    <form asp-action="TrocarSenha" class="formLogin">
-    <h1>Nova Senha</h1>
-    <p>Digite os seus dados de acesso no campo abaixo.</p>
-    <input asp-for="Email" type="email" placeholder="Email" required />
-    <input asp-for="NovaSenha" type="password" placeholder="Nova Senha" required />
-    <input asp-for="Token" type="hidden" />
-    <input type="submit" value="Confirmar" class="btn" />
-</form>
+
+    <form asp-action="RedefinicaodeSenhaEnviada" class="formLogin">
+        <h1>Email enviado com sucesso</h1>
+      
+    </form>
 </div>
 
 <style>
