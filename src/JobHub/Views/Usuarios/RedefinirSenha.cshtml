@@ -5,22 +5,19 @@
 }
 
 @{
-    ViewData["Title"] = "Login";
+    ViewData["Title"] = "Esqueci a Senha";
 }
 
 <div class="page">
     <form asp-action="Login" class="formLogin">
-        <h1>Login</h1>
+        <h1>Redefinir Senha</h1>
         <p>Digite os seus dados de acesso no campo abaixo.</p>
         <label asp-for="Email">Digite seu e-mail</label>
         <input asp-for="Email" placeholder="Digite seu e-mail" />
         <span asp-validation-for="Email" class="text-danger"></span>
-        <label asp-for="Senha">Digite sua senha</label>
-        <input asp-for="Senha" placeholder="Digite sua senha" />
-        <span asp-validation-for="Senha" class="text-danger"></span>
-        <a asp-action="Create">Não tem uma conta? Cadastre-se</a>
-        <a asp-action="RedefinirSenha">Esqueci minha senha</a>
-        <input type="submit" value="Acessar" class="btn" />
+       
+        <a asp-action="Login">Voltar</a>
+        <input type="submit" value="Enviar Email" class="btn" />
     </form>
 </div>
 
@@ -29,7 +26,7 @@
         background-color: #0f1135;
         font-family: 'Roboto', sans-serif;
     }
-  
+
     body {
         font-family: 'Roboto', sans-serif;
         margin: 0;
@@ -86,9 +83,9 @@
     }
 
 
-    .formLogin input:focus {
-        border: 1px solid #0f1135;
-    }
+        .formLogin input:focus {
+            border: 1px solid #0f1135;
+        }
 
     .formLogin label {
         font-size: 14px;
@@ -103,9 +100,9 @@
         transition: all linear 160ms;
     }
 
-    .formLogin a:hover {
-        color: #0f1135;
-    }
+        .formLogin a:hover {
+            color: #0f1135;
+        }
 
     .btn {
         background-color: #0f1135;
@@ -116,17 +113,17 @@
         transition: all linear 160ms;
         cursor: pointer;
         margin: 0 !important;
-
     }
 
-    .btn:hover {
-        transform: scale(1.05);
-        background-color: #0f1135;
-
-    }
+        .btn:hover {
+            transform: scale(1.05);
+            background-color: #0f1135;
+        }
 </style>
 
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

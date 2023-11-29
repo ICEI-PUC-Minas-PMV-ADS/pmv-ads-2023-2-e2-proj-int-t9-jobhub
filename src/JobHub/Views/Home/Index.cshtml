@@ -12,92 +12,103 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-   <div class="container">
-       <div class="row text-center mb-3">
-           <h1>Encontre o emprego dos sonhos</h1>
-       </div>
-       <div class="row mb-5">
-            <form action="" method="GET">
-                <div class="input-group">   
-                    <input class="form-control" type="text" placeholder="Pesquisar pela vaga" name="nome">
-                    <button type="submit" class="btn btn-warning">Pesquisar</button>
+    <div class="container">
+        <div class="row text-center mb-3">
+            <h1>Encontre o emprego dos sonhos</h1>
+        </div>
+        <div class="row mb-5">
+            <form id="searchForm" action="" method="GET">
+                <div class="input-group">
+                    <input id="searchInput" class="form-control" type="text" placeholder="Pesquisar pela vaga" name="nome">
+                    <button id="searchButton" type="submit" class="btn btn-warning">Pesquisar</button>
                 </div>
             </form>
-       </div>
-       <div class="row">
-           <div class="col-md-4">
-               <form action="" method="GET" class="d-flex gap-2 flex-column">
-                   <select name="modo_trabalho" id="modo_trabalho" class="form-select">
-                      <option selected value="">Modo de trabalho</option>
-                      <option value="Presencial">Presencial</option>
-                      <option value="Hibrido">Híbrido</option>
-                      <option value="Remoto">Remoto</option>
-                   </select>
-                   <select name="senioridade" id="senioridade" class="form-select">
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <form action="" method="GET" class="d-flex gap-2 flex-column">
+                    <select name="modo_trabalho" id="modo_trabalho" class="form-select">
+                        <option selected value="">Modo de trabalho</option>
+                        <option value="Presencial">Presencial</option>
+                        <option value="Hibrido">Híbrido</option>
+                        <option value="Remoto">Remoto</option>
+                    </select>
+                    <select name="senioridade" id="senioridade" class="form-select">
                         <option selected value="">Senioridade</option>
                         <option value="Estágio">Estágio</option>
                         <option value="Junior">Junior</option>
                         <option value="Pleno">Pleno</option>
                         <option value="Senior">Senior</option>
-                   </select>
-                   <button type="submit" class="btn btn-warning">Pesquisar</button>
-               </form>
-           </div>
-           <div class="col-md-8">
-                @foreach (var vaga in Model.Vagas) {
+                    </select>
+                    <button type="submit" class="btn btn-warning">Pesquisar</button>
+                </form>
+            </div>
+            <div class="col-md-8">
+                @foreach (var vaga in Model.Vagas)
+                {
                     <a href="@Url.Action("PaginaVaga", "Vaga", new { id = vaga.Id })" style="text-decoration: none; color: inherit;">
                         <div class="item">
                             <div style="margin: 0 5px;">
                                 <img src="img/Imgempresas.png" class="img-empresa" alt="imgempresas">
                             </div>
-                                <div class="info d-flex">
-                                    <div class="row">
-                                        <div class="info2">
-                                            <h4>@vaga.Titulo</h4>
-                                        </div>
+                            <div class="info d-flex">
+                                <div class="row">
+                                    <div class="info2">
+                                        <h4>@vaga.Titulo</h4>
                                     </div>
-                                    <div class="row">
-                                        <div class=''>
-                                            <span>R$ @vaga.Salario</span>
-                                            <span>-</span>
-                                            <span>@vaga.FormaDeTrabalho</span>
-                                        </div>
-                                        <div class="">
-                                            <span>@vaga.Empresa</span>
-                                            <span> - </span>
-                                            <span>@vaga.Local</span>
-                                            </div>
-                                        <div class="">
-                                            <span> @vaga.Nivel </span>
-                                            <span> - </span>
-                                            <span> @vaga.Titulo</span>
-                                        </div>
+                                </div>
+                                <div class="row">
+                                    <div class=''>
+                                        <span>R$ @vaga.Salario</span>
+                                        <span>-</span>
+                                        <span>@vaga.FormaDeTrabalho</span>
                                     </div>
+                                    <div class="">
+                                        <span>@vaga.Empresa</span>
+                                        <span> - </span>
+                                        <span>@vaga.Local</span>
+                                    </div>
+                                    <div class="">
+                                        <span> @vaga.Nivel </span>
+                                        <span> - </span>
+                                        <span> @vaga.Titulo</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </a>
                 }
-           </div>
-       </div>
-   </div> 
-   <script>
-        // Recupera o valor do parâmetro de consulta "selectedValue" da URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const modo_trabalho = urlParams.get('modo_trabalho');
+            </div>
+        </div>
+    </div>
+    <script>
+        // Recupera o formulário de pesquisa e os elementos relevantes
+        const searchForm = document.getElementById('searchForm');
+        const searchInput = document.getElementById('searchInput');
+        const modo_trabalho = document.getElementById('modo_trabalho');
+        const senioridade = document.getElementById('senioridade');
 
-        // Se o valor estiver presente, define a opção correspondente como selecionada
-        if (modo_trabalho) {
-            let selectElement = document.getElementById('modo_trabalho');
-            selectElement.value = modo_trabalho;
-        }
+        // Adiciona um ouvinte de evento ao formulário de pesquisa
+        searchForm.addEventListener('submit', function (event) {
+            // Evita que o formulário seja enviado
+            event.preventDefault();
 
-        const senioridade = urlParams.get('senioridade');
+            // Obtém o valor da pesquisa
+            const searchTerm = searchInput.value.trim();
 
-        // Se o valor estiver presente, define a opção correspondente como selecionada
-        if (senioridade) {
-            let selectElement = document.getElementById('senioridade');
-            selectElement.value = senioridade;
-        }
+            // Atualiza os filtros com o valor da pesquisa
+            if (searchTerm !== '') {
+                modo_trabalho.value = 'Valor correspondente';
+                senioridade.value = 'Valor correspondente';
+            } else {
+                // Se a pesquisa estiver vazia, redefina os filtros para o valor padrão
+                modo_trabalho.value = '';
+                senioridade.value = '';
+            }
+
+            // Submeta o formulário com os valores atualizados dos filtros
+            searchForm.submit();
+        });
     </script>
 </body>
 </html>
