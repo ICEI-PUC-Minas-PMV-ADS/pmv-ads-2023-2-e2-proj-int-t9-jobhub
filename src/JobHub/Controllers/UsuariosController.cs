@@ -11,17 +11,20 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using JobHub.ViewModels;
+using Microsoft.AspNetCore.Identity;
 
 namespace JobHub.Controllers
 {
     [Authorize]
     public class UsuariosController : Controller
     {
+        private readonly IEmailService _emailService;
         private readonly AppDbContext _context;
 
-        public UsuariosController(AppDbContext context)
+        public UsuariosController(AppDbContext context, IEmailService emailService)
         {
             _context = context;
+            _emailService = emailService;
         }
 
         // GET: Usuarios
@@ -258,16 +261,90 @@ namespace JobHub.Controllers
             return View(); 
         }
 
+        [AllowAnonymous]
+        public IActionResult TrocarSenha(string token)
+        {
+            if (string.IsNullOrEmpty(token))
+                return BadRequest("Token inválido");
+
+            var model = new TrocarSenhaViewModel { Token = token };
+            return View(model);
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<IActionResult> TrocarSenha(TrocarSenhaViewModel model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+
+            var user = await _context.Usuarios.FirstOrDefaultAsync(u => u.Email == model.Email);
+            if (user == null)
+                return BadRequest("Usuário não encontrado");
+
+            // Verificar se o token é válido (necessário implementar a lógica de verificação)
+            if (user.Token != model.Token ||
+                user.DataExpiracaoToken == null ||
+                user.DataExpiracaoToken < DateTime.UtcNow)
+            {
+                // Token inválido ou expirado
+                return BadRequest("Token de redefinição de senha inválido ou expirado.");
+            }
+
+            // Se o token for válido, redefina a senha
+            user.Senha = BCrypt.Net.BCrypt.HashPassword(model.NovaSenha);
+            user.Token = null;
+            user.DataExpiracaoToken = null;
+
+            _context.Update(user);
+            await _context.SaveChangesAsync();
+
+            // Redirecionar para a página de login ou outra página de confirmação
+            return RedirectToAction("Login");
+        }
+
+
         [HttpPost]
         [AllowAnonymous]
 
-        public IActionResult EnviarLinkParaRedefinirSenha() 
+        public async Task<IActionResult> EnviarLinkParaRedefinirSenha(string email)
         {
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                // Adicione uma mensagem de erro ou lógica conforme necessário
+                return View();
+            }
 
-            return View();
+            var user = await _context.Usuarios.FirstOrDefaultAsync(u => u.Email == email);
 
+            // Gerar um token de redefinição de senha simples (não seguro)
+            var token = Guid.NewGuid().ToString(); // Exemplo simples. Use um método mais seguro.
+
+            // Salvar o token no banco de dados associado ao usuário (necessário implementar)
+            user.Token = token;
+            user.DataExpiracaoToken = DateTime.UtcNow.AddHours(24); // Expira em 24 horas
+
+            // Salvar as alterações no banco de dados
+            _context.Update(user);
+            await _context.SaveChangesAsync();
+
+            var callbackUrl = Url.Action(
+                "TrocarSenha", // Nome do método de ação para redefinir a senha
+                "Usuarios", // Nome do controlador onde o método de ação está localizado
+                new { token = token }, // Parâmetros
+                protocol: HttpContext.Request.Scheme);
+
+            // Enviar email
+            var emailService = new EmailService(); // Inicializar corretamente de acordo com sua configuração
+            await _emailService.SendEmailAsync(
+                email,
+                "Redefinir Senha",
+                $"Por favor, redefina sua senha clicando aqui: <a href='{callbackUrl}'>link</a>");
+
+            // Redirecionar para a página de confirmação ou voltar para a página de login
+            return RedirectToAction("RedefinicaoDeSenhaEnviada");
         }
-          
-        
+
+
     }
 }

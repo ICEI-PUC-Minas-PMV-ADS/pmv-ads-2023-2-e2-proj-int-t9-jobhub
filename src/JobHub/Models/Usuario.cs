@@ -24,6 +24,8 @@ namespace JobHub.Models
         public string Senha { get; set; }
 
         public Perfil Perfil { get; set; }
+        public string Token { get; set; }
+        public DateTime? DataExpiracaoToken { get; set; }
     }
 
     public enum Perfil

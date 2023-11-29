@@ -1,0 +1,8 @@
+﻿@model TrocarSenhaViewModel
+
+<form asp-action="TrocarSenha">
+    <input asp-for="Email" type="email" placeholder="Email" required />
+    <input asp-for="NovaSenha" type="password" placeholder="Nova Senha" required />
+    <input asp-for="Token" type="hidden" />
+    <button type="submit">Redefinir Senha</button>
+</form>
