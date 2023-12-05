@@ -30,7 +30,7 @@ namespace JobHub.Controllers
         // GET: Usuarios
         public async Task<IActionResult> Index()
         {
-              return View(await _context.Usuarios.ToListAsync());
+            return View(await _context.Usuarios.ToListAsync());
         }
 
         [AllowAnonymous]
@@ -245,14 +245,14 @@ namespace JobHub.Controllers
             {
                 _context.Usuarios.Remove(usuario);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
         [AllowAnonymous]
-        public IActionResult PerfilCandidato1()
+        [HttpGet]
+        public IActionResult PerfilCandidato()
         {
-            // Obtenha o ID do usuário atualmente autenticado
             var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
             if (userId == null)
@@ -260,7 +260,6 @@ namespace JobHub.Controllers
                 return NotFound(); // Ou redirecione para uma página de erro
             }
 
-            // Consulte o banco de dados para obter o candidato correspondente ao ID do usuário
             var candidato = _context.Usuarios.OfType<Candidato>().FirstOrDefault(u => u.Id.ToString() == userId);
 
             if (candidato == null)
@@ -270,6 +269,99 @@ namespace JobHub.Controllers
 
             return View(candidato);
         }
+        [AllowAnonymous]
+        [HttpPost]
+        public async Task<IActionResult> SalvarPerfilCandidato(Candidato candidato)
+        {
+            
+            
+                var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+                if (userId == null)
+                {
+                    return NotFound(); // Ou redirecione para uma página de erro
+                }
+
+                var candidatoNoBanco = _context.Usuarios.OfType<Candidato>().FirstOrDefault(u => u.Id.ToString() == userId);
+
+                if (candidatoNoBanco == null)
+                {
+                    return NotFound(); // Ou redirecione para uma página de erro
+                }
+
+                candidatoNoBanco.Nome = candidato.Nome;
+                candidatoNoBanco.Idade = candidato.Idade;
+                candidatoNoBanco.SobreMim = candidato.SobreMim;
+                candidatoNoBanco.AreaDeInteresse = candidato.AreaDeInteresse;
+                candidatoNoBanco.Telefone = candidato.Telefone;
+                candidatoNoBanco.Habilidades = candidato.Habilidades;
+                candidatoNoBanco.Experiencia = candidato.Experiencia;
+                candidatoNoBanco.Formacao = candidato.Formacao;
+
+                _context.Update(candidatoNoBanco);
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction("PerfilCandidato");
+            }
+
+            
+        
+
+
+
+
+        [AllowAnonymous]
+        [HttpGet]
+        public IActionResult PerfilEmpresa()
+        {
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            if (userId == null)
+            {
+                return NotFound(); // Ou redirecione para uma página de erro
+            }
+
+            var empresa = _context.Usuarios.OfType<Empresa>().FirstOrDefault(u => u.Id.ToString() == userId);
+
+            if (empresa == null)
+            {
+                return NotFound(); // Ou redirecione para uma página de erro
+            }
+
+            return View(empresa);
+        }
+
+        [AllowAnonymous]
+        [HttpPost]
+        public async Task<IActionResult> SalvarPerfilEmpresa(Empresa empresa)
+        {
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            if (userId == null)
+            {
+                return NotFound(); // Ou redirecione para uma página de erro
+            }
+
+            var empresaNoBanco = _context.Usuarios.OfType<Empresa>().FirstOrDefault(u => u.Id.ToString() == userId);
+
+            if (empresaNoBanco == null)
+            {
+                return NotFound(); // Ou redirecione para uma página de erro
+            }
+
+            empresaNoBanco.Cnpj = empresa.Cnpj;
+            empresaNoBanco.SobreEmpresa = empresa.SobreEmpresa;
+            empresaNoBanco.Endereco = empresa.Endereco;
+            empresaNoBanco.Telefone = empresa.Telefone;
+
+            _context.Update(empresaNoBanco);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("PerfilEmpresa");
+        }
+
+
+
 
 
 

@@ -1,13 +1,121 @@
-﻿@model JobHub.ViewModels.CandidatoViewModel
+﻿@model JobHub.Models.Candidato
 
-<h1>Perfil do Candidato</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Perfil do Candidato</title>
+    <!-- Seus estilos, scripts, etc. -->
+    <style>
+        input[type="text"],
+        textarea {
+            background-color: transparent;
+            color: white;
+            border: none;
+            border-bottom: 1px solid transparent;
+            padding: 5px;
+            outline: none;
+            transition: border-bottom 0.3s ease;
+            width: 100%;
+        }
 
-<p><strong>Nome:</strong> @Model.Nome</p>
-<p><strong>Idade:</strong> @Model.Idade</p>
-<p><strong>Sobre Mim:</strong> @Model.SobreMim</p>
-<p><strong>Área de Interesse:</strong> @Model.AreaDeInteresse</p>
-<p><strong>Telefone:</strong> @Model.Telefone</p>
-<p><strong>Habilidades:</strong> @Model.Habilidades</p>
-<p><strong>Experiência:</strong> @Model.Experiencia</p>
-<p><strong>Formação:</strong> @Model.Formacao</p>
-<p><strong>Currículo URL:</strong> @Model.CvURL</p>
+        input[type="text"]:focus,
+        textarea:focus {
+            background-color: transparent;
+            border-bottom: 1px solid white;
+        }
+
+        input[type="text"]:read-only,
+        textarea:read-only {
+            background-color: transparent;
+            border-bottom: 1px solid transparent;
+        }
+
+        /* Outros estilos */
+    </style>
+    <script>
+        function habilitarEdicao() {
+            var inputs = document.getElementsByTagName("input");
+            for (var i = 0; i < inputs.length; i++) {
+                inputs[i].removeAttribute("readonly");
+            }
+            var textareas = document.getElementsByTagName("textarea");
+            for (var j = 0; j < textareas.length; j++) {
+                textareas[j].removeAttribute("readonly");
+            }
+            document.getElementById("salvarAlteracoes").style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <form method="post" action="@Url.Action("SalvarPerfilCandidato", "Usuarios")">
+            <div class="row">
+                <section class="grid1">
+                    <div>
+                        <h1>@Model.Nome</h1>
+                        <button type="button" onclick="habilitarEdicao()" style="background-color: #3498db; color: white; border: none; padding: 8px 16px; border-radius: 4px;">Editar</button>
+                        <button id="salvarAlteracoes" style="display: none;">Salvar Alterações</button>
+                    </div>
+                </section>
+                <div class="vaga1">
+                    <div class="vaga2">
+                        <span style="font-weight: bolder">Nome</span>
+                        <span>-</span>
+                        <span><input type="text" id="Nome" name="Nome" value="@Model.Nome" readonly /></span>
+                    </div>
+                    <br />
+                    <div class="vaga2">
+                        <span style="font-weight: bolder">Idade</span>
+                        <span>-</span>
+                        <span><input type="text" id="Idade" name="Idade" value="@Model.Idade" readonly /></span>
+                    </div>
+                    <br />
+                    <div class="vaga2">
+                        <span style="font-weight: bolder">Sobre Mim</span>
+                        <span>-</span>
+                        <span><textarea id="SobreMim" name="SobreMim" readonly>@Model.SobreMim</textarea></span>
+                    </div>
+                    <br />
+                    <hr style="width: 100%; color: white; margin: 20px 0;">
+                    <br />
+                    <div class="vaga2">
+                        <span style="font-weight: bolder">Área de Interesse</span>
+                        <span>-</span>
+                        <span><input type="text" id="AreaDeInteresse" name="AreaDeInteresse" value="@Model.AreaDeInteresse" readonly /></span>
+                    </div>
+                    <br />
+                    <div class="vaga2">
+                        <span style="font-weight: bolder">Telefone</span>
+                        <span>-</span>
+                        <span><input type="text" id="Telefone" name="Telefone" value="@Model.Telefone" readonly /></span>
+                    </div>
+                    <br />
+                    <div class="vaga2">
+                        <span style="font-weight: bolder">Habilidades</span>
+                        <span>-</span>
+                        <span><textarea id="Habilidades" name="Habilidades" readonly>@Model.Habilidades</textarea></span>
+                    </div>
+                    <br />
+                    <hr style="width: 100%; color: white; margin: 20px 0;">
+                    <br />
+                    <div class="vaga2">
+                        <span style="font-weight: bolder">Experiência</span>
+                        <span>-</span>
+                        <span><textarea id="Experiencia" name="Experiencia" readonly>@Model.Experiencia</textarea></span>
+                    </div>
+                    <br />
+                    <div class="vaga2">
+                        <span style="font-weight: bolder">Formação</span>
+                        <span>-</span>
+                        <span><textarea id="Formacao" name="Formacao" readonly>@Model.Formacao</textarea></span>
+                    </div>
+                    <br />
+                    <!-- Adicione aqui os outros campos conforme necessário -->
+                </div>
+            </div>
+            <button type="submit" id="salvarAlteracoes" style="display: none;">Salvar Alterações</button>
+        </form>
+    </div>
+</body>
+</html>
+

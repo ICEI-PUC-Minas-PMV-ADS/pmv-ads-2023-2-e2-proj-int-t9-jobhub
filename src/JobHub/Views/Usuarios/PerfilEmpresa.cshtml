@@ -1,15 +1,88 @@
-﻿@model JobHub.ViewModels.EmpresaViewModel
+﻿@model JobHub.Models.Empresa
 
-<h1>Perfil da Empresa</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Perfil da Empresa</title>
+    <!-- Seus estilos, scripts, etc. -->
+    <style>
+        input[type="text"],
+        textarea {
+            background-color: transparent;
+            color: white; /* Define a cor do texto para branco */
+            border: none; /* Remove a borda dos campos */
+            border-bottom: 1px solid transparent; /* Remove a linha de destaque dos campos */
+            padding: 5px;
+            outline: none; /* Remove a borda de foco quando clicado */
+            transition: border-bottom 0.3s ease; /* Adiciona transição para a linha de destaque */
+        }
 
-<p><strong>Nome da Empresa:</strong> @Model.NomeDaEmpresa</p>
-<p><strong>CNPJ:</strong> @Model.Cnpj</p>
-<p><strong>Sobre a Empresa:</strong> @Model.SobreEmpresa</p>
-<p><strong>Endereço:</strong> @Model.Endereco</p>
-<p><strong>Telefone:</strong> @Model.Telefone</p>
+            input[type="text"]:focus,
+            textarea:focus {
+                background-color: transparent; /* Volta a ter fundo transparente quando focado */
+                border-bottom: 1px solid white; /* Adiciona uma linha embaixo dos campos para destacá-los quando focados */
+            }
 
-<h2>Vagas Criadas</h2>
-@foreach (var vaga in Model.VagasCriadas)
-{
-    <p>@vaga.Titulo - @vaga.Descricao</p>
-}
+            input[type="text"]:read-only,
+            textarea:read-only {
+                background-color: transparent; /* Mantém fundo transparente para campos somente leitura */
+                border-bottom: 1px solid transparent; /* Remove a linha de destaque para campos somente leitura */
+            }
+
+        /* Adicione outros estilos conforme necessário */
+    </style>
+    <script>
+        function habilitarEdicao() {
+            var inputs = document.getElementsByTagName("input");
+            for (var i = 0; i < inputs.length; i++) {
+                inputs[i].removeAttribute("readonly");
+            }
+            var textareas = document.getElementsByTagName("textarea");
+            for (var j = 0; j < textareas.length; j++) {
+                textareas[j].removeAttribute("readonly");
+            }
+            document.getElementById("salvarAlteracoes").style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <form method="post" action="@Url.Action("SalvarPerfilEmpresa", "Usuarios")">
+            <div class="row">
+                <section class="grid1">
+                    <div> <img src="~/img/Imgempresas.png" class="img-empresa-grid" alt="imgempresas"></div>
+                    <div>
+                        <h1>@Model.NomeDaEmpresa</h1>
+                        <button type="button" onclick="habilitarEdicao()" style="background-color: #3498db; color: white; border: none; padding: 8px 16px; border-radius: 4px;">Editar</button>
+                        <button id="salvarAlteracoes" style="display: none;">Salvar Alterações</button>
+                    </div>
+                </section>
+                <div class="vaga1">
+                    <div class="vaga2">
+                        <span style="font-weight: bolder">CNPJ</span>
+                        <span>-</span>
+                        <span><input type="text" id="Cnpj" name="Cnpj" value="@Model.Cnpj" readonly /></span>
+                    </div>
+                    <br />
+                    <div class="vaga2" style="display: flex; align-items: center;">
+                        <span style="font-weight: bolder;">Endereço</span><span style="margin-right: 5px;">-</span>
+                        <span style="flex: 1;"><input type="text" id="Endereco" name="Endereco" value="@Model.Endereco" readonly style="width: 50%; border: none; background-color: transparent;" /></span>
+                    </div>
+
+                    <div class="vaga2">
+                        <span style="font-weight: bolder">Telefone</span>
+                        <span>-</span>
+                        <span><input type="text" id="Telefone" name="Telefone" value="@Model.Telefone" readonly /></span>
+                    </div>
+                </div>
+                <div class="vaga2">
+                    <h3 style="font-weight: bolder">Sobre a Empresa</h3>
+                    <hr class="solid">
+                    <textarea id="SobreEmpresa" name="SobreEmpresa" readonly style="height: 200px; width: 100%;">@Model.SobreEmpresa</textarea>
+                </div>
+            </div>
+            <button type="submit" id="salvarAlteracoes" style="display: none;">Salvar Alterações</button>
+        </form>
+    </div>
+</body>
+</html>
