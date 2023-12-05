@@ -1,8 +1,12 @@
-﻿@model JobHub.ViewModels.CandidatoViewModel
+﻿@model JobHub.Models.Candidato
 
-<h1>Perfil do Candidato</h1>
+@{
+    ViewData["Title"] = "Perfil do Candidato";
+}
 
-<p><strong>Nome:</strong> @Model.Nome</p>
+<h2>@Model.Nome</h2>
+
+<p><strong>Email:</strong> @Model.Email</p>
 <p><strong>Idade:</strong> @Model.Idade</p>
 <p><strong>Sobre Mim:</strong> @Model.SobreMim</p>
 <p><strong>Área de Interesse:</strong> @Model.AreaDeInteresse</p>

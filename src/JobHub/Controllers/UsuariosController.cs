@@ -249,6 +249,30 @@ namespace JobHub.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+        [AllowAnonymous]
+        public IActionResult PerfilCandidato1()
+        {
+            // Obtenha o ID do usuário atualmente autenticado
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            if (userId == null)
+            {
+                return NotFound(); // Ou redirecione para uma página de erro
+            }
+
+            // Consulte o banco de dados para obter o candidato correspondente ao ID do usuário
+            var candidato = _context.Usuarios.OfType<Candidato>().FirstOrDefault(u => u.Id.ToString() == userId);
+
+            if (candidato == null)
+            {
+                return NotFound(); // Ou redirecione para uma página de erro
+            }
+
+            return View(candidato);
+        }
+
+
+
 
         private bool UsuarioExists(int id)
         {
