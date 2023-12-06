@@ -468,6 +468,41 @@ namespace JobHub.Controllers
             return RedirectToAction("RedefinicaoDeSenhaEnviada");
         }
 
+        [HttpPost]
+        public async Task<IActionResult> AplicarParaVaga(int vagaId, int usuarioId)
+        {
+            var vaga = await _context.Vagas.FindAsync(vagaId);
+            var usuario = await _context.Usuarios.FindAsync(usuarioId);
+            var empresa = await _context.Usuarios.OfType<Empresa>().FirstOrDefaultAsync(u => u.Id.ToString() == vaga.EmpresaId.ToString());
+
+            if (vaga == null || usuario == null)
+            {
+                return NotFound();
+            }
+
+            var candidato = _context.Usuarios.OfType<Candidato>().FirstOrDefault(u => u.Id == usuarioId);
+
+            if (candidato == null)
+            {
+                return NotFound(); // Ou redirecione para uma página de erro
+            }
+
+            string emailEmpresa = empresa.Email;
+            string assunto = "Novo candidato para a vaga " + vaga.Titulo;
+            // Coloque todas infomrações do usuario nome, sobreMim, AreaDeinteresse, telefone, habilidades, experiencia, formaçao
+            string mensagem = "O candidato " + candidato.Nome + " se candidatou para a vaga " + vaga.Titulo + ".\n" +                 "Sobre o candidato: " + candidato.SobreMim + "\n" +
+                "Área de interesse: " + candidato.AreaDeInteresse + "\n" +
+                "Telefone: " + candidato.Telefone + "\n" +
+                "Habilidades: " + candidato.Habilidades + "\n" +
+                "Experiência: " + candidato.Experiencia + "\n" +
+                "Formação: " + candidato.Formacao + "\n" +
+                "Currículo: " + candidato.CvURL + "\n";
+
+            await _emailService.SendEmailAsync(emailEmpresa, assunto, mensagem);
+
+            return RedirectToAction("CandidaturaEnviada");
+        }
+
 
     }
 }

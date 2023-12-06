@@ -14,13 +14,13 @@ public class EmailService : IEmailService
         var smtpClient = new SmtpClient("smtp.gmail.com") // Substitua com seu servidor SMTP
         {
             Port = 587, // Substitua com a porta do seu servidor SMTP
-            Credentials = new NetworkCredential("animelistproject0@gmail.com", "exrdxnkcnqmpzdxq"), // Substitua com suas credenciais
+            Credentials = new NetworkCredential("JobhubAdm@gmail.com", "phwclrvaqpuvmwte"), // Substitua com suas credenciais
             EnableSsl = true,
         };
 
         var mailMessage = new MailMessage
         {
-            From = new MailAddress("animelistproject0@gmail.com"), // Substitua com o endereço de email do remetente
+            From = new MailAddress("JobhubAdm@gmail.com"), // Substitua com o endereço de email do remetente
             Subject = subject,
             Body = message,
             IsBodyHtml = true,
