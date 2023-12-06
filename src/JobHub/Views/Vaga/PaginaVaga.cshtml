@@ -37,7 +37,9 @@
             <div class="vaga2">
                 <span style="font-weight: bolder">@Html.DisplayNameFor(model => model.Empresa)</span>
                 <span>-</span>
-                <span>@Html.DisplayFor(model => model.Empresa)</span>
+                <a href="@Url.Action("PerfilEmpresa", "Usuarios", new { id = ViewBag.Vaga.EmpresaId })" style="color: white; text-decoration: none;">
+                    <span>@Html.DisplayFor(model => model.Empresa)</span>
+                </a>
             </div>
             <br/>
             <div class="vaga2">
