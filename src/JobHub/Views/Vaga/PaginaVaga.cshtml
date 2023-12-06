@@ -5,6 +5,7 @@
     var userId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
     var empresaIdAsString = Model.EmpresaId.ToString();
     var empresaId = Model.EmpresaId;
+    var isCandidato = User.IsInRole("Candidato");
 }
 
 <div>
@@ -15,11 +16,15 @@
             <div> 
                 <h1>@Html.DisplayFor(model => model.Titulo)</h1>
                 <h4>@Html.DisplayFor(model => model.Nivel)</h4>
-                <form asp-controller="Usuarios" asp-action="AplicarParaVaga">
-                    <input type="hidden" name="usuarioId" value="@Model.Id" />
-                    <input type="hidden" name="vagaId" value="@userId" />
-                    <button type="submit" class="btn-candidatar">Candidatar-se</button>
-                </form>
+                @if (isCandidato)
+                {
+                    <form asp-controller="Usuarios" asp-action="AplicarParaVaga">
+                        <input type="hidden" name="vagaTitle" value="@Model.Titulo" />
+                        <input type="hidden" name="empresaId" value="@empresaId" />
+                        <input type="hidden" name="usuarioId" value="@userId" />
+                        <button type="submit" class="btn-candidatar">Candidatar-se</button>
+                    </form>
+                }
             </div>
         </section>
         <div class="vaga1">
