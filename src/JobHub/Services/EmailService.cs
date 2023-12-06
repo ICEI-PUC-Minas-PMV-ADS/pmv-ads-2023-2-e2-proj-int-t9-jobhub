@@ -23,7 +23,7 @@ public class EmailService : IEmailService
             From = new MailAddress("JobhubAdm@gmail.com"), // Substitua com o endereço de email do remetente
             Subject = subject,
             Body = message,
-            IsBodyHtml = true,
+            IsBodyHtml = false,
         };
         mailMessage.To.Add(email);
 
