@@ -1,4 +1,6 @@
-﻿@model JobHub.Models.Empresa
+﻿@using System.Security.Claims
+@model JobHub.Models.Empresa
+
 
 <!DOCTYPE html>
 <html>
@@ -59,9 +61,12 @@
                     <div> <img src="~/img/Imgempresas.png" class="img-empresa-grid" alt="imgempresas"></div>
                     <div>
                         <h1>@Model.NomeDaEmpresa</h1>
+                        @if (User.Identity.IsAuthenticated && User.FindFirst(ClaimTypes.NameIdentifier)?.Value == Model.Id.ToString())
+                        {
                         <button type="button" onclick="habilitarEdicao()" style="background-color: #3498db; color: white; border: none; padding: 8px 16px; border-radius: 4px; margin-bottom: 10px;">Editar</button>
+                        }
                         <button id="salvarAlteracoes" style="display: none; background-color: #3498db; color: white; border: none; padding: 8px 16px; border-radius: 4px; margin-top: 10px;">Salvar Alterações</button>
-
+                    </div>
 
                     </div>
                 </section>
