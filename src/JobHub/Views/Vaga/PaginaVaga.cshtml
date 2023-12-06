@@ -11,10 +11,18 @@
     
     <div class="row">
         <section class="grid1"> 
-            <div> <img src="~/img/Imgempresas.png" class="img-empresa-grid" alt="imgempresas"></div>
-            <div> 
-                <h1>@Html.DisplayFor(model => model.Titulo)</h1>
-                <h4>@Html.DisplayFor(model => model.Nivel)</h4>
+            <div>
+                <img src="~/img/Imgempresas.png" class="img-empresa-grid" alt="imgempresas">
+            </div>
+            <div>
+                <!-- Adicionando um link para o perfil da empresa -->
+                <h1>
+                    <a href="@Url.Action("PerfilEmpresa", "Usuarios", new { id = ViewBag.Vaga.EmpresaId })" style="color: white; text-decoration: none;">
+                        @Html.DisplayFor(model => model.Titulo)
+                    </a>
+                </h1>
+
+                
                 <form asp-controller="Usuarios" asp-action="AplicarParaVaga">
                     <input type="hidden" name="usuarioId" value="@Model.Id" />
                     <input type="hidden" name="vagaId" value="@userId" />
@@ -23,6 +31,7 @@
             </div>
         </section>
         <div class="vaga1">
+            
             <div class="vaga2">
                 <span style="font-weight: bolder">@Html.DisplayNameFor(model => model.Empresa)</span>
                 <span>-</span>
@@ -39,6 +48,12 @@
                 <span style="font-weight: bolder">@Html.DisplayNameFor(model => model.FormaDeTrabalho)</span>
                 <span>-</span>
                 <span>@Html.DisplayFor(model => model.FormaDeTrabalho)</span>
+            </div>
+            <br />
+            <div class="vaga2">
+                <span style="font-weight: bolder">@Html.DisplayNameFor(model => model.Nivel)</span>
+                <span>-</span>
+                <span>@Html.DisplayFor(model => model.Nivel)</span>
             </div>
             <br />
             <div class="vaga2">
