@@ -1,17 +1,44 @@
 ﻿@model JobHub.Models.Candidato
 
 @{
-    ViewData["Title"] = "Perfil do Candidato";
+    ViewData["Title"] = "Editar Perfil do Candidato";
 }
 
-<h2>@Model.Nome</h2>
+<h2>@ViewData["Title"]</h2>
 
-<p><strong>Email:</strong> @Model.Email</p>
-<p><strong>Idade:</strong> @Model.Idade</p>
-<p><strong>Sobre Mim:</strong> @Model.SobreMim</p>
-<p><strong>Área de Interesse:</strong> @Model.AreaDeInteresse</p>
-<p><strong>Telefone:</strong> @Model.Telefone</p>
-<p><strong>Habilidades:</strong> @Model.Habilidades</p>
-<p><strong>Experiência:</strong> @Model.Experiencia</p>
-<p><strong>Formação:</strong> @Model.Formacao</p>
-<p><strong>Currículo URL:</strong> @Model.CvURL</p>
+<form asp-action="EditarPerfil" asp-controller="Usuarios" method="post">
+    <input type="hidden" asp-for="@Model.Id" />
+
+    <p><strong>Email:</strong> @Model.Email</p>
+
+    <p>
+        <label for="Idade">Idade:</label>
+        <input type="text" id="Idade" name="Idade" value="@Model.Idade" />
+    </p>
+    <p>
+        <label for="SobreMim">Sobre Mim:</label>
+        <textarea id="SobreMim" name="SobreMim">@Model.SobreMim</textarea>
+    </p>
+    <p>
+        <label for="AreaDeInteresse">Área de Interesse:</label>
+        <input type="text" id="AreaDeInteresse" name="AreaDeInteresse" value="@Model.AreaDeInteresse" />
+    </p>
+    <p>
+        <label for="Telefone">Telefone:</label>
+        <input type="text" id="Telefone" name="Telefone" value="@Model.Telefone" />
+    </p>
+    <p>
+        <label for="Habilidades">Habilidades:</label>
+        <input type="text" id="Habilidades" name="Habilidades" value="@Model.Habilidades" />
+    </p>
+    <p>
+        <label for="Experiencia">Experiência:</label>
+        <textarea id="Experiencia" name="Experiencia">@Model.Experiencia</textarea>
+    </p>
+    <p>
+        <label for="Formacao">Formação:</label>
+        <input type="text" id="Formacao" name="Formacao" value="@Model.Formacao" />
+    </p>
+
+    <button type="submit">Salvar Alterações</button>
+</form>

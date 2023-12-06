@@ -3,8 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil do Candidato</title>
-    <!-- Seus estilos, scripts, etc. -->
+
     <style>
         input[type="text"],
         textarea {
@@ -71,9 +73,9 @@
                     </div>
                     <br />
                     <div class="vaga2">
-                        <span style="font-weight: bolder">Sobre Mim</span>
+                        <span style="font-weight: bolder">Experiência</span>
                         <span>-</span>
-                        <span><textarea id="SobreMim" name="SobreMim" readonly>@Model.SobreMim</textarea></span>
+                        <span><textarea id="Experiencia" name="Experiencia" readonly>@Model.Experiencia</textarea></span>
                     </div>
                     <br />
                     <hr style="width: 100%; color: white; margin: 20px 0;">
@@ -98,11 +100,14 @@
                     <br />
                     <hr style="width: 100%; color: white; margin: 20px 0;">
                     <br />
+                    <div class="bgp"
+                        </div>
                     <div class="vaga2">
-                        <span style="font-weight: bolder">Experiência</span>
+                        <span style="font-weight: bolder">Sobre Mim</span>
                         <span>-</span>
-                        <span><textarea id="Experiencia" name="Experiencia" readonly>@Model.Experiencia</textarea></span>
+                        <span><textarea id="SobreMim" name="SobreMim" readonly>@Model.SobreMim</textarea></span>
                     </div>
+                    
                     <br />
                     <div class="vaga2">
                         <span style="font-weight: bolder">Formação</span>
@@ -110,7 +115,7 @@
                         <span><textarea id="Formacao" name="Formacao" readonly>@Model.Formacao</textarea></span>
                     </div>
                     <br />
-                    <!-- Adicione aqui os outros campos conforme necessário -->
+                   
                 </div>
             </div>
             <button type="submit" id="salvarAlteracoes" style="display: none;">Salvar Alterações</button>
