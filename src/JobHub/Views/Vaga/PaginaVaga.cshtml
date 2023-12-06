@@ -12,26 +12,12 @@
     
     <div class="row">
         <section class="grid1"> 
-<<<<<<< HEAD
             <div>
-                <img src="~/img/Imgempresas.png" class="img-empresa-grid" alt="imgempresas">
+                <a href="@Url.Action("PerfilEmpresa", "Usuarios", new { id = ViewBag.Vaga.EmpresaId })" style="color: white; text-decoration: none;">
+                    <img src="~/img/Imgempresas.png" class="img-empresa-grid" alt="imgempresas">
+                </a>
             </div>
-            <div>
                 <!-- Adicionando um link para o perfil da empresa -->
-                <h1>
-                    <a href="@Url.Action("PerfilEmpresa", "Usuarios", new { id = ViewBag.Vaga.EmpresaId })" style="color: white; text-decoration: none;">
-                        @Html.DisplayFor(model => model.Titulo)
-                    </a>
-                </h1>
-
-                
-                <form asp-controller="Usuarios" asp-action="AplicarParaVaga">
-                    <input type="hidden" name="usuarioId" value="@Model.Id" />
-                    <input type="hidden" name="vagaId" value="@userId" />
-                    <button type="submit" class="btn-candidatar">Candidatar-se</button>
-                </form>
-=======
-            <div> <img src="~/img/Imgempresas.png" class="img-empresa-grid" alt="imgempresas"></div>
             <div> 
                 <h1>@Html.DisplayFor(model => model.Titulo)</h1>
                 <h4>@Html.DisplayFor(model => model.Nivel)</h4>
@@ -44,7 +30,6 @@
                         <button type="submit" class="btn-candidatar">Candidatar-se</button>
                     </form>
                 }
->>>>>>> b25c896fd7f4fb1473cfc4122696fe60b78c85ed
             </div>
         </section>
         <div class="vaga1">
