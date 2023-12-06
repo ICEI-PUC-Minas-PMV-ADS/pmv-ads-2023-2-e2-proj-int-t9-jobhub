@@ -312,20 +312,29 @@ namespace JobHub.Controllers
 
         [AllowAnonymous]
         [HttpGet]
-        public IActionResult PerfilEmpresa()
+        public IActionResult PerfilEmpresa(string? id = null)
         {
-            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            string userId;
 
-            if (userId == null)
+            if (string.IsNullOrEmpty(id))
             {
-                return NotFound(); // Ou redirecione para uma página de erro
+                userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+                if (userId == null)
+                {
+                    return NotFound(); // Or redirect to an error page
+                }
+            }
+            else
+            {
+                userId = id;
             }
 
             var empresa = _context.Usuarios.OfType<Empresa>().FirstOrDefault(u => u.Id.ToString() == userId);
 
             if (empresa == null)
             {
-                return NotFound(); // Ou redirecione para uma página de erro
+                return NotFound(); // Or redirect to an error page
             }
 
             return View(empresa);
