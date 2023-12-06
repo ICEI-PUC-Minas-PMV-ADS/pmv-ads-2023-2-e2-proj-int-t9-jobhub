@@ -6,6 +6,9 @@
     <title>Perfil da Empresa</title>
     <!-- Seus estilos, scripts, etc. -->
     <style>
+
+
+
         input[type="text"],
         textarea {
             background-color: transparent;
@@ -14,7 +17,8 @@
             border-bottom: 1px solid transparent; /* Remove a linha de destaque dos campos */
             padding: 5px;
             outline: none; /* Remove a borda de foco quando clicado */
-            transition: border-bottom 0.3s ease; /* Adiciona transição para a linha de destaque */
+            transition: border-bottom 0.3s ease;
+            font-size: 19px; /* Adiciona transição para a linha de destaque */
         }
 
             input[type="text"]:focus,
@@ -28,6 +32,8 @@
                 background-color: transparent; /* Mantém fundo transparente para campos somente leitura */
                 border-bottom: 1px solid transparent; /* Remove a linha de destaque para campos somente leitura */
             }
+
+       
 
         /* Adicione outros estilos conforme necessário */
     </style>
@@ -53,8 +59,10 @@
                     <div> <img src="~/img/Imgempresas.png" class="img-empresa-grid" alt="imgempresas"></div>
                     <div>
                         <h1>@Model.NomeDaEmpresa</h1>
-                        <button type="button" onclick="habilitarEdicao()" style="background-color: #3498db; color: white; border: none; padding: 8px 16px; border-radius: 4px;">Editar</button>
-                        <button id="salvarAlteracoes" style="display: none;">Salvar Alterações</button>
+                        <button type="button" onclick="habilitarEdicao()" style="background-color: #3498db; color: white; border: none; padding: 8px 16px; border-radius: 4px; margin-bottom: 10px;">Editar</button>
+                        <button id="salvarAlteracoes" style="display: none; background-color: #3498db; color: white; border: none; padding: 8px 16px; border-radius: 4px; margin-top: 10px;">Salvar Alterações</button>
+
+
                     </div>
                 </section>
                 <div class="vaga1">
@@ -66,8 +74,9 @@
                     <br />
                     <div class="vaga2" style="display: flex; align-items: center;">
                         <span style="font-weight: bolder;">Endereço</span><span style="margin-right: 5px;">-</span>
-                        <span style="flex: 1;"><input type="text" id="Endereco" name="Endereco" value="@Model.Endereco" readonly style="width: 50%; border: none; background-color: transparent;" /></span>
+                        <span style="flex: 1; width: 300px;"><input type="text" id="Endereco" name="Endereco" value="@Model.Endereco" readonly style="border: none; background-color: transparent; width: 100%;" /></span>
                     </div>
+                    <br/>
 
                     <div class="vaga2">
                         <span style="font-weight: bolder">Telefone</span>
@@ -75,11 +84,13 @@
                         <span><input type="text" id="Telefone" name="Telefone" value="@Model.Telefone" readonly /></span>
                     </div>
                 </div>
-                <div class="vaga2">
+                <div class="vaga2" style="overflow: hidden;">
                     <h3 style="font-weight: bolder">Sobre a Empresa</h3>
                     <hr class="solid">
-                    <textarea id="SobreEmpresa" name="SobreEmpresa" readonly style="height: 200px; width: 100%;">@Model.SobreEmpresa</textarea>
+                    <textarea id="SobreEmpresa" name="SobreEmpresa" readonly style="height: 300px; width: 100%; border: none; background-color: transparent; overflow: hidden; resize: none;">@Model.SobreEmpresa</textarea>
                 </div>
+
+
             </div>
             <button type="submit" id="salvarAlteracoes" style="display: none;">Salvar Alterações</button>
         </form>
