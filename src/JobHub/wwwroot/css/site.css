@@ -96,13 +96,20 @@ input.btn.btn-primary {
 .item {
     display: flex;
     padding: 2.5vw 2.5vw;
-    margin: 0 0 20px 50px;
+    margin: 0 0 20px 0;
     background-color: #12091F;
-    width: 40vw; 
+    width: 100%; 
     border-radius: 10px;
     box-shadow: 5px 5px 5px 5px rgba(61, 36, 36, 0.2);
     gap: 10px;
 }
+
+@media (max-width: 767.9px) {
+    .item {
+        margin: 20px 0 20px 0;
+    }
+}
+
 
 .skills, .info {
     display: flex;
