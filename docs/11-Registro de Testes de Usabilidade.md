@@ -2,8 +2,8 @@
 
 | **Caso de Teste** 	| **CT-01 – Fazer Cadastro** 	|
 |:---:	|:---:	|
-|	Objetivo do Teste 	| Verificar se o  usuário Candidato consegue se cadastrar de maneira satisfatória . |
-| Referência 	|  |
+|	Objetivo do Teste 	| Verificar se o  usuário consegue se cadastrar de maneira satisfatória . |
+| Referência 	| ![Homepage](img/cadastrogif.gif) |
 | Avalição | - O usuário se cadastrou com sucesso |
 |  	|  	|
 | **Caso de Teste** 	| **CT-02 – Efetuar login**	|
@@ -13,12 +13,12 @@
 |  	|  	|
 | **Caso de Teste** 	| **CT-03 – Personalizar Perfil**	|
 | Objetivo do Teste 	| Verificar se o usuário consegue personalizar o perfil e adicionar seu currículo |
-| Referência 	|  |
+| Referência 	| ![Homepage](img/editarperfilgif.gif) |
 | Avalição | - O usuário personalizou o perfil com sucesso |
 |  	|  	|
 | **Caso de Teste** 	| **CT-04 – Aplicando para Vaga**	|
 | Objetivo do Teste 	| Verificar se o usuário consegue pesquisar a vaga desejada e aplicar para ela de maneira satisfatória |
-| Referência 	|  |
+| Referência 	| ![Homepage](img/candidatargif.gif) |
 | Avalição | - O usuário aplicou para a vaga com sucesso |
 |  	|  	|
 | **Caso de Teste** 	| **CT-05 – Criação de Vaga**	|
