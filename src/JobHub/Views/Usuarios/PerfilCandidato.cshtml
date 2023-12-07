@@ -20,19 +20,18 @@
             width: 100%;
         }
 
-        input[type="text"]:focus,
-        textarea:focus {
-            background-color: transparent;
-            border-bottom: 1px solid white;
-        }
+            input[type="text"]:focus,
+            textarea:focus {
+                background-color: transparent;
+                border-bottom: 1px solid white;
+            }
 
-        input[type="text"]:read-only,
-        textarea:read-only {
-            background-color: transparent;
-            border-bottom: 1px solid transparent;
-        }
+            input[type="text"]:read-only,
+            textarea:read-only {
+                background-color: transparent;
+                border-bottom: 1px solid transparent;
+            }
 
-       
     </style>
     <script>
         function habilitarEdicao() {
@@ -53,69 +52,70 @@
         <form method="post" action="@Url.Action("SalvarPerfilCandidato", "Usuarios")">
             <div class="row">
                 <section class="grid1">
-                    <div>
-                        <h1>@Model.Nome</h1>
+                    <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                        <span style="font-size: 35px; margin-bottom: 10px;">
+                            <input type="text" id="Nome" name="Nome" value="@Model.Nome" readonly style="width: 400px; box-sizing: border-box;" />
+                        </span>
+
                         <button type="button" onclick="habilitarEdicao()" style="background-color: #3498db; color: white; border: none; padding: 8px 16px; border-radius: 4px;">Editar</button>
-                        <button id="salvarAlteracoes" style="display: none;">Salvar Alterações</button>
+
+                        <button id="salvarAlteracoes" style="display: none; background-color: #3498db; color: white; border: none; padding: 8px 16px; border-radius: 4px; margin-top: 10px;">Salvar Alterações</button>
                     </div>
+
                 </section>
-                <div class="vaga1">
-                    <div class="vaga2" style="display: flex; align-items: center;">
-                        <span style="font-weight: bolder">Nome</span>
-                        <span>-</span>
-                        <span><input type="text" id="Nome" name="Nome" value="@Model.Nome" readonly /></span>
-                    </div>
+                <div class="vaga1" style="font-size: 18px;">
+
                     <br />
-                    <div class="vaga2" style="display: flex; align-items: center;"> 
-                        <span style="font-weight: bolder">Idade</span>
+                    <div class="vaga2" style="display: flex; align-items: center;">
+                        <span style="font-weight: bolder; font-size:20px">Idade</span>
                         <span>-</span>
                         <span><input type="text" id="Idade" name="Idade" value="@Model.Idade" readonly /></span>
                     </div>
                     <br />
                     <div class="vaga2" style="display: flex; align-items: center;">
-                        <span style="font-weight: bolder">Telefone</span>
+                        <span style="font-weight: bolder; font-size:20px">Telefone</span>
                         <span>-</span>
                         <span><input type="text" id="Telefone" name="Telefone" value="@Model.Telefone" readonly /></span>
                     </div>
-                   
+
                     <br />
                     <hr style="width: 100%; color: #1657D9; margin: 20px 0; height: 5px">
                     <br />
                     <div class="vaga2">
-                        <span style="font-weight: bolder">Área de Interesse</span>
+                        <span style="font-weight: bolder; font-size:20px">Área de Interesse</span>
                         <span>-</span>
                         <span><input type="text" id="AreaDeInteresse" name="AreaDeInteresse" value="@Model.AreaDeInteresse" readonly /></span>
                     </div>
                     <br />
-                     <div class="vaga2">
-                        <span style="font-weight: bolder">Experiência</span>
+                    <div class="vaga2">
+                        <span style="font-weight: bolder; font-size:20px">Experiência</span>
                         <span>-</span>
                         <span><textarea id="Experiencia" name="Experiencia" readonly>@Model.Experiencia</textarea></span>
                     </div>
                     <br />
                     <div class="vaga2">
-                        <span style="font-weight: bolder">Habilidades</span>
+                        <span style="font-weight: bolder; font-size:20px">Habilidades</span>
                         <span>-</span>
                         <span><textarea id="Habilidades" name="Habilidades" readonly>@Model.Habilidades</textarea></span>
                     </div>
                     <br />
                     <hr style="width: 100%; color: #1657D9; margin: 20px 0; height: 5px">
                     <br />
-                     <div class="vaga2">
-                        <span style="font-weight: bolder">Formação</span>
+                    <div class="vaga2">
+                        <span style="font-weight: bolder; font-size:20px">Formação</span>
                         <span>-</span>
                         <span><textarea id="Formacao" name="Formacao" readonly>@Model.Formacao</textarea></span>
                     </div>
-                   
-                    
+
+
                     <br />
                     <div class="vaga2">
-                        <span style="font-weight: bolder">Sobre Mim</span>
+                        <span style="font-weight: bolder; font-size:20px">Sobre Mim</span>
                         <span>-</span>
                         <span><textarea id="SobreMim" name="SobreMim" readonly>@Model.SobreMim</textarea></span>
                     </div>
                     <br />
-                   
+
                 </div>
             </div>
             <button type="submit" id="salvarAlteracoes" style="display: none;">Salvar Alterações</button>
