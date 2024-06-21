@@ -1,0 +1,25 @@
+message: Please cite this software using these metadata.
+title: Jobhub
+authors:
+  - family-names: de Oliveira Machado
+    given-names:  Matheus Gonçalves
+  - family-names: Pontes Gazzinelli
+    given-names: Thiago
+  - family-names: Borges da Silva de Moura Fé
+    given-names: Andréia
+  - family-names: Sousa Santana
+    given-names: Bianca Cristina
+  - family-names: Santos da Silva
+    given-names: Carlos Henrique
+  - family-names: Alves Mariano
+    given-names: Vinicius Henrique
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Carvalho Monteiro Ferreira
+    given-names: Daniela
+keywords:
+  - jobhub
+  - e2
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t9-jobhub.git
+version: 1.0.0
+date-released: 2024-06-21
